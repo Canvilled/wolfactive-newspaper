@@ -9,21 +9,21 @@ define('THEME_URL', get_stylesheet_directory_uri());
  *  INCLUDED FILES
  */
 
-$file_includes = [
-    'includes/theme-setup.php',                // General theme setting
-    'includes/acf-options.php',               // ACF Option page
-    'includes/resize.php'
-];
+ $file_includes = [
+     'includes/theme-setup.php',                // General theme setting
+     'includes/acf-options.php',  // ACF Option page
+     'includes/resize.php',
+ ];
 
-foreach ($file_includes as $file) {
-    if (!$filePath = locate_template($file)) {
-        trigger_error(sprintf(__('Missing included file'), $file), E_USER_ERROR);
-    }
+ foreach ($file_includes as $file) {
+     if (!$filePath = locate_template($file)) {
+         trigger_error(sprintf(__('Missing included file'), $file), E_USER_ERROR);
+     }
 
-    require_once $filePath;
-}
+     require_once $filePath;
+ }
 
-unset($file, $filePath);
+ unset($file, $filePath);
 
  // Import feauture images
  function theme_features() {
@@ -603,16 +603,16 @@ remove_action( 'wp_head', 'feed_links', 2 );
 // function hk_addcode_header(){
 // 	the_field('google_analytic','option');
 // }
-add_action('admin_init', 'rw_remove_dashboard_widgets');
-  function rw_remove_dashboard_widgets() {
-      remove_meta_box('dashboard_recent_comments', 'dashboard', 'normal'); // recent comments
-      remove_meta_box('dashboard_incoming_links', 'dashboard', 'normal'); // incoming links
-      remove_meta_box('dashboard_plugins', 'dashboard', 'normal'); // plugins
-      remove_meta_box('dashboard_quick_press', 'dashboard', 'normal'); // quick press
-      remove_meta_box('dashboard_recent_drafts', 'dashboard', 'normal'); // recent drafts
-      remove_meta_box('dashboard_primary', 'dashboard', 'normal'); // wordpress blog
-      remove_meta_box('dashboard_secondary', 'dashboard', 'normal'); // other wordpress news
-}
+// add_action('admin_init', 'rw_remove_dashboard_widgets');
+//   function rw_remove_dashboard_widgets() {
+//       remove_meta_box('dashboard_recent_comments', 'dashboard', 'normal'); // recent comments
+//       remove_meta_box('dashboard_incoming_links', 'dashboard', 'normal'); // incoming links
+//       remove_meta_box('dashboard_plugins', 'dashboard', 'normal'); // plugins
+//       remove_meta_box('dashboard_quick_press', 'dashboard', 'normal'); // quick press
+//       remove_meta_box('dashboard_recent_drafts', 'dashboard', 'normal'); // recent drafts
+//       remove_meta_box('dashboard_primary', 'dashboard', 'normal'); // wordpress blog
+//       remove_meta_box('dashboard_secondary', 'dashboard', 'normal'); // other wordpress news
+// }
 function remove_admin_bar_links() {
   global $wp_admin_bar;
     $wp_admin_bar->remove_menu('wp-logo');          /** Remove the WordPress logo **/
@@ -627,20 +627,20 @@ function remove_admin_bar_links() {
     //$wp_admin_bar->remove_menu('new-content');      /** Remove the content link **/
 }
 add_action( 'wp_before_admin_bar_render', 'remove_admin_bar_links' );
-add_action( 'admin_menu', 'my_remove_menus', 999 );
-function my_remove_menus() {
-   //remove_menu_page( 'upload.php');
-   remove_menu_page( 'edit-comments.php' );
-   remove_menu_page( 'themes.php');
-   remove_menu_page( 'plugins.php');
-  // remove_menu_page( 'users.php');
-   remove_menu_page( 'tools.php');
-  // remove_menu_page( 'options-general.php');
-  // remove_menu_page( 'wpseo_dashboard');
-  // remove_menu_page( 'wpcf-cpt');
-   remove_submenu_page( 'themes.php', 'theme-editor.php');
-   remove_submenu_page( 'plugins.php', 'plugin-editor.php');
-}
+// add_action( 'admin_menu', 'my_remove_menus', 999 );
+// function my_remove_menus() {
+//    //remove_menu_page( 'upload.php');
+//    remove_menu_page( 'edit-comments.php' );
+//    remove_menu_page( 'themes.php');
+//    remove_menu_page( 'plugins.php');
+//   // remove_menu_page( 'users.php');
+//    remove_menu_page( 'tools.php');
+//   // remove_menu_page( 'options-general.php');
+//   // remove_menu_page( 'wpseo_dashboard');
+//   // remove_menu_page( 'wpcf-cpt');
+//    remove_submenu_page( 'themes.php', 'theme-editor.php');
+//    remove_submenu_page( 'plugins.php', 'plugin-editor.php');
+// }
 add_action( 'widgets_init', 'my_unregister_widgets' );
 
 
