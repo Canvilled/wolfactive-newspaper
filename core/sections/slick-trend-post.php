@@ -1,0 +1,22 @@
+<div class="marquee-slick">
+  <div class="trending__post row-divide">
+    <div class="trend__title col-divide-2">
+      <span>TRENDING NOW</span>
+    </div>
+    <div class="trend__post-list col-divide-10" data-flickity='{ "autoPlay": false, "pauseAutoPlayOnHover": false, "pageDots": false,"draggable": true }'>
+      <?php
+      $args = array(
+        'post_type' => 'post',
+        'order' => 'DESC',
+        'showposts' => 4,
+      );
+        $the_query = new WP_Query($args);
+        while($the_query->have_posts()):$the_query->the_post();
+       ?>
+       <div class="title__post">
+         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+       </div>
+     <?php endwhile; ?>
+    </div>
+  </div>
+</div>

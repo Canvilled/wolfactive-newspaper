@@ -13,6 +13,7 @@ define('THEME_URL', get_stylesheet_directory_uri());
      'includes/theme-setup.php',                // General theme setting
      'includes/acf-options.php',  // ACF Option page
      'includes/resize.php',
+     'includes/short-code.php'
  ];
 
  foreach ($file_includes as $file) {
@@ -641,24 +642,24 @@ add_action( 'wp_before_admin_bar_render', 'remove_admin_bar_links' );
 //    remove_submenu_page( 'themes.php', 'theme-editor.php');
 //    remove_submenu_page( 'plugins.php', 'plugin-editor.php');
 // }
-add_action( 'widgets_init', 'my_unregister_widgets' );
-
-
-
-function my_unregister_widgets() {
-    unregister_widget('WP_Widget_Pages');
-    unregister_widget('WP_Widget_Calendar');
-    unregister_widget('WP_Widget_Archives');
-    unregister_widget('WP_Widget_Links');
-    unregister_widget('WP_Widget_Meta');
-    unregister_widget('WP_Widget_Search');
-    unregister_widget('WP_Widget_Categories');
-    unregister_widget('WP_Widget_Recent_Posts');
-    unregister_widget('WP_Widget_Recent_Comments');
-    unregister_widget('WP_Widget_RSS');
-    unregister_widget('WP_Widget_Tag_Cloud');
-    unregister_widget('WP_Nav_Menu_Widget');
-}
+// add_action( 'widgets_init', 'my_unregister_widgets' );
+//
+//
+//
+// function my_unregister_widgets() {
+//     unregister_widget('WP_Widget_Pages');
+//     unregister_widget('WP_Widget_Calendar');
+//     unregister_widget('WP_Widget_Archives');
+//     unregister_widget('WP_Widget_Links');
+//     unregister_widget('WP_Widget_Meta');
+//     unregister_widget('WP_Widget_Search');
+//     unregister_widget('WP_Widget_Categories');
+//     unregister_widget('WP_Widget_Recent_Posts');
+//     unregister_widget('WP_Widget_Recent_Comments');
+//     unregister_widget('WP_Widget_RSS');
+//     unregister_widget('WP_Widget_Tag_Cloud');
+//     unregister_widget('WP_Nav_Menu_Widget');
+// }
 function my_deregister_scripts(){
  wp_dequeue_script( 'wp-embed' );
 }
@@ -688,3 +689,27 @@ function hk_get_image($url, $w, $h){
 //       endif;
 //   }
 // }
+function get_news_top_post($num,$width,$height){
+  $args = array(
+    'post_type' => 'post',
+    'post_status' => 'public',
+    'orderby' => 'DESC',
+    'offset' => $num,
+    'showposts' => 1,
+  );
+  $queryTopPost = new WP_Query($args);
+  while($queryTopPost->have_posts()):$queryTopPost->the_post();
+  ?>
+  <div class="top__news-post-head">
+    <div class="post__head-item">
+      <div class="post__head-image">
+        <a href="<?php echo get_permalink(); ?>"><img src="<?php echo hk_get_thumb(get_the_id(),$width,$height) ?>" alt="Image"></a>
+      </div>
+      <div class="post__head-title">
+        <h2><a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a></h2>
+      </div>
+    </div>
+  </div>
+  <?php
+endwhile;
+}

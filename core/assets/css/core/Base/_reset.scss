@@ -1,5 +1,5 @@
 @import "./lib/fontawsome/all.css";
-@import "./lib/lib/flickity/flickity.css";
+@import "./lib/flickity/flickity.css";
 /*
 Create date: 20/04/2020
 Design by Canvilled.
@@ -37,7 +37,7 @@ body{
 	font-weight:500;
 	line-height:1.5;
 	color:#333;
-	font-family: Lora;
+	font-family: Verdana,Geneva,sans-serif;
 }
 #main{
 	margin:0px;
@@ -178,7 +178,7 @@ img{
 
 .col-divide-6 {
     flex: 0 0 50%;
-    max-width: 48%;
+    max-width: 49.75%;
     width: 100%;
 }
 
@@ -229,7 +229,7 @@ img{
 
 /*---Background---*/
 .main--background{
-	background: var(--primary-bg-color);
+	background: #fff;
  }
 
 .primary--background{
@@ -631,4 +631,12 @@ width: 80%;
 	 font-size:25px;
     }
 	/*Setup*/
+}
+ul{
+	padding:0;
+	margin:0;
+	list-style: none;
+}
+li{
+	list-style: none;
 }

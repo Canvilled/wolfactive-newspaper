@@ -4,9 +4,7 @@
      <meta charset="<?php bloginfo('charset'); ?>" />
      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-     <meta property="og:image" content="<?php echo esc_url($featured_img_url); ?>" />
-     <meta name="author" content="Wolfactive - HuyNguyen - PhuongNam">
-     <link rel="shortcut icon" type="image/png" href="<?php echo esc_url($featured_img_url); ?>"/>
+     <meta name="author" content="Wolfactive - HuyNguyen - PhuongNam">  
   	 <link rel="profile" href="https://wolfactive.net/">
      <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
      <link rel="preload" href="<?php echo get_theme_file_uri('assets\css\lib\fontawsome\webfonts\fa-brands-400.woff2') ?>" as="font" type="font/woff2" crossorigin>
@@ -19,34 +17,67 @@
 <body <?php body_class(); ?>>
 <section class="header">
   <div class="main--background">
-    <div class="header__contain container">
-  	   <div class="header__item">
-  	      <a href="<?php echo site_url(); ?>" class="d--block logo mr-auto">
+    <div class="header__contain">
+      <div class="row-divide logo-and-banner">
+        <div class="col-divide-1"></div>
+        <div class="header__item logo__container col-divide-3">
+           <a href="<?php echo site_url(); ?>" class="d--block header-logo mr-auto">
+             <?php
+              $image = get_field('logo','option');
+                 ?>
+             <img src="<?php echo $image; ?>" alt="logo-newspaper-wolfactive">
+           </a>
+        </div>
+        <div class="header__item banner__container col-divide-7">
+          <a href="#" class="header-banner">
             <?php
-             $custom_logo_id = get_theme_mod( 'custom_logo' );
-             $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-                ?>
-  	        <img src="<?php echo $image[0]; ?>" alt="logo-nha-pho-sai-gon">
-  	      </a>
-  	   </div>
-  	   <div class="header__item dp--none">
-  	      <?php
-  	       wp_nav_menu(array(
-  		    'theme_location' => 'headerMenuLocation' ));
-  	      ?>
-  	   </div>
-  	   <div class="header__item d--none dp--block">
-  	      <button class="btn text--light" id="navBtn" aria-label="btn-navbar">
-  	          <i class="fas fa-bars icon--text"></i>
-  	      </button>
-  	   </div>
+              $banner_image= get_field('banner','option');
+             ?>
+             <img src="<?php echo $banner_image ?>" alt="banner-image-newspaper-wolfactive">
+          </a>
+        </div>
+        <div class="col-divide-1"></div>
+      </div>
+
   	</div>
+    <div class="menu__container row-divide dp--none">
+        <div class="col-divide-1">
+        </div>
+        <div class="menu__background col-divide-5 ">
+          <?php
+           wp_nav_menu(array(
+          'theme_location' => 'headerMenuLocation' ));
+          ?>
+        </div>
+        <div class="header__item search-content col-divide-5">
+          <button type="button" name="button" class="open-search"><i class="fas fa-search"></i></button>
+          <form role="search" method="get" class="search-form" action="<?php echo esc_url(site_url('/')); ?>">
+            <label>
+              <!-- <span class="screen-reader-text">Search for:</span> -->
+              <input type="text" class="search-field" placeholder="Tìm Kiếm" value="" name="s">
+              <input type="hidden" class="search-field" placeholder="Search …" value="1" name="sentence">
+              <input type="hidden" class="search-field" placeholder="Search …" value="post" name="post_type">
+            </label>
+            <button type="submit" class="search-submit" value="Search" aria-label="Button Submit Search">
+              SEARCH >
+            </button>
+          </form>
+        </div>
+        <div class="col-divide-1">
+        </div>
+     </div>
+     <div class="header__item d--none dp--block">
+        <button class="btn text--light" id="navBtn" aria-label="btn-navbar">
+            <i class="fas fa-bars icon--text"></i>
+        </button>
+     </div>
   </div>
     <div class="main--background" id="headerNavBar">
+
      <div class="container navbar__mb">
        <?php
-       wp_nav_menu(array(
-      'theme_location' => 'headerMenuLocation' ));
+      //  wp_nav_menu(array(
+      // 'theme_location' => 'headerMenuLocation' ));
       ?>
     </div>
   </div>
