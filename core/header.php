@@ -4,7 +4,7 @@
      <meta charset="<?php bloginfo('charset'); ?>" />
      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-     <meta name="author" content="Wolfactive - HuyNguyen - PhuongNam">  
+     <meta name="author" content="Wolfactive - HuyNguyen - PhuongNam">
   	 <link rel="profile" href="https://wolfactive.net/">
      <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
      <link rel="preload" href="<?php echo get_theme_file_uri('assets\css\lib\fontawsome\webfonts\fa-brands-400.woff2') ?>" as="font" type="font/woff2" crossorigin>
@@ -19,7 +19,7 @@
   <div class="main--background">
     <div class="header__contain">
       <div class="row-divide logo-and-banner">
-        <div class="col-divide-1"></div>
+        <div class="col-divide-2"></div>
         <div class="header__item logo__container col-divide-3">
            <a href="<?php echo site_url(); ?>" class="d--block header-logo mr-auto">
              <?php
@@ -28,7 +28,7 @@
              <img src="<?php echo $image; ?>" alt="logo-newspaper-wolfactive">
            </a>
         </div>
-        <div class="header__item banner__container col-divide-7">
+        <div class="header__item banner__container col-divide-5">
           <a href="#" class="header-banner">
             <?php
               $banner_image= get_field('banner','option');
@@ -36,20 +36,19 @@
              <img src="<?php echo $banner_image ?>" alt="banner-image-newspaper-wolfactive">
           </a>
         </div>
-        <div class="col-divide-1"></div>
+        <div class="col-divide-2"></div>
       </div>
-
   	</div>
     <div class="menu__container row-divide dp--none">
-        <div class="col-divide-1">
+        <div class="col-divide-2">
         </div>
-        <div class="menu__background col-divide-5 ">
+        <div class="menu__background col-divide-4">
           <?php
            wp_nav_menu(array(
           'theme_location' => 'headerMenuLocation' ));
           ?>
         </div>
-        <div class="header__item search-content col-divide-5">
+        <div class="header__item search-content col-divide-4">
           <button type="button" name="button" class="open-search"><i class="fas fa-search"></i></button>
           <form role="search" method="get" class="search-form" action="<?php echo esc_url(site_url('/')); ?>">
             <label>
@@ -63,7 +62,7 @@
             </button>
           </form>
         </div>
-        <div class="col-divide-1">
+        <div class="col-divide-2">
         </div>
      </div>
      <div class="header__item d--none dp--block">

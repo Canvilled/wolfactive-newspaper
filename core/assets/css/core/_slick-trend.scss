@@ -2,15 +2,17 @@
   .trending__post{
     margin:25px 0;
     padding:0 10px;
+    justify-content: normal;
     .trend__title {
       display: inline-block;
-      padding: 10px 10px 1px;
+      padding: 5px;
       background: var(--primary-color);
       font-size: 14px;
       color: #fff;
       text-align: center;
     }
     .trend__post-list{
+      margin-left:10px;
       .flickity-button {
         background: var(--primary-color);
       }

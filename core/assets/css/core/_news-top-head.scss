@@ -1,0 +1,80 @@
+.top-news{
+  .top-news__container{
+    .left-top-news{
+      .top__news-post-head{
+        .post__head-item {
+          position: relative;
+          .post__head-title{
+            position: absolute;
+            bottom: 5px;
+            padding: 0 15px 20px 17px;
+            background: linear-gradient(0deg,rgba(0,0,0,.5) 10%,rgba(255,255,255,0) 100%);
+            .title__cat-news-top{
+              span.category-title a {
+                color: #fff;
+                padding: 5px;
+                font-size: 10px;
+                background: #000;
+                font-family: 'Roboto',sans-serif;
+                font-weight: 700;
+              }
+            }
+            .title__news-top{
+              a{color:#fff;font-size:27px;font-weight:700;}
+            }
+          }
+        }
+      }
+    }
+    .right-top-news{
+      .right__news-head{
+        .post__head-item {
+          position: relative;
+          .post__head-title{
+            position: absolute;
+            bottom: 5px;
+            padding: 0 15px 20px 17px;
+            background: linear-gradient(0deg,rgba(0,0,0,.5) 10%,rgba(255,255,255,0) 100%);
+            .title__cat-news-top{
+              span.category-title a {
+                color: #fff;
+                padding: 5px;
+                font-size: 10px;
+                background: #000;
+                font-family: 'Roboto',sans-serif;
+                font-weight: 700;
+              }
+            }
+            .title__news-top{
+              a{color:#fff; font-size:24px;font-weight:700;}
+            }
+          }
+        }
+      }
+      .right__news-tail{
+        .post__head-item {
+          position: relative;
+          .post__head-title{
+            position: absolute;
+            bottom: 5px;
+            padding: 0 15px 20px 17px;
+            background: linear-gradient(0deg,rgba(0,0,0,.5) 10%,rgba(255,255,255,0) 100%);
+            .title__cat-news-top{
+              span.category-title a {
+                color: #fff;
+                padding: 5px;
+                font-size: 10px;
+                background: #000;
+                font-family: 'Roboto',sans-serif;
+                font-weight: 700;
+              }
+            }
+            .title__news-top{
+              a{color:#fff; font-size:11px;font-weight:700;}
+            }
+          }
+        }
+      }
+    }
+  }
+}

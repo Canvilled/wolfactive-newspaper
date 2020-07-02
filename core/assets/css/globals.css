@@ -716,6 +716,14 @@ li {
   list-style: none;
 }
 
+.roboto {
+  font-family: 'Roboto',sans-serif;
+}
+
+.open-sanrif {
+  font-family: 'Open Sans',arial,sans-serif;
+}
+
 .main--background .header__contain .row-divide .banner__container {
   align-self: center;
 }
@@ -770,11 +778,12 @@ li {
 .marquee-slick .trending__post {
   margin: 25px 0;
   padding: 0 10px;
+  justify-content: normal;
 }
 
 .marquee-slick .trending__post .trend__title {
   display: inline-block;
-  padding: 10px 10px 1px;
+  padding: 5px;
   background: var(--primary-color);
   font-size: 14px;
   color: #fff;
@@ -782,6 +791,7 @@ li {
 }
 
 .marquee-slick .trending__post .trend__post-list {
+  margin-left: 10px;
   /* icon color */
   /* position outside */
 }
@@ -824,8 +834,19 @@ li {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 10%, rgba(255, 255, 255, 0) 100%);
 }
 
-.top-news .top-news__container .left-top-news .top__news-post-head .post__head-item .post__head-title h2 a {
+.top-news .top-news__container .left-top-news .top__news-post-head .post__head-item .post__head-title .title__cat-news-top span.category-title a {
   color: #fff;
+  padding: 5px;
+  font-size: 10px;
+  background: #000;
+  font-family: 'Roboto',sans-serif;
+  font-weight: 700;
+}
+
+.top-news .top-news__container .left-top-news .top__news-post-head .post__head-item .post__head-title .title__news-top a {
+  color: #fff;
+  font-size: 27px;
+  font-weight: 700;
 }
 
 .top-news .top-news__container .right-top-news .right__news-head .post__head-item {
@@ -839,9 +860,19 @@ li {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 10%, rgba(255, 255, 255, 0) 100%);
 }
 
-.top-news .top-news__container .right-top-news .right__news-head .post__head-item .post__head-title h2 a {
+.top-news .top-news__container .right-top-news .right__news-head .post__head-item .post__head-title .title__cat-news-top span.category-title a {
+  color: #fff;
+  padding: 5px;
+  font-size: 10px;
+  background: #000;
+  font-family: 'Roboto',sans-serif;
+  font-weight: 700;
+}
+
+.top-news .top-news__container .right-top-news .right__news-head .post__head-item .post__head-title .title__news-top a {
   color: #fff;
   font-size: 24px;
+  font-weight: 700;
 }
 
 .top-news .top-news__container .right-top-news .right__news-tail .post__head-item {
@@ -855,9 +886,48 @@ li {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 10%, rgba(255, 255, 255, 0) 100%);
 }
 
-.top-news .top-news__container .right-top-news .right__news-tail .post__head-item .post__head-title h2 a {
+.top-news .top-news__container .right-top-news .right__news-tail .post__head-item .post__head-title .title__cat-news-top span.category-title a {
   color: #fff;
-  font-size: 18px;
+  padding: 5px;
+  font-size: 10px;
+  background: #000;
+  font-family: 'Roboto',sans-serif;
+  font-weight: 700;
+}
+
+.top-news .top-news__container .right-top-news .right__news-tail .post__head-item .post__head-title .title__news-top a {
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.news-wrapper .news-wrapper__container .news-wrapper__background .news-wrapper__label {
+  justify-content: space-between;
+  display: flex;
+}
+
+.news-wrapper .news-wrapper__container .news-wrapper__background .news-wrapper__label .label-item {
+  color: #fff;
+  padding: 5px;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.news-wrapper .news-wrapper__container .news-wrapper__background .news-wrapper__label .news__category-related {
+  align-self: center;
+}
+
+.news-wrapper .news-wrapper__container .news-wrapper__background .news-wrapper__label .news__category-related .category-related__container {
+  display: flex;
+}
+
+.news-wrapper .news-wrapper__container .news-wrapper__background .news-wrapper__label .news__category-related .category-related__container li.sub__category {
+  margin-left: 30px;
+}
+
+.news-wrapper .news-wrapper__container .news-wrapper__background .news-wrapper__label .news__category-related .category-related__container li.sub__category a {
+  color: #777;
+  font-size: 13px;
 }
 
 /*# sourceMappingURL=globals.css.map */

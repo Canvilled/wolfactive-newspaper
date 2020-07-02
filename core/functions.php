@@ -692,11 +692,13 @@ function hk_get_image($url, $w, $h){
 function get_news_top_post($num,$width,$height){
   $args = array(
     'post_type' => 'post',
-    'post_status' => 'public',
-    'orderby' => 'DESC',
+    'post_status' => 'publish',
+    'order' => 'DESC',
+    'orderby' => 'date',
     'offset' => $num,
     'showposts' => 1,
   );
+  $i=0;
   $queryTopPost = new WP_Query($args);
   while($queryTopPost->have_posts()):$queryTopPost->the_post();
   ?>
@@ -706,7 +708,17 @@ function get_news_top_post($num,$width,$height){
         <a href="<?php echo get_permalink(); ?>"><img src="<?php echo hk_get_thumb(get_the_id(),$width,$height) ?>" alt="Image"></a>
       </div>
       <div class="post__head-title">
-        <h2><a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a></h2>
+        <div class="title__cat-news-top">
+          <?php
+          $categories=get_the_category(get_the_id());
+            foreach ($categories as $c) {
+              $category_link = get_category_link($c->cat_ID);
+              if($i===0){
+                echo '<span class="category-title text--upcase"><a href="'.$category_link.'">'.$c->cat_name.'</a></span>';}
+                $i++;
+            } ?>
+        </div>
+        <div class="title__news-top"><a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a></div>
       </div>
     </div>
   </div>
