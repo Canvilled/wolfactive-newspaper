@@ -29,7 +29,7 @@ body {
   font-weight: 500;
   line-height: 1.5;
   color: #333;
-  font-family: Verdana,Geneva,sans-serif;
+  font-family: Roboto,sans-serif;
 }
 
 #main {
@@ -901,33 +901,82 @@ li {
   font-weight: 700;
 }
 
-.news-wrapper .news-wrapper__container .news-wrapper__background .news-wrapper__label {
+.nw .nw__container .nw__background .nw__label {
   justify-content: space-between;
   display: flex;
 }
 
-.news-wrapper .news-wrapper__container .news-wrapper__background .news-wrapper__label .label-item {
+.nw .nw__container .nw__background .nw__label .label-item {
   color: #fff;
   padding: 5px;
   font-size: 14px;
   display: inline-block;
 }
 
-.news-wrapper .news-wrapper__container .news-wrapper__background .news-wrapper__label .news__category-related {
+.nw .nw__container .nw__background .nw__label .news__category-related {
   align-self: center;
 }
 
-.news-wrapper .news-wrapper__container .news-wrapper__background .news-wrapper__label .news__category-related .category-related__container {
+.nw .nw__container .nw__background .nw__label .news__category-related .category-related__container {
   display: flex;
 }
 
-.news-wrapper .news-wrapper__container .news-wrapper__background .news-wrapper__label .news__category-related .category-related__container li.sub__category {
+.nw .nw__container .nw__background .nw__label .news__category-related .category-related__container li.sub__category {
   margin-left: 30px;
 }
 
-.news-wrapper .news-wrapper__container .news-wrapper__background .news-wrapper__label .news__category-related .category-related__container li.sub__category a {
+.nw .nw__container .nw__background .nw__label .news__category-related .category-related__container li.sub__category a {
   color: #777;
   font-size: 13px;
+}
+
+.nw .nw__container .nw__background .nw__content .nw__left-content .nw__post-title {
+  font-size: 23px;
+  color: #111;
+  font-weight: 500;
+  line-height: 25px;
+  margin: 10px 0;
+}
+
+.nw .nw__container .nw__background .nw__content .nw__left-content .nw__post-content {
+  font-size: 13px;
+  color: #777;
+  line-height: 21px;
+}
+
+.nw .nw__container .nw__background .nw__content .nw__left-content .nw__editor-date .editor {
+  font-size: 11px;
+  font-weight: 700;
+  color: #000;
+}
+
+.nw .nw__container .nw__background .nw__content .nw__left-content .nw__editor-date .date-time {
+  font-size: 11px;
+  color: #777;
+}
+
+.nw .nw__container .nw__background .nw__content .nw__left-content .nw__editor-date .comment {
+  float: right;
+  margin-top: 5px;
+}
+
+.nw .nw__container .nw__background .nw__content .nw__left-content .nw__editor-date .comment a {
+  position: relative;
+  color: #fff;
+  background: #000;
+  padding: 2px 5px;
+}
+
+.nw .nw__container .nw__background .nw__content .nw__left-content .nw__editor-date .comment a::after {
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 3px 3px 0 0;
+  border-color: #000 transparent transparent;
 }
 
 /*# sourceMappingURL=globals.css.map */

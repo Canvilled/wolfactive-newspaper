@@ -725,3 +725,22 @@ function get_news_top_post($num,$width,$height){
   <?php
 endwhile;
 }
+
+function post_wrapper()
+{
+  $get_cat_id = get_sub_field('category','option');
+  $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+  $args = array(
+    'cat' => $get_cat_id,
+    'post_type' => 'post',
+    'post_status' => 'publish',
+    'paged'=>$paged,
+    'posts_per_page' => '5',
+  );
+  $query_post_from_cat = new WP_Query($args);
+  while($query_post_from_cat->have_posts()):$query_post_from_cat->the_post();
+    ?> <div class="">
+      <?php the_title(); ?>
+    </div> <?php
+  endwhile;
+}
