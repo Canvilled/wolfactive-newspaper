@@ -13,7 +13,8 @@
       <?php get_template_part('/sections/news-wrapper') ?>
       <?php //echo do_shortcode('[GiveMeListPost cat="new-look" /]') ?>
     </div>
-    <div class="col-divide-2 right-sidebar"></div>
+    <div class="col-divide-2 right-sidebar">
+    </div>
   </div>
 </div>
  <?php

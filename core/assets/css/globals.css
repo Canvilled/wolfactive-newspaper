@@ -930,12 +930,19 @@ li {
   font-size: 13px;
 }
 
+.nw .nw__container .nw__background .nw__content .col-divide-6 {
+  max-width: 48%;
+}
+
 .nw .nw__container .nw__background .nw__content .nw__left-content .nw__post-title {
   font-size: 23px;
-  color: #111;
   font-weight: 500;
   line-height: 25px;
   margin: 10px 0;
+}
+
+.nw .nw__container .nw__background .nw__content .nw__left-content .nw__post-title a {
+  color: #111;
 }
 
 .nw .nw__container .nw__background .nw__content .nw__left-content .nw__post-content {
@@ -977,6 +984,186 @@ li {
   border-style: solid;
   border-width: 3px 3px 0 0;
   border-color: #000 transparent transparent;
+}
+
+.nw .nw__container .nw__background .nw__content .nw__right-content .nw__right-content--item {
+  justify-content: inherit;
+  padding: 0 20px 13px;
+  margin-bottom: 13px;
+}
+
+.nw .nw__container .nw__background .nw__content .nw__right-content .nw__right-content--item .nw__infomation {
+  padding-left: 15px;
+}
+
+.nw .nw__container .nw__background .nw__content .nw__right-content .nw__right-content--item .nw__infomation .nw__post-title {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.nw .nw__container .nw__background .nw__content .nw__right-content .nw__right-content--item .nw__infomation .nw__post-title a {
+  color: #111;
+}
+
+.nw .nw__container .nw__background .nw__content .nw__right-content .nw__right-content--item .nw__infomation .nw__post-title a:hover {
+  color: var(--primary-color);
+}
+
+.nw .nw__container .nw__background .nw__content .nw__right-content .nw__right-content--item .nw__infomation .nw__editor-date {
+  margin-top: 5px;
+}
+
+.nw .nw__container .nw__background .nw__content .nw__right-content .nw__right-content--item .nw__infomation .nw__editor-date .date-time {
+  font-size: 11px;
+  color: #777;
+}
+
+.nw .nw__container .nw__background .nw__content .nw__left-content.td-2 .nw__post-item .nw__post-title--small {
+  margin: 0;
+}
+
+.nw .nw__container .nw__background .nw__content .nw__left-content.td-2 .nw__post-item .nw__post-title--small a {
+  font-size: 14px;
+  color: #111;
+  font-weight: 600;
+}
+
+.nw .nw__container .nw__background .nw__content .nw__left-content.td-2 .nw__post-item .nw__post-title--small a:hover {
+  color: var(--primary-color);
+}
+
+.nw .nw__container .nw__background .nw__content .nw__left-content.td-2 .nw__post-item.row-divide {
+  margin: 10px 0;
+}
+
+.nw .nw__container .nw__background .nw__content .nw__right-content.td-2 .nw__post-item .nw__post-title--small {
+  margin: 0 !important;
+}
+
+.nw .nw__container .nw__background .nw__content .nw__right-content.td-2 .nw__post-item .nw__post-title--small a {
+  font-size: 14px;
+  color: #111;
+  font-weight: 600;
+}
+
+.nw .nw__container .nw__background .nw__content .nw__right-content.td-2 .nw__post-item .nw__post-title--small a:hover {
+  color: var(--primary-color);
+}
+
+.nw .nw__container .nw__background .nw__content .nw__right-content.td-2 .nw__post-item .nw__post-title {
+  font-weight: 500;
+  line-height: 25px;
+  font-size: 23px;
+  margin: 10px 0;
+}
+
+.nw .nw__container .nw__background .nw__content .nw__right-content.td-2 .nw__post-item .nw__post-title a {
+  color: #111;
+}
+
+.nw .nw__container .nw__background .nw__content .nw__right-content.td-2 .nw__post-item .nw__post-title a:hover {
+  color: var(--primary-color);
+}
+
+.nw .nw__container .nw__background .nw__content .nw__right-content.td-2 .nw__post-item .nw__post-content {
+  font-size: 13px;
+  color: #777;
+  line-height: 21px;
+}
+
+.nw .nw__container .nw__background .nw__content .nw__right-content.td-2 .nw__post-item .nw__editor-date .editor {
+  font-size: 11px;
+  font-weight: 700;
+  color: #000;
+}
+
+.nw .nw__container .nw__background .nw__content .nw__right-content.td-2 .nw__post-item .nw__editor-date .date-time {
+  font-size: 11px;
+  color: #777;
+}
+
+.nw .nw__container .nw__background .nw__content .nw__right-content.td-2 .nw__post-item .nw__editor-date .comment {
+  float: right;
+  margin-top: 5px;
+}
+
+.nw .nw__container .nw__background .nw__content .nw__right-content.td-2 .nw__post-item .nw__editor-date .comment a {
+  position: relative;
+  color: #fff;
+  background: #000;
+  padding: 2px 5px;
+}
+
+.nw .nw__container .nw__background .nw__content .nw__right-content.td-2 .nw__post-item .nw__editor-date .comment a::after {
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 3px 3px 0 0;
+  border-color: #000 transparent transparent;
+}
+
+.nw .nw__container .nw__background .nw__content .nw__right-content.td-2 .nw__post-item.row-divide {
+  margin: 10px 0;
+}
+
+.nw .nw__container .nw__background .nw__content.td-3 .nw__content-post-slide {
+  /* icon color */
+  /* position outside */
+}
+
+.nw .nw__container .nw__background .nw__content.td-3 .nw__content-post-slide .flickity-button {
+  background: var(--primary-color);
+}
+
+.nw .nw__container .nw__background .nw__content.td-3 .nw__content-post-slide .flickity-prev-next-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 0px;
+}
+
+.nw .nw__container .nw__background .nw__content.td-3 .nw__content-post-slide .flickity-button-icon {
+  fill: white;
+}
+
+.nw .nw__container .nw__background .nw__content.td-3 .nw__content-post-slide .flickity-prev-next-button.previous {
+  left: 0px;
+  right: unset;
+  top: unset;
+  bottom: -50px;
+}
+
+.nw .nw__container .nw__background .nw__content.td-3 .nw__content-post-slide .flickity-prev-next-button.next {
+  right: unset;
+  left: 35px;
+  bottom: -50px;
+  top: unset;
+}
+
+.nw .nw__container .nw__background .nw__content.td-3 .nw__content-post-slide .flickity-viewport {
+  height: 240px !important;
+}
+
+.nw .nw__container .nw__background .nw__content.td-3 .nw__content-post-slide .flickity-viewport .flickity-slider {
+  width: 105%;
+  left: -13px !important;
+}
+
+.nw .nw__container .nw__background .nw__content.td-3 .nw__content-post-slide .flickity-viewport .flickity-slider .nw__post-slide--item {
+  width: 260px;
+}
+
+.nw .nw__container .nw__background .nw__content.td-3 .nw__content-post-slide .flickity-viewport .flickity-slider .nw__post-slide--item .nw__post-title a {
+  color: #111;
+  font-weight: 700;
+}
+
+.nw .nw__container .nw__background .nw__content.td-3 .nw__content-post-slide .flickity-viewport .flickity-slider .nw__post-slide--item .nw__post-title a:hover {
+  color: var(--primary-color);
 }
 
 /*# sourceMappingURL=globals.css.map */

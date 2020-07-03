@@ -3,7 +3,7 @@
     <div class="trend__title col-divide-2">
       <span>TRENDING NOW</span>
     </div>
-    <div class="trend__post-list col-divide-10" data-flickity='{ "autoPlay": false, "pauseAutoPlayOnHover": false, "pageDots": false,"draggable": true }'>
+    <div class="trend__post-list col-divide-10" data-flickity='{ "autoPlay": true, "pauseAutoPlayOnHover": false, "pageDots": false,"draggable": true }'>
       <?php
       $args = array(
         'post_type' => 'post',

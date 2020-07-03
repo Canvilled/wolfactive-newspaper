@@ -725,22 +725,15 @@ function get_news_top_post($num,$width,$height){
   <?php
 endwhile;
 }
-
-function post_wrapper()
-{
-  $get_cat_id = get_sub_field('category','option');
-  $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-  $args = array(
-    'cat' => $get_cat_id,
-    'post_type' => 'post',
-    'post_status' => 'publish',
-    'paged'=>$paged,
-    'posts_per_page' => '5',
-  );
-  $query_post_from_cat = new WP_Query($args);
-  while($query_post_from_cat->have_posts()):$query_post_from_cat->the_post();
-    ?> <div class="">
-      <?php the_title(); ?>
-    </div> <?php
-  endwhile;
-}
+function arphabet_widgets_init(){
+        // Sidebar
+        register_sidebar(array(
+            'name'          => 'Left Sidebar',
+            'id'            => 'left-sidebar',
+            'before_widget' => '<div class="sidebar">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h2 class="title--section text--upcase">',
+            'after_title'   => '</h2>',
+        ));
+    }
+add_action( 'widgets_init', 'arphabet_widgets_init' );
