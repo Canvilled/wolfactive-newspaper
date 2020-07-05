@@ -13,7 +13,7 @@ define('THEME_URL', get_stylesheet_directory_uri());
      'includes/theme-setup.php',                // General theme setting
      'includes/acf-options.php',  // ACF Option page
      'includes/resize.php',
-     'includes/short-code.php'
+     'includes/short-code.php',
  ];
 
  foreach ($file_includes as $file) {
@@ -725,12 +725,92 @@ function get_news_top_post($num,$width,$height){
   <?php
 endwhile;
 }
+function loops_get_post_center($get_cat_id){
+  ?>
+  <div class="nw__label myt-50">
+    <h3 class="label-item roboto text--upcase"><?php echo get_cat_name( $get_cat_id ); ?></h3>
+  </div>
+  <?php
+  $args=array(
+    'post_type'=>'post',
+    'cat'=>$get_cat_id,
+    'showposts'=> 4,
+    'post_status'=>'publish',
+  );
+  $query_post = new WP_Query($args);
+  $j=0;
+  while($query_post->have_posts()):$query_post->the_post();
+    if($j===0){
+    ?>
+    <div class="nw__post-item first-post">
+      <div class="nw__image">
+        <a href="<?php echo get_permalink(); ?>">
+          <img src="<?php echo hk_get_thumb(get_the_id(),485,360) ?>" alt="Image">
+          <div class="bg-color-front"></div>
+        </a>
+        <div class="nw-info-post open-sanrif">
+          <div class="nw__post-title">
+            <a href="<?php echo get_permalink(); ?>"><?php echo wp_trim_words( get_the_title(), 10, '...' );?></a>
+          </div>
+          <div class="nw__editor-date">
+            <span class="editor"><?php the_author_link(); ?></span> -
+            <span class="date-time"><?php echo get_the_date( 'F j, Y' ); ?></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <?php
+    }
+    else{
+      ?>
+      <div class="nw__post-item row-divide">
+        <div class="nw__image col-divide-4">
+          <a href="<?php echo get_permalink(); ?>"><img src="<?php echo hk_get_thumb(get_the_id(),485,360) ?>" alt="Image"></a>
+        </div>
+        <div class="nw__infomation col-divide-8">
+          <div class="nw__post-title nw__post-title--small">
+            <a href="<?php echo get_permalink(); ?>"><?php echo wp_trim_words( get_the_title(), 10, '...' );?></a>
+          </div>
+          <div class="nw__editor-date open-sanrif">
+            <span class="date-time open-sanrif"><?php echo get_the_date( 'F j, Y' ) ?></span>
+          </div>
+        </div>
+      </div>
+      <?php
+    }
+    $j++;
+  endwhile;
+}
 function arphabet_widgets_init(){
         // Sidebar
         register_sidebar(array(
             'name'          => 'Left Sidebar',
             'id'            => 'left-sidebar',
             'before_widget' => '<div class="sidebar">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h2 class="title--section text--upcase">',
+            'after_title'   => '</h2>',
+        ));
+        register_sidebar(array(
+            'name'          => 'Footer Left Sidebar',
+            'id'            => 'footer-left-sidebar',
+            'before_widget' => '<div class="footer-left-sidebar">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h2 class="title--section text--upcase">',
+            'after_title'   => '</h2>',
+        ));
+        register_sidebar(array(
+            'name'          => 'Footer Mid Sidebar',
+            'id'            => 'footer-mid-sidebar',
+            'before_widget' => '<div class="footer-mid-sidebar">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h2 class="title--section text--upcase">',
+            'after_title'   => '</h2>',
+        ));
+        register_sidebar(array(
+            'name'          => 'Footer Right Sidebar',
+            'id'            => 'footer-right-sidebar',
+            'before_widget' => '<div class="footer-right-sidebar">',
             'after_widget'  => '</div>',
             'before_title'  => '<h2 class="title--section text--upcase">',
             'after_title'   => '</h2>',

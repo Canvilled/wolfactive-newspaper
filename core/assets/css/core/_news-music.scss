@@ -1,0 +1,93 @@
+.news-music{
+  .news-music-container{
+    .mi-container{
+      .mi__image{
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        a{
+          .img-music{
+          }
+        }
+        .mi__info{
+          position: absolute;
+          text-align: center;
+          padding: 0px 20px;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 0;
+          width: 100%;
+          right: 0;
+          z-index: 1;
+          .mi__category{
+              span.title__cat {
+                padding: 0px 5px 2px;
+                background: #222;
+                a{
+                  color: #fff;
+                  font-size: 10px;
+                }
+            }
+          }
+          .mi__title{
+            span{
+              a{
+                font-size: 18px;
+                color: #fff;
+                font-weight: 300;
+              }
+            }
+          }
+          .mi__editor-date{
+            .editor{
+              a{
+                color:#fff;
+                font-weight: 600;
+                text-transform: capitalize;
+              }
+            }
+            .date-time{
+              color:#fff;
+            }
+          }
+        }
+      }
+      .mi__image::before{
+        content: '';
+        width: 100%;
+        height:100%;
+        position: absolute;
+        bottom:7px;
+        left:0;
+        background: -webkit-linear-gradient(0deg,rgba(0,0,0,.7),rgba(0,0,0,.7) 100%,rgba(0,0,0,0));
+        background: linear-gradient(0deg,rgba(0,0,0,.7),rgba(0,0,0,.7) 100%,rgba(0,0,0,0));
+      }
+    }
+    .mi-container:hover{
+      .mi__image::before{
+        top: 0;
+        left: 0;
+        width: 160%;
+        height: 100%;
+        background: rgba(255,255,255,.2);
+        transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-120%,0);
+        -webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-120%,0);
+        -webkit-transition: transform .7s ease 0s;
+        transition: transform .7s ease 0s;
+        z-index: 1;
+      }
+      .mi__image{
+        .mi__info{
+          .mi__category{
+            span{
+              background:#fff;
+              a{
+                color:#000;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
