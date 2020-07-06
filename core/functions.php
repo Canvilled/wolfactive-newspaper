@@ -815,5 +815,46 @@ function arphabet_widgets_init(){
             'before_title'  => '<h2 class="title--section text--upcase">',
             'after_title'   => '</h2>',
         ));
+        register_sidebar(array(
+            'name'          => 'Footer Sub Mid Sidebar',
+            'id'            => 'footer-sub-mid-sidebar',
+            'before_widget' => '<div class="footer-sub-mid-sidebar">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h2 class="title--section text--upcase">',
+            'after_title'   => '</h2>',
+        ));
+        register_sidebar(array(
+            'name'          => 'Footer Sub Right Sidebar',
+            'id'            => 'footer-sub-right-sidebar',
+            'before_widget' => '<div class="footer-sub-right-sidebar">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h2 class="title--section text--upcase">',
+            'after_title'   => '</h2>',
+        ));
     }
 add_action( 'widgets_init', 'arphabet_widgets_init' );
+
+function getPostViews($postID){
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+        return "0";
+    }
+    return $count;
+}
+
+// function to count views.
+function setPostViews($postID) {
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        $count = 0;
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+    }else{
+        $count++;
+        update_post_meta($postID, $count_key, $count);
+    }
+}

@@ -1,8 +1,6 @@
 <?php
 $cat_id = get_sub_field('category','option');
 $cate_child=get_term_children($cat_id,'category');
-$term= get_queried_object();
-$color = get_field('color', $term);
 $type_display = get_sub_field('type_display','option');
  ?>
 <div class="nw__label myt-50" style="border-bottom:2px solid <?php echo get_sub_field('background_color','option'); ?>">
@@ -53,7 +51,7 @@ switch ($type_display) {
               <div class="nw__editor-date">
                 <span class="editor"><?php the_author_link(); ?></span> -
                 <span class="date-time"><?php echo get_the_date( 'F j, Y' ) ?></span>
-                <span class="comment"> <a href="#">1</a> </span>
+                <span class="comment"> <a href="#"><?php echo get_comments_number(get_the_id()) ?></a> </span>
               </div>
               <div class="nw__post-content open-sanrif">
                 <?php echo wp_trim_words( get_the_content(), 15, '...' ); ?>
@@ -129,7 +127,7 @@ switch ($type_display) {
               <div class="nw__editor-date">
                 <span class="editor"><?php the_author_link(); ?></span> -
                 <span class="date-time"><?php echo get_the_date( 'F j, Y' ); ?></span>
-                <span class="comment"> <a href="#">1</a> </span>
+                <span class="comment"> <a href="#"><?php echo get_comments_number(get_the_id()) ?></a> </span>
               </div>
               <div class="nw__post-content open-sanrif">
                 <?php echo wp_trim_words( get_the_content(), 15, '...' ); ?>
@@ -180,7 +178,7 @@ switch ($type_display) {
             <div class="nw__editor-date">
               <span class="editor"><?php the_author_link(); ?></span> -
               <span class="date-time"><?php echo get_the_date( 'F j, Y' ); ?></span>
-              <span class="comment"> <a href="#">1</a> </span>
+              <span class="comment"> <a href="#"><?php echo get_comments_number(get_the_id()) ?></a> </span>
             </div>
             <div class="nw__post-content open-sanrif">
               <?php echo wp_trim_words( get_the_content(), 15, '...' ); ?>
@@ -268,7 +266,7 @@ switch ($type_display) {
         <div class="nw__editor-date">
           <span class="editor"><?php the_author_link(); ?></span> -
           <span class="date-time"><?php echo get_the_date( 'F j, Y' ) ?></span>
-          <span class="comment"> <a href="#">1</a> </span>
+          <span class="comment"> <a href="#"><?php echo get_comments_number(get_the_id()) ?></a> </span>
         </div>
         <div class="nw__post-content open-sanrif">
           <?php echo wp_trim_words( get_the_content(), 20, '...' ); ?>

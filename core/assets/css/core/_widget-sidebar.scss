@@ -1,0 +1,44 @@
+.textwidget{
+  .category-item{
+    text-align-last: justify;
+    cursor: default;
+    margin-bottom: 3px;
+    span {
+      a{
+          display: table-footer-group;
+      }
+    }
+  }
+  .category-item:hover{
+    span{
+      color:var(--primary-color);
+      a{
+        color:var(--primary-color);
+      }
+    }
+  }
+}
+.nw__sidebar{
+  .sidebar{
+    h2.title--section{
+      font-size: 16px;
+      color: #fff;
+      background: #222;
+      font-weight: 400;
+      padding: 2px 8px;
+      margin-bottom: 0;
+      display: inline-block;
+      }
+    .textwidget{
+      border-top:1px solid #222;
+      .sidebar__social-list{
+        display: grid;
+        a{
+          font-size:24px;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
