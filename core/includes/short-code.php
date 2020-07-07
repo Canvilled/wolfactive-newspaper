@@ -59,7 +59,7 @@ function renderPopularPost(){
   return $output;
 }
 
-//Popular shortcode
+//House Produce shortcode
 add_action('init', 'renderHousePostShortcode');
 function renderHousePostShortcode (){
   add_shortcode('house_post','renderHousePost');
@@ -94,6 +94,28 @@ function renderHousePost($name_slug){
     $i++;
   }
   endwhile;
+  $output=ob_get_contents();
+  ob_end_clean();
+  return $output;
+}
+
+add_action('init', 'renderAuthorShortcode');
+function renderAuthorShortCode(){
+  add_shortcode('author','renderAuthorInfo');
+}
+function renderAuthorInfo(){
+  ob_start();
+  ?>
+  <div class="author text--dark">
+    <?php echo get_avatar(get_the_author_meta( 'ID' )); ?>
+    <div class="author-name text--upcase open-sanrif">
+      <?php the_author(); ?>
+    </div>
+    <div class="author-description">
+      <?php echo get_the_author_meta('description') ?>
+    </div>
+  </div>
+  <?php
   $output=ob_get_contents();
   ob_end_clean();
   return $output;

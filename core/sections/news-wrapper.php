@@ -9,8 +9,8 @@
         endwhile;
       }?>
     </div>
-    <div class="nw__sidebar col-divide-4">
-      <?php get_sidebar('left-sidebar'); ?>
+    <div class="nw__sidebar myt-50 col-divide-4">
+      <?php if (dynamic_sidebar('left-sidebar')) : get_sidebar( 'left-sidebar' ); ?><?php endif; ?>
     </div>
   </div>
 </div>

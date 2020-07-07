@@ -831,6 +831,14 @@ function arphabet_widgets_init(){
             'before_title'  => '<h2 class="title--section text--upcase">',
             'after_title'   => '</h2>',
         ));
+        register_sidebar(array(
+            'name'          => 'Single Sidebar',
+            'id'            => 'single-sidebar',
+            'before_widget' => '<div class="single-sidebar">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h2 class="title--section text--upcase">',
+            'after_title'   => '</h2>',
+        ));
     }
 add_action( 'widgets_init', 'arphabet_widgets_init' );
 

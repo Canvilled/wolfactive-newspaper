@@ -281,7 +281,6 @@ img {
   border-radius: 2px;
   margin-right: 15px;
   color: #fff !important;
-  background: var(--primary-bg-color);
 }
 
 /*---Background---*/
@@ -1508,28 +1507,211 @@ li {
   color: var(--primary-color);
 }
 
-.nw__sidebar .sidebar h2.title--section {
-  font-size: 16px;
-  color: #fff;
-  background: #222;
-  font-weight: 400;
-  padding: 2px 8px;
-  margin-bottom: 0;
-  display: inline-block;
+.nw__sidebar {
+  padding: 0 40px;
 }
 
-.nw__sidebar .sidebar .textwidget {
-  border-top: 1px solid #222;
+.nw__sidebar .sidebar {
+  margin-bottom: 20px;
+}
+
+.nw__sidebar .sidebar h2.title--section {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  background: #000;
+  color: #fff;
+  margin-top: 10px;
+  position: relative;
+  padding: 2px 5px;
+}
+
+.nw__sidebar .sidebar h2.title--section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 150%;
+  padding: 1px;
+  background: #000;
 }
 
 .nw__sidebar .sidebar .textwidget .sidebar__social-list {
-  display: grid;
+  display: flex;
+  justify-content: space-between;
 }
 
 .nw__sidebar .sidebar .textwidget .sidebar__social-list a {
-  font-size: 24px;
+  font-size: 40px;
   display: flex;
   justify-content: space-between;
+}
+
+.nw__sidebar .sidebar .textwidget .sidebar__social-list .social--facebook i {
+  color: #4267b2;
+}
+
+.nw__sidebar .sidebar .textwidget .sidebar__social-list .social--instagram i {
+  color: #cc3d65;
+}
+
+.nw__sidebar .sidebar .textwidget .sidebar__social-list .social--behance i {
+  color: #0057ff;
+}
+
+.nw__sidebar .sidebar .textwidget .sidebar__social-list .social--pinterest i {
+  color: #cb1b26;
+}
+
+.nw__sidebar .sidebar .textwidget .sidebar__social-list .social--github i {
+  color: #333;
+}
+
+.textwidget {
+  margin-bottom: 10px;
+}
+
+section#singlePost .single__wrapper .post__wrapper .post__item-des .post__category {
+  justify-content: initial;
+}
+
+section#singlePost .single__wrapper .post__wrapper .post__item-des .post__category .category-item {
+  margin-right: 10px;
+  background: #000;
+  padding: 5px;
+  font-weight: 600;
+}
+
+section#singlePost .single__wrapper .post__wrapper .post__item-des .title--section {
+  font-size: 42px;
+}
+
+section#singlePost .single__wrapper .post__wrapper .post__contain .author-date {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin: 50px 0;
+  padding: 5px 0;
+}
+
+section#singlePost .single__wrapper .post__wrapper .post__contain .author-date .author {
+  justify-content: initial;
+}
+
+section#singlePost .single__wrapper .post__wrapper .post__contain .author-date .author img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+section#singlePost .single__wrapper .post__wrapper .post__contain .author-date .author .author-name {
+  margin-left: 5px;
+  font-weight: 700;
+  align-self: center;
+  font-size: 12px;
+  color: #000;
+}
+
+section#singlePost .single__wrapper .post__wrapper .post__contain .author-date .date {
+  position: relative;
+  align-self: center;
+  font-size: 12px;
+  color: #444;
+  font-weight: 400;
+}
+
+section#singlePost .single__wrapper .post__wrapper .post__contain .author-date .date:before {
+  content: '';
+  position: absolute;
+  left: -7px;
+  top: -5px;
+  width: 1px;
+  height: 30px;
+  background: #eaeaea;
+}
+
+section#singlePost .single__wrapper .post__wrapper .post__wrapper-container .singlePost-sidebar {
+  padding: 0 40px;
+}
+
+section#singlePost .single__wrapper .post__wrapper .post__wrapper-container .singlePost-sidebar h2.title--section {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  background: #000;
+  color: #fff;
+  position: relative;
+  padding: 2px 5px;
+}
+
+section#singlePost .single__wrapper .post__wrapper .post__wrapper-container .singlePost-sidebar h2.title--section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 150%;
+  padding: 1px;
+  background: #000;
+}
+
+section#singlePost .single__wrapper .post__wrapper .post__wrapper-container .singlePost-sidebar .single-sidebar {
+  overflow: hidden;
+}
+
+section#singlePost .single__wrapper .post__wrapper .post__wrapper-container .singlePost-sidebar .single-sidebar .textwidget .nw__post-item {
+  margin: 10px 0;
+}
+
+section#singlePost .single__wrapper .post__wrapper .post__wrapper-container .singlePost-sidebar .single-sidebar .textwidget .nw__post-item .nw__infomation .nw__post-title a {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+section#singlePost .single__wrapper .post__wrapper .post__wrapper-container .singlePost-sidebar .single-sidebar .textwidget .nw__post-item .nw__infomation .nw__editor-date .date-time {
+  font-size: 11px;
+  color: #6b6a6a;
+}
+
+section#singlePost .single__wrapper .post__wrapper .post__wrapper-container .singlePost-sidebar .single-sidebar .textwidget .author {
+  text-align: center;
+}
+
+section#singlePost .single__wrapper .post__wrapper .post__wrapper-container .singlePost-sidebar .single-sidebar .textwidget .author .avatar {
+  width: 150px;
+  border-radius: 50%;
+}
+
+section#singlePost .single__wrapper .post__wrapper .post__wrapper-container .singlePost-sidebar .single-sidebar .textwidget .author .author-name {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+section#singlePost .single__wrapper .post__wrapper .post__wrapper-container .singlePost-sidebar .single-sidebar .textwidget .author .author-description {
+  font-size: 13px;
+  color: #555;
+}
+
+section#singlePost .single__wrapper .post__wrapper .previous__post {
+  display: grid;
+  color: #666;
+}
+
+section#singlePost .single__wrapper .post__wrapper .previous__post a {
+  font-size: 16px;
+  color: #222;
+  font-weight: 700;
+  font-family: 'Open Sans',arial,sans-serif;
+}
+
+section#singlePost .single__wrapper .post__wrapper .next__post {
+  display: grid;
+  color: #666;
+  text-align: end;
+}
+
+section#singlePost .single__wrapper .post__wrapper .next__post a {
+  font-size: 16px;
+  color: #222;
+  font-weight: 700;
+  font-family: 'Open Sans',arial,sans-serif;
 }
 
 /*# sourceMappingURL=globals.css.map */

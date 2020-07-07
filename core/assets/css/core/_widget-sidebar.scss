@@ -19,26 +19,55 @@
   }
 }
 .nw__sidebar{
+  padding: 0 40px;
   .sidebar{
+    margin-bottom: 20px;
     h2.title--section{
-      font-size: 16px;
-      color: #fff;
-      background: #222;
-      font-weight: 400;
-      padding: 2px 8px;
-      margin-bottom: 0;
       display: inline-block;
-      }
+      font-size: 14px;
+      font-weight: 400;
+      background: #000;
+      color: #fff;
+      margin-top:10px;
+      position: relative;
+      padding: 2px 5px;
+    }
+    h2.title--section::after{
+      content:'';
+      position: absolute;
+      bottom:0;
+      width:150%;
+      padding:1px;
+      background:#000;
+    }
     .textwidget{
-      border-top:1px solid #222;
       .sidebar__social-list{
-        display: grid;
+        display: flex;
+        justify-content: space-between;
         a{
-          font-size:24px;
+          font-size:40px;
           display: flex;
           justify-content: space-between;
+        }
+        .social--facebook i {
+          color: #4267b2;
+        }
+        .social--instagram i{
+          color:#cc3d65;
+        }
+        .social--behance i {
+          color: #0057ff;
+        }
+        .social--pinterest i {
+          color: #cb1b26;
+        }
+        .social--github i {
+          color: #333;
         }
       }
     }
   }
+}
+.textwidget{
+  margin-bottom:10px;
 }
