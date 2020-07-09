@@ -126,7 +126,7 @@
       .nw__content.td-3{
         .nw__content-post-slide{
           .flickity-button {
-            background: var(--primary-color);
+            border:1px solid var(--primary-color);
           }
           .flickity-prev-next-button {
             width: 30px;
@@ -135,7 +135,7 @@
           }
           /* icon color */
           .flickity-button-icon {
-            fill: white;
+            fill: var(--primary-color);
           }
           /* position outside */
           .flickity-prev-next-button.previous {

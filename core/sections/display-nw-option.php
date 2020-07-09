@@ -11,7 +11,7 @@ $type_display = get_sub_field('type_display','option');
       foreach ($cate_child as $child) {
           $child_Obj = get_category($child);
           $category_link = get_category_link($child_Obj->cat_ID);
-          echo '<li class="sub__category"><a class="roboto" href="'.$category_link.'">'.$child_Obj->name.'</a></li>';
+          echo '<li class="sub__category"><a href="'.$category_link.'">'.$child_Obj->name.'</a></li>';
         }
        ?>
     </ul>

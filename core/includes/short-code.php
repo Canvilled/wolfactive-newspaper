@@ -120,3 +120,12 @@ function renderAuthorInfo(){
   ob_end_clean();
   return $output;
 }
+
+function helloWolfactive (){
+  add_shortcode('say_Hi','renderHello');
+}
+function renderHello($op,$content){
+  var_dump($op);
+  return $op['value'];
+}
+add_action('init', 'helloWolfactive');
