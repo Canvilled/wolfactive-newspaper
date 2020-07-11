@@ -4,16 +4,16 @@
   $tags = wp_get_post_tags(get_the_id());
   if ($tags) {
     ?>
-    <div class="music__related myt-20">
+    <div class="music__related container">
       <h3>RELATED</h3>
-      <div class="music__related-contain" data-flickity='{ "autoPlay": false, "pauseAutoPlayOnHover": false, "pageDots": false,"draggable": true }'>
+      <div class="music__related-contain" data-flickity='{ "autoPlay": false, "pauseAutoPlayOnHover": false, "pageDots": false,"draggable": true,"groupCells": 6 }'>
     <?php
   $tag_ids = array();
   foreach($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id;
   $args=array(
   'tag__in' => $tag_ids,
   'post__not_in' => array(get_the_id()),
-  'showposts'=>12,
+  'showposts'=>16,
   'order'=>'DESC',
   'ign_sticky_posts'=>1
   );
@@ -26,14 +26,16 @@
   <div class="music__related-item">
     <div class="music__related-thumb">
       <a rel="nofollow" target="_blank" href="<? the_permalink()?>">
-        <img src="<?php echo hk_get_thumb(get_the_id(),220,130) ?>" alt="Image">
+        <img src="<?php echo hk_get_thumb(get_the_id(),150,150) ?>" alt="Image">
       </a>
-      <div class="music-category">
-        <?php var_dump(get_the_id()); ?>
-        <?php echo get_category(get_the_id()) ?>
+      <div class="music-category open-sanrif">
+        <?php $category_id = get_cat_id('Music');
+        $category_link = get_category_link( $category_id );
+         ?>
+         <a href="<?php echo esc_url( $category_link ); ?>" title="Category Name">Music</a>
       </div>
-      <div class="icon-music-play">
-        <i class="fas fa-music"></i>
+      <div class="icon-music">
+          <i class="fas fa-music"></i>
       </div>
     </div>
     <div class="music__related-title">

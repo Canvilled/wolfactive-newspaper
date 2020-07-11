@@ -39,13 +39,16 @@
          </div>
          <div class="single__music-wrapper">
            <div class="music__wrapper">
-             <div class="music py-40 container">
-               <div class="music-content">
+             <div class="music py-40">
+               <div class="music-content container">
                  <?php the_content(); ?>
                </div>
              </div>
            </div>
-           <?php get_template_part( 'sections/related-music' ) ?>
+           <?php get_template_part( 'sections/related-music' );?>
+           <div class="social-container container">
+             <?php get_template_part( 'sections/social-share' ); ?>
+           </div>
          </div>
          <?php
        }

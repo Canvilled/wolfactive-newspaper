@@ -18,9 +18,8 @@
 <section class="header">
   <div class="main--background">
     <div class="header__contain">
-      <div class="row-divide logo-and-banner">
-        <div class="col-divide-2"></div>
-        <div class="header__item logo__container col-divide-3">
+      <div class="logo-and-banner row-divide container">
+        <div class="header__item logo__container col-divide-4">
            <a href="<?php echo site_url(); ?>" class="d--block header-logo mr-auto">
              <?php
               $image = get_field('logo','option');
@@ -28,7 +27,7 @@
              <img src="<?php echo $image; ?>" alt="logo-newspaper-wolfactive">
            </a>
         </div>
-        <div class="header__item banner__container col-divide-5">
+        <div class="header__item banner__container col-divide-8">
           <a href="#" class="header-banner">
             <?php
               $banner_image= get_field('banner','option');
@@ -36,19 +35,17 @@
              <img src="<?php echo $banner_image ?>" alt="banner-image-newspaper-wolfactive">
           </a>
         </div>
-        <div class="col-divide-2"></div>
       </div>
   	</div>
-    <div class="menu__container row-divide dp--none">
-        <div class="col-divide-2">
-        </div>
-        <div class="menu__background col-divide-4">
+    <div class="menu__container dp--none">
+      <div class="menu__wrapper container row-divide">
+        <div class="menu__background">
           <?php
            wp_nav_menu(array(
           'theme_location' => 'headerMenuLocation' ));
           ?>
         </div>
-        <div class="header__item search-content col-divide-4">
+        <div class="header__item search-content">
           <button type="button" name="button" class="open-search"><i class="fas fa-search"></i></button>
           <form role="search" method="get" class="search-form" action="<?php echo esc_url(site_url('/')); ?>">
             <label>
@@ -62,8 +59,7 @@
             </button>
           </form>
         </div>
-        <div class="col-divide-2">
-        </div>
+      </div>
      </div>
      <div class="header__item d--none dp--block">
         <button class="btn text--light" id="navBtn" aria-label="btn-navbar">

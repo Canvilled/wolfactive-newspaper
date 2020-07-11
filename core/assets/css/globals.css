@@ -737,6 +737,10 @@ li {
   justify-content: space-between;
 }
 
+.main--background .menu__container .menu__background .menu-main-menu-container ul.menu li.menu-item {
+  margin-right: 20px;
+}
+
 .main--background .menu__container .menu__background .menu-main-menu-container ul.menu li.menu-item a.menu-link {
   font-weight: 700;
   font-size: 14px;
@@ -1788,6 +1792,100 @@ section#singlePost .single__category-post .music__wrapper {
 
 section#singlePost .single__category-post .music__wrapper .music {
   justify-content: center;
+}
+
+section#singlePost .single__category-post .music__related {
+  margin: 50px auto;
+}
+
+section#singlePost .single__category-post .music__related .music__related-contain {
+  /* icon color */
+  /* position outside */
+}
+
+section#singlePost .single__category-post .music__related .music__related-contain .flickity-viewport .flickity-slider {
+  left: -105px !important;
+  width: 120%;
+}
+
+section#singlePost .single__category-post .music__related .music__related-contain .music__related-item {
+  width: 150px;
+}
+
+section#singlePost .single__category-post .music__related .music__related-contain .music__related-item .music__related-thumb {
+  position: relative;
+  width: 150px;
+}
+
+section#singlePost .single__category-post .music__related .music__related-contain .music__related-item .music__related-thumb a img {
+  width: 150px;
+  height: 150px;
+}
+
+section#singlePost .single__category-post .music__related .music__related-contain .music__related-item .music__related-thumb .music-category {
+  position: absolute;
+  bottom: 7px;
+  background: #222;
+}
+
+section#singlePost .single__category-post .music__related .music__related-contain .music__related-item .music__related-thumb .music-category a {
+  color: #fff;
+  font-size: 10px;
+}
+
+section#singlePost .single__category-post .music__related .music__related-contain .music__related-item .music__related-thumb .icon-music {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.48);
+  border-radius: 50%;
+  padding: 2px 6px;
+  border: 2px solid #fff;
+}
+
+section#singlePost .single__category-post .music__related .music__related-contain .music__related-item .music__related-thumb .icon-music .fa-music {
+  color: #fff;
+}
+
+section#singlePost .single__category-post .music__related .music__related-contain .music__related-item .music__related-title a {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+section#singlePost .single__category-post .music__related .music__related-contain .flickity-button {
+  border: 1px solid #00b9eb;
+}
+
+section#singlePost .single__category-post .music__related .music__related-contain .flickity-prev-next-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 0px;
+}
+
+section#singlePost .single__category-post .music__related .music__related-contain .flickity-button-icon {
+  fill: #00b9eb;
+  left: 30%;
+  width: 40%;
+}
+
+section#singlePost .single__category-post .music__related .music__related-contain .flickity-prev-next-button.previous {
+  left: 0px;
+  right: unset;
+  top: unset;
+  bottom: -50px;
+  width: 25px;
+  height: 25px;
+}
+
+section#singlePost .single__category-post .music__related .music__related-contain .flickity-prev-next-button.next {
+  right: unset;
+  left: 35px;
+  width: 25px;
+  height: 25px;
+  bottom: -50px;
+  top: unset;
 }
 
 .relatedposts {

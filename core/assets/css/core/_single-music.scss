@@ -68,5 +68,89 @@ section#singlePost{
         justify-content: center;
       }
     }
+    .music__related{
+      margin:50px auto;
+      .music__related-contain{
+        .flickity-viewport{
+          .flickity-slider{
+            left:-105px !important;
+            width: 120%;
+          }
+        }
+        .music__related-item{
+          width:150px;
+          .music__related-thumb{
+            position: relative;
+            width:150px;
+            a{
+              img{
+                width:150px;
+                height:150px;
+              }
+            }
+            .music-category{
+              position: absolute;
+              bottom:7px;
+              background:#222;
+              a{
+                color:#fff;
+                font-size:10px;
+              }
+            }
+            .icon-music{
+              position: absolute;
+              display: inline-block;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%,-50%);
+              background: rgba(0,0,0,.48);
+              border-radius: 50%;
+              padding: 2px 6px;
+              border: 2px solid #fff;
+              .fa-music{
+                color:#fff;
+              }
+            }
+          }
+          .music__related-title{
+            a{
+              font-size:13px;
+              font-weight: 600;
+            }
+          }
+        }
+        .flickity-button {
+          border:1px solid #00b9eb;
+        }
+        .flickity-prev-next-button {
+          width: 30px;
+          height: 30px;
+          border-radius: 0px;
+        }
+        /* icon color */
+        .flickity-button-icon {
+          fill: #00b9eb;
+          left: 30%;
+          width: 40%;
+        }
+        /* position outside */
+        .flickity-prev-next-button.previous {
+          left: 0px;
+          right: unset;
+          top:unset;
+          bottom:-50px;
+          width: 25px;
+          height: 25px;
+        }
+        .flickity-prev-next-button.next {
+          right: unset;
+          left: 35px;
+          width: 25px;
+          height: 25px;
+          bottom:-50px;
+          top:unset;
+        }
+      }
+    }
   }
 }

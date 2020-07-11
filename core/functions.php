@@ -33,6 +33,9 @@ define('THEME_URL', get_stylesheet_directory_uri());
 }
 add_action('after_setup_theme', 'theme_features');
 
+if( !defined(THEME_IMG_PATH)){
+   define( 'THEME_IMG_PATH', get_stylesheet_directory_uri() . '/images' );
+  }
 
 add_theme_support( 'custom-logo', array(
   	'height'      => 100,
