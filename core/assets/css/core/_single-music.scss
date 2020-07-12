@@ -70,6 +70,25 @@ section#singlePost{
     }
     .music__related{
       margin:50px auto;
+      h4.title__block{
+        overflow: hidden;
+        position: relative;
+        span{
+          padding-right: 20px;
+          color: #000;
+        }
+      }
+      h4.title__block::after{
+        content: '';
+        display: block;
+        height: 4px;
+        position: absolute;
+        top: 50%;
+        left: 7%;
+        margin-top: -2px;
+        width: 100%;
+        background-color: #f5f5f5;
+      }
       .music__related-contain{
         .flickity-viewport{
           .flickity-slider{

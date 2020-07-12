@@ -5,8 +5,8 @@
   if ($tags) {
     ?>
     <div class="music__related container">
-      <h3>RELATED</h3>
-      <div class="music__related-contain" data-flickity='{ "autoPlay": false, "pauseAutoPlayOnHover": false, "pageDots": false,"draggable": true,"groupCells": 6 }'>
+      <h4 class="title__block"> <span>RELATED</span> </h4>
+      <div class="music__related-contain myt-20" data-flickity='{ "autoPlay": true, "pauseAutoPlayOnHover": false, "pageDots": false,"draggable": true,"groupCells": 6 }'>
     <?php
   $tag_ids = array();
   foreach($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id;

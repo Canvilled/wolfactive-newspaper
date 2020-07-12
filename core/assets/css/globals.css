@@ -1570,38 +1570,38 @@ li {
   margin-bottom: 10px;
 }
 
-section#singlePost .single__wrapper .post__wrapper .post__item-des .post__category {
+section#singlePost .single__wrapper .post__item-des .post__category {
   justify-content: initial;
 }
 
-section#singlePost .single__wrapper .post__wrapper .post__item-des .post__category .category-item {
+section#singlePost .single__wrapper .post__item-des .post__category .category-item {
   margin-right: 10px;
   background: #000;
   padding: 5px;
   font-weight: 600;
 }
 
-section#singlePost .single__wrapper .post__wrapper .post__item-des .title--section {
+section#singlePost .single__wrapper .post__item-des .title--section {
   font-size: 42px;
 }
 
-section#singlePost .single__wrapper .post__wrapper .post__contain .author-date {
+section#singlePost .single__wrapper .post__wrapper-container .post__contain .author-date {
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
   margin: 50px 0;
   padding: 5px 0;
 }
 
-section#singlePost .single__wrapper .post__wrapper .post__contain .author-date .author {
+section#singlePost .single__wrapper .post__wrapper-container .post__contain .author-date .author {
   justify-content: initial;
 }
 
-section#singlePost .single__wrapper .post__wrapper .post__contain .author-date .author img {
+section#singlePost .single__wrapper .post__wrapper-container .post__contain .author-date .author img {
   width: 50px;
   border-radius: 50%;
 }
 
-section#singlePost .single__wrapper .post__wrapper .post__contain .author-date .author .author-name {
+section#singlePost .single__wrapper .post__wrapper-container .post__contain .author-date .author .author-name {
   margin-left: 5px;
   font-weight: 700;
   align-self: center;
@@ -1609,7 +1609,7 @@ section#singlePost .single__wrapper .post__wrapper .post__contain .author-date .
   color: #000;
 }
 
-section#singlePost .single__wrapper .post__wrapper .post__contain .author-date .date {
+section#singlePost .single__wrapper .post__wrapper-container .post__contain .author-date .date {
   position: relative;
   align-self: center;
   font-size: 12px;
@@ -1617,7 +1617,15 @@ section#singlePost .single__wrapper .post__wrapper .post__contain .author-date .
   font-weight: 400;
 }
 
-section#singlePost .single__wrapper .post__wrapper .post__contain .author-date .date:before {
+section#singlePost .single__wrapper .post__wrapper-container .post__contain .author-date .date .view-counts {
+  float: right;
+}
+
+section#singlePost .single__wrapper .post__wrapper-container .post__contain .author-date .date .view-counts i {
+  margin-right: 5px;
+}
+
+section#singlePost .single__wrapper .post__wrapper-container .post__contain .author-date .date:before {
   content: '';
   position: absolute;
   left: -7px;
@@ -1627,11 +1635,11 @@ section#singlePost .single__wrapper .post__wrapper .post__contain .author-date .
   background: #eaeaea;
 }
 
-section#singlePost .single__wrapper .post__wrapper .post__wrapper-container .singlePost-sidebar {
+section#singlePost .single__wrapper .post__wrapper-container .singlePost-sidebar {
   padding: 0 40px;
 }
 
-section#singlePost .single__wrapper .post__wrapper .post__wrapper-container .singlePost-sidebar h2.title--section {
+section#singlePost .single__wrapper .post__wrapper-container .singlePost-sidebar h2.title--section {
   display: inline-block;
   font-size: 14px;
   font-weight: 400;
@@ -1641,7 +1649,7 @@ section#singlePost .single__wrapper .post__wrapper .post__wrapper-container .sin
   padding: 2px 5px;
 }
 
-section#singlePost .single__wrapper .post__wrapper .post__wrapper-container .singlePost-sidebar h2.title--section::after {
+section#singlePost .single__wrapper .post__wrapper-container .singlePost-sidebar h2.title--section::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -1650,64 +1658,64 @@ section#singlePost .single__wrapper .post__wrapper .post__wrapper-container .sin
   background: #000;
 }
 
-section#singlePost .single__wrapper .post__wrapper .post__wrapper-container .singlePost-sidebar .single-sidebar {
+section#singlePost .single__wrapper .post__wrapper-container .singlePost-sidebar .single-sidebar {
   overflow: hidden;
 }
 
-section#singlePost .single__wrapper .post__wrapper .post__wrapper-container .singlePost-sidebar .single-sidebar .textwidget .nw__post-item {
+section#singlePost .single__wrapper .post__wrapper-container .singlePost-sidebar .single-sidebar .textwidget .nw__post-item {
   margin: 10px 0;
 }
 
-section#singlePost .single__wrapper .post__wrapper .post__wrapper-container .singlePost-sidebar .single-sidebar .textwidget .nw__post-item .nw__infomation .nw__post-title a {
+section#singlePost .single__wrapper .post__wrapper-container .singlePost-sidebar .single-sidebar .textwidget .nw__post-item .nw__infomation .nw__post-title a {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.4;
 }
 
-section#singlePost .single__wrapper .post__wrapper .post__wrapper-container .singlePost-sidebar .single-sidebar .textwidget .nw__post-item .nw__infomation .nw__editor-date .date-time {
+section#singlePost .single__wrapper .post__wrapper-container .singlePost-sidebar .single-sidebar .textwidget .nw__post-item .nw__infomation .nw__editor-date .date-time {
   font-size: 11px;
   color: #6b6a6a;
 }
 
-section#singlePost .single__wrapper .post__wrapper .post__wrapper-container .singlePost-sidebar .single-sidebar .textwidget .author {
+section#singlePost .single__wrapper .post__wrapper-container .singlePost-sidebar .single-sidebar .textwidget .author {
   text-align: center;
 }
 
-section#singlePost .single__wrapper .post__wrapper .post__wrapper-container .singlePost-sidebar .single-sidebar .textwidget .author .avatar {
+section#singlePost .single__wrapper .post__wrapper-container .singlePost-sidebar .single-sidebar .textwidget .author .avatar {
   width: 150px;
   border-radius: 50%;
 }
 
-section#singlePost .single__wrapper .post__wrapper .post__wrapper-container .singlePost-sidebar .single-sidebar .textwidget .author .author-name {
+section#singlePost .single__wrapper .post__wrapper-container .singlePost-sidebar .single-sidebar .textwidget .author .author-name {
   font-size: 18px;
   font-weight: 700;
   margin: 10px 0;
 }
 
-section#singlePost .single__wrapper .post__wrapper .post__wrapper-container .singlePost-sidebar .single-sidebar .textwidget .author .author-description {
+section#singlePost .single__wrapper .post__wrapper-container .singlePost-sidebar .single-sidebar .textwidget .author .author-description {
   font-size: 13px;
   color: #555;
 }
 
-section#singlePost .single__wrapper .post__wrapper .previous__post {
+section#singlePost .single__wrapper .previous__post {
   display: grid;
   color: #666;
 }
 
-section#singlePost .single__wrapper .post__wrapper .previous__post a {
+section#singlePost .single__wrapper .previous__post a {
   font-size: 16px;
   color: #222;
   font-weight: 700;
   font-family: 'Open Sans',arial,sans-serif;
 }
 
-section#singlePost .single__wrapper .post__wrapper .next__post {
+section#singlePost .single__wrapper .next__post {
   display: grid;
   color: #666;
   text-align: end;
 }
 
-section#singlePost .single__wrapper .post__wrapper .next__post a {
+section#singlePost .single__wrapper .next__post a {
   font-size: 16px;
   color: #222;
   font-weight: 700;
@@ -1796,6 +1804,28 @@ section#singlePost .single__category-post .music__wrapper .music {
 
 section#singlePost .single__category-post .music__related {
   margin: 50px auto;
+}
+
+section#singlePost .single__category-post .music__related h4.title__block {
+  overflow: hidden;
+  position: relative;
+}
+
+section#singlePost .single__category-post .music__related h4.title__block span {
+  padding-right: 20px;
+  color: #000;
+}
+
+section#singlePost .single__category-post .music__related h4.title__block::after {
+  content: '';
+  display: block;
+  height: 4px;
+  position: absolute;
+  top: 50%;
+  left: 7%;
+  margin-top: -2px;
+  width: 100%;
+  background-color: #f5f5f5;
 }
 
 section#singlePost .single__category-post .music__related .music__related-contain {
@@ -1893,15 +1923,10 @@ section#singlePost .single__category-post .music__related .music__related-contai
   font-size: 12px;
 }
 
-.relatedposts h3 {
-  font-size: 20px;
-  margin: 0 0 5px 0;
-}
-
 .relatedthumb {
   overflow: hidden;
   margin: 0 1px 0 1px;
-  width: 240px;
+  width: 220px;
   height: 100%;
   box-sizing: border-box;
   border: 0.5px solid #eaeaea;
@@ -1910,8 +1935,23 @@ section#singlePost .single__category-post .music__related .music__related-contai
 .relatedthumb img {
   margin: 0 0 3px 0;
   padding: 0;
-  width: 240px;
+  width: 220px;
   height: 150px;
+}
+
+.relatedposts h4 {
+  border-bottom: 2px solid #222;
+}
+
+.relatedposts h4 span {
+  font-size: 12px;
+  text-transform: uppercase;
+  background: #222;
+  color: #fff;
+  font-weight: 400;
+  position: relative;
+  display: inline-block;
+  padding: 5px 7px 3px;
 }
 
 .relatedposts .relatedposts__contain {
@@ -1924,12 +1964,13 @@ section#singlePost .single__category-post .music__related .music__related-contai
 }
 
 .relatedposts .relatedposts__contain .flickity-viewport .flickity-slider {
-  left: -320px !important;
-  width: 115%;
+  left: -19px !important;
+  width: 108%;
 }
 
 .relatedposts .relatedposts__contain .flickity-viewport .flickity-slider .relatedthumb .info__relatedpost {
   padding: 15px 15px 10px;
+  padding-top: 0;
   border-color: #eaeaea;
 }
 
@@ -1943,7 +1984,7 @@ section#singlePost .single__category-post .music__related .music__related-contai
 }
 
 .relatedposts .relatedposts__contain .flickity-button {
-  border: 1px solid var(--primary-color);
+  border: 1px solid #00b9eb;
 }
 
 .relatedposts .relatedposts__contain .flickity-prev-next-button {
@@ -1953,7 +1994,9 @@ section#singlePost .single__category-post .music__related .music__related-contai
 }
 
 .relatedposts .relatedposts__contain .flickity-button-icon {
-  fill: var(--primary-color);
+  fill: #00b9eb;
+  left: 30%;
+  width: 40%;
 }
 
 .relatedposts .relatedposts__contain .flickity-prev-next-button.previous {
@@ -1961,13 +2004,81 @@ section#singlePost .single__category-post .music__related .music__related-contai
   right: unset;
   top: unset;
   bottom: -50px;
+  width: 25px;
+  height: 25px;
 }
 
 .relatedposts .relatedposts__contain .flickity-prev-next-button.next {
   right: unset;
   left: 35px;
+  width: 25px;
+  height: 25px;
   bottom: -50px;
   top: unset;
+}
+
+.social-share .share-buttons a {
+  display: flex;
+  border-radius: 2px;
+}
+
+.social-share .share-buttons a .social-text {
+  align-self: center;
+  color: #fff;
+  position: relative;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.social-share .share-buttons a .social-text:before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 1px;
+  height: 16px;
+  background-color: #fff;
+  opacity: .2;
+  z-index: 1;
+}
+
+.social-share .share-buttons a.fb-share-button {
+  background: #3b5998;
+}
+
+.social-share .share-buttons a.twitter-share-button {
+  background: #00abf1;
+}
+
+.social-share .share-buttons a.pinterset-share-button {
+  background: #ca2127;
+}
+
+ul.share-buttons {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+ul.share-buttons li {
+  display: inline;
+  margin-right: 10px;
+}
+
+ul.share-buttons .sr-only {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+ul.share-buttons img {
+  width: 32px;
+  padding: 5px;
 }
 
 /*# sourceMappingURL=globals.css.map */

@@ -33,9 +33,7 @@ define('THEME_URL', get_stylesheet_directory_uri());
 }
 add_action('after_setup_theme', 'theme_features');
 
-if( !defined(THEME_IMG_PATH)){
-   define( 'THEME_IMG_PATH', get_stylesheet_directory_uri() . '/images' );
-  }
+
 
 add_theme_support( 'custom-logo', array(
   	'height'      => 100,
@@ -842,6 +840,14 @@ function arphabet_widgets_init(){
             'before_title'  => '<h2 class="title--section text--upcase">',
             'after_title'   => '</h2>',
         ));
+        register_sidebar(array(
+            'name'          => 'Single Music Sidebar',
+            'id'            => 'single-music-sidebar',
+            'before_widget' => '<div class="single-music-sidebar">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h2 class="title--section text--upcase">',
+            'after_title'   => '</h2>',
+        ));
     }
 add_action( 'widgets_init', 'arphabet_widgets_init' );
 
@@ -868,4 +874,18 @@ function setPostViews($postID) {
         $count++;
         update_post_meta($postID, $count_key, $count);
     }
+}
+add_filter('single_template', 'check_for_category_single_template');
+function check_for_category_single_template( $t )
+{
+  foreach( (array) get_the_category() as $cat )
+  {
+    if ( file_exists(get_stylesheet_directory() . "/single-{$cat->slug}.php") ) return get_stylesheet_directory() . "/single-{$cat->slug}.php";
+    if($cat->slug==="music")
+    {
+      $cat = get_the_category_by_ID( $cat->parent );
+      if ( file_exists(get_stylesheet_directory() . "/single-{$cat->slug}.php") ) return get_stylesheet_directory() . "/single-{$cat->slug}.php";
+    }
+  }
+  return $t;
 }

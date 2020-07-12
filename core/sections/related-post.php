@@ -5,9 +5,9 @@
 
   if ($tags) {
     ?>
-    <div class="relatedposts myt-20">
-      <h3>Related posts</h3>
-      <div class="relatedposts__contain" data-flickity='{ "autoPlay": false, "pauseAutoPlayOnHover": false, "pageDots": false,"draggable": true }'>
+    <div class="relatedposts py-40">
+      <h4><span>Related posts</span></h4>
+      <div class="relatedposts__contain my-20" data-flickity='{ "autoPlay": true, "pauseAutoPlayOnHover": false, "pageDots": false,"draggable": true,"groupCells": 3 }'>
     <?php
   $tag_ids = array();
   foreach($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id;
@@ -15,7 +15,7 @@
   'tag__in' => $tag_ids,
   'post__not_in' => array(get_the_id()),
   //'posts_per_page'=>4, // Number of related posts to display.
-  'showposts'=>6,
+  'showposts'=>9,
   'order'=>'DESC',
   'ign_sticky_posts'=>1
   );
@@ -39,9 +39,11 @@
     </div>
   </div>
   <? }
+  ?>
+</div>
+</div>
+  <?php
   }
   $post = $orig_post;
   wp_reset_query();
   ?>
-  </div>
-</div>

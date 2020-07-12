@@ -1,6 +1,5 @@
 section#singlePost{
   .single__wrapper{
-    .post__wrapper{
       .post__item-des{
         .post__category{
           justify-content: initial;
@@ -15,45 +14,51 @@ section#singlePost{
           font-size:42px;
         }
       }
-      .post__contain{
-        .author-date{
-          border-top: 1px solid #eee;
-          border-bottom: 1px solid #eee;
-          margin: 50px 0;
-          padding: 5px 0;
-          .author{
-            justify-content: initial;
-            img{
-              width:50px;
-              border-radius: 50%;
+      .post__wrapper-container{
+        .post__contain{
+          .author-date{
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            margin: 50px 0;
+            padding: 5px 0;
+            .author{
+              justify-content: initial;
+              img{
+                width:50px;
+                border-radius: 50%;
+              }
+              .author-name{
+                margin-left: 5px;
+                font-weight: 700;
+                align-self: center;
+                font-size:12px;
+                color:#000;
+              }
             }
-            .author-name{
-              margin-left: 5px;
-              font-weight: 700;
+            .date{
+              position: relative;
               align-self: center;
-              font-size:12px;
-              color:#000;
+              font-size: 12px;
+              color: #444;
+              font-weight: 400;
+              .view-counts{
+                float:right;
+                  i{
+                    margin-right:5px;
+                  }
+                }
             }
-          }
-          .date{
-            position: relative;
-            align-self: center;
-            font-size: 12px;
-            color: #444;
-            font-weight: 400;
-          }
-          .date:before {
-            content: '';
-            position: absolute;
-            left: -7px;
-            top: -5px;
-            width: 1px;
-            height: 30px;
-            background: #eaeaea;
+            .date:before {
+              content: '';
+              position: absolute;
+              left: -7px;
+              top: -5px;
+              width: 1px;
+              height: 30px;
+              background: #eaeaea;
+            }
           }
         }
-      }
-      .post__wrapper-container{
         .singlePost-sidebar{
           padding:0 40px;
           h2.title--section{
@@ -135,6 +140,5 @@ section#singlePost{
           font-family: 'Open Sans',arial,sans-serif;
         }
       }
-    }
   }
 }

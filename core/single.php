@@ -4,56 +4,53 @@
  setPostViews(get_the_id());
 ?>
  <section class="wrapper" id="singlePost">
-   <div class="single__category-post">
-     <?php
-     $categories = get_the_category();
-     foreach ($categories as $cat) {
-       if($cat->name === "Music"){
-         $id=$cat->cat_ID;
-         $cat_name=$cat->name;
-         $category= get_category($id);
-         $category_link = get_category_link($id);
-         $image = get_field('banner_category',$category);
-         $color = get_field('color_category',$category);
-         ?>
-         <div class="banner-music position--relative">
-           <img src="<?php echo $image ?>" alt="banner__image">
-           <div class="cat-tit-music">
-             <div class="category-name text--center">
-               <?php echo '<a href="'.$category_link.'" style="background:'.$color.'">'.$cat->name.'</a></li>'; ?>
-             </div>
-             <div class="title-music text--center">
-               <?php the_title(); ?>
-             </div>
-             <div class="author-date row-divide">
-               <div class="author row-divide">
-                 <?php echo get_avatar(get_the_author_meta( 'ID' )); ?>
-                 <div class="author-name open-sanrif"><span> By </span><?php the_author_link() ?></div>
-               </div>
-               <div class="date open-sanrif"><?php echo get_the_date(); ?></div>
-               <div class="views-count">
-                 <?php echo getPostViews(get_the_id()) ?> Views
-               </div>
-             </div>
-           </div>
-         </div>
-         <div class="single__music-wrapper">
-           <div class="music__wrapper">
-             <div class="music py-40">
-               <div class="music-content container">
-                 <?php the_content(); ?>
-               </div>
-             </div>
-           </div>
-           <?php get_template_part( 'sections/related-music' );?>
-           <div class="social-container container">
-             <?php get_template_part( 'sections/social-share' ); ?>
-           </div>
-         </div>
-         <?php
-       }
-     }
+   <div class="single__wrapper">
+     <div class="post__item-des myt-20 container">
+        <span class="text--dark row-divide post__category">
+               <?php
+               $categories = get_the_category();
+                   if ( ! empty( $categories ) ) {
+                     foreach ($categories as $cat) {
+                       ?>
+                       <div class="category-item">
+                         <?php echo esc_html( $cat->name ); ?>
+                       </div>
+                       <?php
+                     }
+                   }
+               ?>
+        </span>
+        <h1 class="title--section my-6"><?php the_title(); ?></h1>
+     </div>
+     <?php while (have_posts()):the_post();
       ?>
+      <div class="row-divide post__wrapper-container container">
+          <div class="col-divide-8 post__contain">
+               <div class="author-date row-divide">
+                 <div class="author col-divide-6 row-divide text--dark"><?php echo get_avatar(get_the_author_meta( 'ID' )); ?> <div class="author-name text--upcase open-sanrif"><?php the_author(); ?></div> </div>
+                 <div class="date col-divide-6 text--dark open-sanrif text--upcase"><span class="date-post text--dark"><?php echo get_the_date(); ?></span><span class="view-counts text--dark"><i class="far fa-eye"></i><?php echo getPostViews(get_the_id()) ?></span></div>
+               </div>
+               <div class="thumbnail max--height--400"><?php the_post_thumbnail('large') ?></div>
+              <div class="post__item-content">
+                <?php the_content() ?>
+              </div>
+            <div class="navigation myt-20 row-divide">
+              <div class="previous__post col-divide-6">
+                <?php previous_post_link('PREVIOUS ARTICLE %link', '%title'); ?>
+              </div>
+              <div class="next__post col-divide-6">
+                <?php next_post_link('NEXT ARTICLE %link', '%title');?>
+              </div>
+            </div>
+            <?php get_template_part( '/sections/related-post' ) ?>
+          </div>
+          <div class="col-divide-4 singlePost-sidebar">
+            <?php if (dynamic_sidebar('single-sidebar')) : get_sidebar( 'single-sidebar' ); ?><?php endif; ?>
+          </div>
+        </div>
+      <?php
+    endwhile;?>
+    </div>
    </div>
  </section>
 <?php
