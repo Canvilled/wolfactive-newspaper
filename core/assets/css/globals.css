@@ -1722,12 +1722,12 @@ section#singlePost .single__wrapper .next__post a {
   font-family: 'Open Sans',arial,sans-serif;
 }
 
-section#singlePost .single__category-post .banner-music {
+section#singlePost .single__music-post .banner-music {
   max-height: 240px;
   overflow: hidden;
 }
 
-section#singlePost .single__category-post .banner-music .cat-tit-music {
+section#singlePost .single__music-post .banner-music .cat-tit-music {
   position: absolute;
   z-index: 1;
   top: 50%;
@@ -1735,54 +1735,54 @@ section#singlePost .single__category-post .banner-music .cat-tit-music {
   left: 50%;
 }
 
-section#singlePost .single__category-post .banner-music .cat-tit-music .category-name a {
+section#singlePost .single__music-post .banner-music .cat-tit-music .category-name a {
   padding: 5px 10px;
   color: #fff;
   font-size: 12px;
 }
 
-section#singlePost .single__category-post .banner-music .cat-tit-music .title-music {
+section#singlePost .single__music-post .banner-music .cat-tit-music .title-music {
   font-size: 38px;
   font-weight: 700;
   color: #fff;
 }
 
-section#singlePost .single__category-post .banner-music .cat-tit-music .author-date {
+section#singlePost .single__music-post .banner-music .cat-tit-music .author-date {
   justify-content: center;
 }
 
-section#singlePost .single__category-post .banner-music .cat-tit-music .author-date .author {
+section#singlePost .single__music-post .banner-music .cat-tit-music .author-date .author {
   justify-content: inherit;
   color: #696666;
 }
 
-section#singlePost .single__category-post .banner-music .cat-tit-music .author-date .author img {
+section#singlePost .single__music-post .banner-music .cat-tit-music .author-date .author img {
   width: 30px;
   border-radius: 50%;
 }
 
-section#singlePost .single__category-post .banner-music .cat-tit-music .author-date .author .author-name {
+section#singlePost .single__music-post .banner-music .cat-tit-music .author-date .author .author-name {
   align-self: center;
   margin-left: 5px;
   text-transform: capitalize;
 }
 
-section#singlePost .single__category-post .banner-music .cat-tit-music .author-date .author .author-name a {
+section#singlePost .single__music-post .banner-music .cat-tit-music .author-date .author .author-name a {
   color: #fff;
 }
 
-section#singlePost .single__category-post .banner-music .cat-tit-music .author-date .date {
+section#singlePost .single__music-post .banner-music .cat-tit-music .author-date .date {
   color: #fff;
   align-self: center;
   margin: 0 15px;
 }
 
-section#singlePost .single__category-post .banner-music .cat-tit-music .author-date .views-count {
+section#singlePost .single__music-post .banner-music .cat-tit-music .author-date .views-count {
   color: #fff;
   align-self: center;
 }
 
-section#singlePost .single__category-post .banner-music::after {
+section#singlePost .single__music-post .banner-music::after {
   content: '';
   width: 100%;
   height: 100%;
@@ -1794,29 +1794,29 @@ section#singlePost .single__category-post .banner-music::after {
   background: linear-gradient(rgba(0, 0, 0, 0.81), rgba(8, 31, 51, 0.84));
 }
 
-section#singlePost .single__category-post .music__wrapper {
+section#singlePost .single__music-post .music__wrapper {
   background: #f4f4f4;
 }
 
-section#singlePost .single__category-post .music__wrapper .music {
+section#singlePost .single__music-post .music__wrapper .music {
   justify-content: center;
 }
 
-section#singlePost .single__category-post .music__related {
+section#singlePost .single__music-post .music__related {
   margin: 50px auto;
 }
 
-section#singlePost .single__category-post .music__related h4.title__block {
+section#singlePost .single__music-post .music__related h4.title__block {
   overflow: hidden;
   position: relative;
 }
 
-section#singlePost .single__category-post .music__related h4.title__block span {
+section#singlePost .single__music-post .music__related h4.title__block span {
   padding-right: 20px;
   color: #000;
 }
 
-section#singlePost .single__category-post .music__related h4.title__block::after {
+section#singlePost .single__music-post .music__related h4.title__block::after {
   content: '';
   display: block;
   height: 4px;
@@ -1828,42 +1828,42 @@ section#singlePost .single__category-post .music__related h4.title__block::after
   background-color: #f5f5f5;
 }
 
-section#singlePost .single__category-post .music__related .music__related-contain {
+section#singlePost .single__music-post .music__related .music__related-contain {
   /* icon color */
   /* position outside */
 }
 
-section#singlePost .single__category-post .music__related .music__related-contain .flickity-viewport .flickity-slider {
+section#singlePost .single__music-post .music__related .music__related-contain .flickity-viewport .flickity-slider {
   left: -105px !important;
   width: 120%;
 }
 
-section#singlePost .single__category-post .music__related .music__related-contain .music__related-item {
+section#singlePost .single__music-post .music__related .music__related-contain .music__related-item {
   width: 150px;
 }
 
-section#singlePost .single__category-post .music__related .music__related-contain .music__related-item .music__related-thumb {
+section#singlePost .single__music-post .music__related .music__related-contain .music__related-item .music__related-thumb {
   position: relative;
   width: 150px;
 }
 
-section#singlePost .single__category-post .music__related .music__related-contain .music__related-item .music__related-thumb a img {
+section#singlePost .single__music-post .music__related .music__related-contain .music__related-item .music__related-thumb a img {
   width: 150px;
   height: 150px;
 }
 
-section#singlePost .single__category-post .music__related .music__related-contain .music__related-item .music__related-thumb .music-category {
+section#singlePost .single__music-post .music__related .music__related-contain .music__related-item .music__related-thumb .music-category {
   position: absolute;
   bottom: 7px;
   background: #222;
 }
 
-section#singlePost .single__category-post .music__related .music__related-contain .music__related-item .music__related-thumb .music-category a {
+section#singlePost .single__music-post .music__related .music__related-contain .music__related-item .music__related-thumb .music-category a {
   color: #fff;
   font-size: 10px;
 }
 
-section#singlePost .single__category-post .music__related .music__related-contain .music__related-item .music__related-thumb .icon-music {
+section#singlePost .single__music-post .music__related .music__related-contain .music__related-item .music__related-thumb .icon-music {
   position: absolute;
   display: inline-block;
   top: 50%;
@@ -1875,32 +1875,32 @@ section#singlePost .single__category-post .music__related .music__related-contai
   border: 2px solid #fff;
 }
 
-section#singlePost .single__category-post .music__related .music__related-contain .music__related-item .music__related-thumb .icon-music .fa-music {
+section#singlePost .single__music-post .music__related .music__related-contain .music__related-item .music__related-thumb .icon-music .fa-music {
   color: #fff;
 }
 
-section#singlePost .single__category-post .music__related .music__related-contain .music__related-item .music__related-title a {
+section#singlePost .single__music-post .music__related .music__related-contain .music__related-item .music__related-title a {
   font-size: 13px;
   font-weight: 600;
 }
 
-section#singlePost .single__category-post .music__related .music__related-contain .flickity-button {
+section#singlePost .single__music-post .music__related .music__related-contain .flickity-button {
   border: 1px solid #00b9eb;
 }
 
-section#singlePost .single__category-post .music__related .music__related-contain .flickity-prev-next-button {
+section#singlePost .single__music-post .music__related .music__related-contain .flickity-prev-next-button {
   width: 30px;
   height: 30px;
   border-radius: 0px;
 }
 
-section#singlePost .single__category-post .music__related .music__related-contain .flickity-button-icon {
+section#singlePost .single__music-post .music__related .music__related-contain .flickity-button-icon {
   fill: #00b9eb;
   left: 30%;
   width: 40%;
 }
 
-section#singlePost .single__category-post .music__related .music__related-contain .flickity-prev-next-button.previous {
+section#singlePost .single__music-post .music__related .music__related-contain .flickity-prev-next-button.previous {
   left: 0px;
   right: unset;
   top: unset;
@@ -1909,13 +1909,92 @@ section#singlePost .single__category-post .music__related .music__related-contai
   height: 25px;
 }
 
-section#singlePost .single__category-post .music__related .music__related-contain .flickity-prev-next-button.next {
+section#singlePost .single__music-post .music__related .music__related-contain .flickity-prev-next-button.next {
   right: unset;
   left: 35px;
   width: 25px;
   height: 25px;
   bottom: -50px;
   top: unset;
+}
+
+section#singlePost .single__music-post .social-des-container .ad-social .author .author-container {
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid #aaaaaa87;
+}
+
+section#singlePost .single__music-post .social-des-container .ad-social .author .author-container .author-image {
+  text-align: center;
+}
+
+section#singlePost .single__music-post .social-des-container .ad-social .author .author-container .author-image img {
+  width: 120px;
+}
+
+section#singlePost .single__music-post .social-des-container .ad-social .author .author-container .author-des .author-name a {
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 15px;
+  color: #222;
+}
+
+section#singlePost .single__music-post .social-des-container .music-sidebar .single-music-sidebar .title--section {
+  margin-left: 15px;
+  font-size: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+section#singlePost .single__music-post .social-des-container .music-sidebar .single-music-sidebar .title--section:before {
+  content: '';
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  padding: 2px;
+  border-radius: 5px;
+  background: #aaa;
+  transform: translateX(20%);
+}
+
+section#singlePost .single__music-post .social-des-container .music-sidebar .single-music-sidebar .new__music-container .music__new-item .music__new-thumb {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+section#singlePost .single__music-post .social-des-container .music-sidebar .single-music-sidebar .new__music-container .music__new-item .music__new-thumb a img {
+  width: 75px;
+}
+
+section#singlePost .single__music-post .social-des-container .music-sidebar .single-music-sidebar .new__music-container .music__new-item .music__new-thumb .icon-music {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2px 7px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.48);
+  border: 2px solid #fff;
+}
+
+section#singlePost .single__music-post .social-des-container .music-sidebar .single-music-sidebar .new__music-container .music__new-item .music__new-thumb .icon-music .fa-music {
+  color: #fff;
+  font-size: 12px;
+}
+
+section#singlePost .single__music-post .social-des-container .music-sidebar .single-music-sidebar .new__music-container .music__new-item .music__new-title {
+  align-self: center;
+}
+
+section#singlePost .single__music-post .social-des-container .music-sidebar .single-music-sidebar .new__music-container .music__new-item .music__new-title a {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+section#singlePost .single__music-post .social-des-container .music-sidebar .single-music-sidebar .new__music-container .music__new-item .music__new-title .date-post .date-time {
+  font-size: 11px;
+  color: #aaa;
 }
 
 .relatedposts {

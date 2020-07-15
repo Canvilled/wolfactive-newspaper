@@ -120,12 +120,47 @@ function renderAuthorInfo(){
   ob_end_clean();
   return $output;
 }
-
-function helloWolfactive (){
-  add_shortcode('say_Hi','renderHello');
+add_action('init','renderNewMusicShorCode');
+function renderNewMusicShorCode(){
+  add_shortcode( 'new_music', 'renderNewMusic');
 }
-function renderHello($op,$content){
-  var_dump($op);
-  return $op['value'];
+function renderNewMusic(){
+  $args = array(
+    'post_type' => 'post',
+    'post_status' => 'publish',
+    'order'=>'desc',
+    'category_name' => 'music',
+    'posts_per_page' => 4,
+  );
+  $query_music = new WP_Query($args);
+  ob_start();
+  ?>
+  <div class="new__music-container">
+  <?php
+  while($query_music -> have_posts()):$query_music->the_post();
+  ?>
+  <div class="music__new-item row-divide">
+    <div class="music__new-thumb col-divide-4">
+      <a rel="nofollow" target="_blank" href="<? the_permalink()?>">
+        <img src="<?php echo hk_get_thumb(get_the_id(),75,75) ?>" alt="Image">
+      </a>
+      <div class="icon-music">
+          <i class="fas fa-music"></i>
+      </div>
+    </div>
+    <div class="music__new-title col-divide-8">
+      <a rel="nofollow" target="_blank" href="<? the_permalink()?>"><?php the_title(); ?></a>
+      <div class="date-post">
+        <span class="date-time open-sanrif"><?php echo get_the_date( 'F j, Y' ) ?></span>
+      </div>
+    </div>
+  </div>
+  <?php
+  endwhile;
+  ?>
+  </div>
+  <?php
+  $output=ob_get_contents();
+  ob_end_clean();
+  return $output;
 }
-add_action('init', 'helloWolfactive');

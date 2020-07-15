@@ -1,5 +1,5 @@
 section#singlePost{
-  .single__category-post{
+  .single__music-post{
     .banner-music{
       max-height: 240px;
       overflow: hidden;
@@ -168,6 +168,97 @@ section#singlePost{
           height: 25px;
           bottom:-50px;
           top:unset;
+        }
+      }
+    }
+    .social-des-container{
+      .ad-social{
+        .author{
+          .author-container{
+            padding: 20px;
+            box-sizing: border-box;
+            border: 1px solid #aaaaaa87;
+            .author-image{
+              text-align: center;
+              img{
+                width: 120px;
+              }
+            }
+            .author-des{
+              .author-name{
+                a{
+                  text-transform: capitalize;
+                  font-weight: 700;
+                  font-size: 15px;
+                  color:#222;
+                }
+              }
+              .author-description{
+              }
+            }
+          }
+        }
+      }
+
+      .music-sidebar{
+        .single-music-sidebar{
+          .title--section{
+            margin-left: 15px;
+            font-size: 20px;
+            position: relative;
+            overflow: hidden;
+          }
+          .title--section:before{
+            content: '';
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            padding: 2px;
+            border-radius: 5px;
+            background: #aaa;
+            transform: translateX(20%);
+          }
+          .new__music-container{
+            .music__new-item{
+              .music__new-thumb{
+                position: relative;
+                overflow: hidden;
+                text-align: center;
+                a{
+                  img{
+                    width: 75px;
+                  }
+                }
+                .icon-music {
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  padding: 2px 7px;
+                  border-radius: 50%;
+                  background: rgba(0,0,0,.48);
+                  border: 2px solid #fff;
+                  .fa-music{
+                    color: #fff;
+                    font-size: 12px;
+                  }
+                }
+              }
+              .music__new-title{
+                align-self: center;
+                a{
+                  font-size: 14px;
+                  font-weight: 700;
+                }
+                .date-post{
+                  .date-time{
+                    font-size: 11px;
+                    color:#aaa;
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
