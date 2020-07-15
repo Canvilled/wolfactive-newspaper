@@ -1,0 +1,25 @@
+.author{
+  .author-container{
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #aaaaaa87;
+    .author-image{
+      text-align: center;
+      img{
+        width: 120px;
+      }
+    }
+    .author-des{
+      .author-name{
+        a{
+          text-transform: capitalize;
+          font-weight: 700;
+          font-size: 15px;
+          color:#222;
+        }
+      }
+      .author-description{
+      }
+    }
+  }
+}

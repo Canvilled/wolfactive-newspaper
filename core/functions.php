@@ -848,6 +848,14 @@ function arphabet_widgets_init(){
             'before_title'  => '<h2 class="title--section text--upcase">',
             'after_title'   => '</h2>',
         ));
+        register_sidebar(array(
+            'name'          => 'Single Design Sidebar',
+            'id'            => 'single-design-sidebar',
+            'before_widget' => '<div class="single-design-sidebar">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h2 class="title--section text--upcase">',
+            'after_title'   => '</h2>',
+        ));
     }
 add_action( 'widgets_init', 'arphabet_widgets_init' );
 
@@ -881,7 +889,7 @@ function check_for_category_single_template( $t )
   foreach( (array) get_the_category() as $cat )
   {
     if ( file_exists(get_stylesheet_directory() . "/single-{$cat->slug}.php") ) return get_stylesheet_directory() . "/single-{$cat->slug}.php";
-    if($cat->slug==="music")
+    if($cat->slug==="music"||$cat->slug==="design")
     {
       $cat = get_the_category_by_ID( $cat->parent );
       if ( file_exists(get_stylesheet_directory() . "/single-{$cat->slug}.php") ) return get_stylesheet_directory() . "/single-{$cat->slug}.php";

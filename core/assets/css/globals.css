@@ -2160,4 +2160,142 @@ ul.share-buttons img {
   padding: 5px;
 }
 
+#singlePostDesign .single__design-post .sdp__banner-and-title {
+  position: relative;
+  overflow: hidden;
+}
+
+#singlePostDesign .single__design-post .sdp__banner-and-title .sdp__infomation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #fff;
+}
+
+#singlePostDesign .single__design-post .sdp__banner-and-title .sdp__infomation .sdp__category .sdp__category-item {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 10px;
+}
+
+#singlePostDesign .single__design-post .sdp__banner-and-title .sdp__infomation .sdp__title .title-desgin-post {
+  font-size: 40px;
+}
+
+#singlePostDesign .single__design-post .sdp__banner-and-title .sdp__infomation .sdp__time-views-admin {
+  justify-content: center;
+  display: flex;
+  font-size: 15px;
+}
+
+#singlePostDesign .single__design-post .sdp__banner-and-title .sdp__infomation .sdp__time-views-admin .sdp__views-count {
+  margin: 0 15px;
+  position: relative;
+}
+
+#singlePostDesign .single__design-post .sdp__banner-and-title .sdp__infomation .sdp__time-views-admin .sdp__views-count:after {
+  content: '';
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #fff;
+}
+
+#singlePostDesign .single__design-post .sdp__banner-and-title .sdp__infomation .sdp__time-views-admin .sdp__views-count:before {
+  content: '';
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+}
+
+#singlePostDesign .single__design-post .sdp__banner-and-title .sdp__infomation .sdp__time-views-admin .sdp__admin .admin-name a {
+  color: #fff;
+}
+
+#singlePostDesign .single__design-post .sdp__banner-and-title .sdp__infomation .sdp__time-views-admin .sdp__admin .admin-name a:hover {
+  color: #00b9eb;
+}
+
+#singlePostDesign .single__design-post .sdp__banner-and-title:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+#singlePostDesign .single__design-post .sdp__content .sdp__content-container .sdp__content-wrapper .social-share ul.share-buttons {
+  justify-content: center;
+}
+
+#singlePostDesign .single__design-post .sdp__content .sdp__content-container .sdp__content-wrapper .navigation .previous__post {
+  display: grid;
+  text-align: start;
+}
+
+#singlePostDesign .single__design-post .sdp__content .sdp__content-container .sdp__content-wrapper .navigation .previous__post span.label-navigation {
+  font-size: 11px;
+  text-transform: capitalize;
+  color: #333333ba;
+}
+
+#singlePostDesign .single__design-post .sdp__content .sdp__content-container .sdp__content-wrapper .navigation .previous__post a {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+#singlePostDesign .single__design-post .sdp__content .sdp__content-container .sdp__content-wrapper .navigation .next__post {
+  display: grid;
+  text-align: end;
+}
+
+#singlePostDesign .single__design-post .sdp__content .sdp__content-container .sdp__content-wrapper .navigation .next__post span.label-navigation {
+  font-size: 11px;
+  text-transform: capitalize;
+  color: #333333ba;
+}
+
+#singlePostDesign .single__design-post .sdp__content .sdp__content-container .sdp__content-wrapper .navigation .next__post a {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+#singlePostDesign .single__design-post .sdp__content .sdp__content-container .sdp__content-wrapper .author .author-container {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 0px solid #aaaaaa87;
+}
+
+.author .author-container {
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid #aaaaaa87;
+}
+
+.author .author-container .author-image {
+  text-align: center;
+}
+
+.author .author-container .author-image img {
+  width: 120px;
+}
+
+.author .author-container .author-des .author-name a {
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 15px;
+  color: #222;
+}
+
 /*# sourceMappingURL=globals.css.map */
