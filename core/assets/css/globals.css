@@ -2298,4 +2298,90 @@ ul.share-buttons img {
   color: #222;
 }
 
+.sdp__related .title__block {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 26px;
+  padding: 15px 0;
+  line-height: 1;
+  border: 0.5px solid #ededed;
+  border-top: 2px solid #4db2ec;
+}
+
+.sdp__related .sdp__related-contain {
+  margin-bottom: 50px;
+  /* icon color */
+  /* position outside */
+}
+
+.sdp__related .sdp__related-contain .flickity-viewport .flickity-slider {
+  left: -10px !important;
+  width: 106%;
+}
+
+.sdp__related .sdp__related-contain .flickity-viewport .flickity-slider .sdp__related-item {
+  width: 340px;
+}
+
+.sdp__related .sdp__related-contain .flickity-viewport .flickity-slider .sdp__related-item .sdp__related-thumb {
+  position: relative;
+  width: 100%;
+}
+
+.sdp__related .sdp__related-contain .flickity-viewport .flickity-slider .sdp__related-item .sdp__related-thumb .sdp-category {
+  position: absolute;
+  bottom: 7px;
+  background: #222;
+}
+
+.sdp__related .sdp__related-contain .flickity-viewport .flickity-slider .sdp__related-item .sdp__related-thumb .sdp-category a {
+  color: #fff;
+  font-size: 10px;
+}
+
+.sdp__related .sdp__related-contain .flickity-viewport .flickity-slider .sdp__related-item .sdp__related-title a {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.sdp__related .sdp__related-contain .flickity-viewport .flickity-slider .sdp__related-item .sdp__related-title a:hover {
+  color: var(--primary-color);
+}
+
+.sdp__related .sdp__related-contain .flickity-button {
+  border: 1px solid #00b9eb;
+}
+
+.sdp__related .sdp__related-contain .flickity-prev-next-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 0px;
+}
+
+.sdp__related .sdp__related-contain .flickity-button-icon {
+  fill: #00b9eb;
+  left: 30%;
+  width: 40%;
+}
+
+.sdp__related .sdp__related-contain .flickity-prev-next-button.previous {
+  left: 0px;
+  right: unset;
+  top: unset;
+  bottom: -50px;
+  width: 25px;
+  height: 25px;
+}
+
+.sdp__related .sdp__related-contain .flickity-prev-next-button.next {
+  right: unset;
+  left: 35px;
+  width: 25px;
+  height: 25px;
+  bottom: -50px;
+  top: unset;
+}
+
 /*# sourceMappingURL=globals.css.map */

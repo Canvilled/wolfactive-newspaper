@@ -62,7 +62,8 @@ foreach ($categories as $cat) {
                <?php next_post_link('<span class="label-navigation">next article</span> %link', '%title');?>
              </div>
            </div>
-           <?php get_template_part('sections/author') ?>
+           <?php get_template_part('sections/author'); ?>
+           <?php get_template_part('sections/related-design'); ?>
          </div>
          <div id="sidebar" class="sdp__design col-divide-4">
            <?php if (dynamic_sidebar('single-design-sidebar')) : get_sidebar( 'single-design-sidebar' ); ?><?php endif; ?>
