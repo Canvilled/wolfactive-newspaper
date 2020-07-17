@@ -5,6 +5,21 @@
 Create date: 20/04/2020
 Design by Canvilled.
 */
+@font-face {
+  font-family:open-sanrif;
+	font-weight:400;
+  src: url("../fonts/OpenSans-Regular.ttf");
+}
+@font-face{
+	font-family:open-sanrif;
+	font-weight:600;
+	src:url("../fonts/OpenSans-SemiBold.ttf");
+}
+@font-face{
+	font-family:open-sanrif;
+	font-weight:700;
+	src:url("../fonts/OpenSans-Bold.ttf");
+}
 /*-----======Setup Color And Text======------*/
 :root{
 	--primary-bg-color: #0b54ba;
@@ -647,5 +662,5 @@ li{
 	font-family: 'Roboto',sans-serif;
 }
 .open-sanrif{
-	font-family: 'Open Sans',arial,sans-serif;
+	font-family:open-sanrif;
 }

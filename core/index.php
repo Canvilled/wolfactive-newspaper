@@ -1,9 +1,9 @@
- <?php
- get_header();
+<?php
+get_header();
 ?>
-  <section class="wrapper" id="PostCategory">
-    <?php do_shortcode('[give category="new-look" /]') ?>
+ <section class="wrapper" id="PostCategory">
+   <?php get_template_part('page-templates/category-type-1') ?>
  </section>
 <?php
- get_footer();
+get_footer();
 ?>

@@ -897,3 +897,49 @@ function check_for_category_single_template( $t )
   }
   return $t;
 }
+function the_breadcrumb() {
+                echo '<ul id="crumbs">';
+        if (!is_home()) {
+                echo '<li><a href="';
+                echo get_option('home');
+                echo '">';
+                echo 'Trang chủ';
+                echo "</a></li>";
+                 if (is_category() || is_single()) {
+                        if(is_category())
+                        {
+                          $this_category = get_category(get_query_var( 'cat' ));
+                          $categories = get_the_category();
+                          if ($this_category->category_parent == 0) {
+                            single_cat_title();
+                          }
+                          else if($this_category->category_parent != 0) {
+                            foreach ($categories as $cat) {
+                              ?>
+                              <div class="category-item">
+                                <?php echo esc_html( $cat->name ); ?>
+                              </div>
+                              <?php
+                            }
+                          } 
+                        }
+                        if (is_single()) {
+                                echo "</li><span>›</span><li>";
+                                the_title();
+                                echo '</li>';
+                        }
+                } elseif (is_page()) {
+                        echo '<span>›</span><li>';
+                        echo the_title();
+                        echo '</li>';
+                }
+        }
+        elseif (is_tag()) {single_tag_title();}
+        elseif (is_day()) {echo"<li>Archive for "; the_time('F jS, Y'); echo'</li>';}
+        elseif (is_month()) {echo"<li>Archive for "; the_time('F, Y'); echo'</li>';}
+        elseif (is_year()) {echo"<li>Archive for "; the_time('Y'); echo'</li>';}
+        elseif (is_author()) {echo"<li>Author Archive"; echo'</li>';}
+        elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {echo "<li>Blog Archives"; echo'</li>';}
+        elseif (is_search()) {echo"<li>Search Results"; echo'</li>';}
+        echo '</ul>';
+}

@@ -4,6 +4,24 @@
 Create date: 20/04/2020
 Design by Canvilled.
 */
+@font-face {
+  font-family: open-sanrif;
+  font-weight: 400;
+  src: url("../fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: open-sanrif;
+  font-weight: 600;
+  src: url("../fonts/OpenSans-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: open-sanrif;
+  font-weight: 700;
+  src: url("../fonts/OpenSans-Bold.ttf");
+}
+
 /*-----======Setup Color And Text======------*/
 :root {
   --primary-bg-color: #0b54ba;
@@ -720,7 +738,7 @@ li {
 }
 
 .open-sanrif {
-  font-family: 'Open Sans',arial,sans-serif;
+  font-family: open-sanrif;
 }
 
 .main--background .header__contain .row-divide .banner__container {
@@ -2382,6 +2400,74 @@ ul.share-buttons img {
   height: 25px;
   bottom: -50px;
   top: unset;
+}
+
+ul#crumbs {
+  display: flex;
+}
+
+ul#crumbs li {
+  margin-right: 10px;
+  color: #fff;
+}
+
+.category-opt1 .cat-container .cat__banner-and-title {
+  position: relative;
+}
+
+.category-opt1 .cat-container .cat__banner-and-title .cat__banner {
+  position: relative;
+  overflow: hidden;
+}
+
+.category-opt1 .cat-container .cat__banner-and-title .cat__banner:after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.category-opt1 .cat-container .cat__banner-and-title .cat__infomation {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 25%;
+  padding-top: 20px;
+  z-index: 1;
+}
+
+.category-opt1 .cat-container .cat__banner-and-title .cat__infomation ul#crumbs a {
+  color: #fff;
+}
+
+.category-opt1 .cat-container .cat__banner-and-title .cat__infomation .cat-title .cat-title-block {
+  font-size: 40px;
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+.category-opt1 .cat-container .cat__banner-and-title .cat__infomation .cat-term {
+  display: flex;
+}
+
+.category-opt1 .cat-container .cat__banner-and-title .cat__infomation .cat-term .sub__category {
+  margin-right: 10px;
+  padding: 4px 8px 5px;
+  font-size: 11px;
+}
+
+.category-opt1 .cat-container .cat__banner-and-title .cat__infomation .cat-term .sub__category a {
+  color: #fff;
+}
+
+.category-opt1 .cat-container .cat__banner-and-title .cat__infomation .cat-description {
+  color: #fff;
+  font-style: italic;
+  font-size: 16px;
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=globals.css.map */
