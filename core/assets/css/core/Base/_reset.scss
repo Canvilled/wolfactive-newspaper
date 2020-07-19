@@ -22,9 +22,9 @@ Design by Canvilled.
 }
 /*-----======Setup Color And Text======------*/
 :root{
-	--primary-bg-color: #0b54ba;
+	--primary-bg-color: #1c6182;
 	--secondary-bg-color:#fff;
-  --primary-color: #0b54ba;
+  --primary-color: #1c6182;
 	--secondary-color:#000;
 	--title-section-size:36px;
 	--title-item-size:20px;
@@ -253,10 +253,6 @@ img{
 }
 .secondary-background{
   background: #fff5e18f;
-}
-
-.text--light{
-	color:#fff !important;
 }
 .text--dark{
 	color: #333 !important;
@@ -506,6 +502,9 @@ width: 80%;
   }
 	.my-50{
 	  margin:50px 0px;
+  }
+  .myt-10{
+    margin-top:10px;
   }
 	.myt-20{
 	  margin-top:20px;

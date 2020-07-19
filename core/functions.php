@@ -92,7 +92,6 @@ add_theme_support( 'custom-logo', array(
 
   }
   add_action('init', 'house_product');
-
 function make_taxonomy_theme() {
   $labels = array(
       'name' => 'Phân loại',
@@ -921,7 +920,7 @@ function the_breadcrumb() {
                               </div>
                               <?php
                             }
-                          } 
+                          }
                         }
                         if (is_single()) {
                                 echo "</li><span>›</span><li>";
