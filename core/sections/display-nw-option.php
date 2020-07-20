@@ -310,6 +310,13 @@ switch ($type_display) {
   </div>
   <?php
     break;
+  case 5:
+  ?>
+  <div class="nw__content td-5 my-20">
+
+  </div>
+  <?php
+    break;
   default:
     // code...
     break;

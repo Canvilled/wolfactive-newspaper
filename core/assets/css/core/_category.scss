@@ -22,9 +22,18 @@
         left: 25%;
         padding-top: 20px;
         z-index: 1;
-        ul#crumbs{
-          a{
-            color:#fff;
+        .breadcrumbs{
+          .breadcrumbs__contain{
+            .f-breadcrumbs{
+              color:#fff;
+              span{
+                span{
+                  a{
+                    color:#fff;
+                  }
+                }
+              }
+            }
           }
         }
         .cat-title{

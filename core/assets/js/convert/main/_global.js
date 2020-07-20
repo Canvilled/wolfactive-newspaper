@@ -7,19 +7,19 @@ var protocol = window.location.protocol;
 var hostname = window.location.hostname;
 
 function iframeResposive() {
-  for (i = 0; i < iframe.length; i++) {
+  for (var i = 0; i < iframe.length; i++) {
     iframe[i].classList.add('lazy');
   }
 }
 
 function imgResposive() {
-  for (i = 0; i < img.length; i++) {
+  for (var i = 0; i < img.length; i++) {
     img[i].classList.add('lazy');
   }
 }
 
 function videoResposive() {
-  for (i = 0; i < video.length; i++) {
+  for (var i = 0; i < video.length; i++) {
     video[i].classList.add('lazy');
   }
 }

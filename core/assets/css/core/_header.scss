@@ -29,7 +29,29 @@
       }
 
     }
-    .search-content{
+    .search__content{
+      position: relative;
+      .search__wrapper{
+        position: absolute;
+        right: 0;
+        width: 100%;
+        max-width: 80%;
+        .search-form {
+          border-bottom: 1px solid #111;
+          input.search-field {
+            width: 79%;
+            border: none;
+          }
+          .button.search-submit {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+          }
+          button.search-submit:hover {
+            color: var(--primary-color);
+          }
+        }
+      }
       display: inline-block;
       text-align: end;
       align-self: center;

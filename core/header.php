@@ -39,25 +39,27 @@
   	</div>
     <div class="menu__container dp--none">
       <div class="menu__wrapper container row-divide">
-        <div class="menu__background">
+        <div class="menu__background col-divide-6">
           <?php
            wp_nav_menu(array(
           'theme_location' => 'headerMenuLocation' ));
           ?>
         </div>
-        <div class="header__item search-content">
+        <div class="header__item search__content col-divide-6">
           <button type="button" name="button" class="open-search" onclick="notice()"><i class="fas fa-search"></i></button>
-          <form role="search" method="get" id="searchForm"class="search-form d--none" action="<?php echo esc_url(site_url('/')); ?>">
-            <label>
-              <!-- <span class="screen-reader-text">Search for:</span> -->
-              <input type="text" class="search-field" placeholder="Tìm Kiếm" value="" name="s">
-              <input type="hidden" class="search-field" placeholder="Search …" value="1" name="sentence">
-              <input type="hidden" class="search-field" placeholder="Search …" value="post" name="post_type">
-            </label>
-            <button type="submit" class="search-submit" value="Search" aria-label="Button Submit Search">
-              SEARCH >
-            </button>
-          </form>
+          <div class="search__wrapper d--none">
+            <form role="search" method="get" id="searchForm" class="search-form" action="<?php echo esc_url(site_url('/')); ?>">
+              <label>
+                <!-- <span class="screen-reader-text">Search for:</span> -->
+                <input type="text" class="search-field" placeholder="Tìm Kiếm" value="" name="s">
+                <input type="hidden" class="search-field" placeholder="Search …" value="1" name="sentence">
+                <input type="hidden" class="search-field" placeholder="Search …" value="post" name="post_type">
+              </label>
+              <button type="submit" class="search-submit" value="Search" aria-label="Button Submit Search">
+                SEARCH >
+              </button>
+            </form>
+          </div>
         </div>
       </div>
      </div>

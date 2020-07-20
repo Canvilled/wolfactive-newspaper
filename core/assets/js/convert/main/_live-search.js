@@ -1,8 +1,6 @@
 "use strict";
 
-var searchForm = document.getElementById('searchForm');
-
 function notice() {
-  // searchForm.classList.add('d--block');
-  console.log(searchForm);
+  var searchForm = document.querySelector('.search__wrapper');
+  searchForm.classList.remove('d--none');
 }
