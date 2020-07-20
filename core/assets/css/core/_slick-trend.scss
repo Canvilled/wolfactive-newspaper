@@ -13,8 +13,9 @@
     }
     .trend__post-list{
       margin-left:10px;
+      align-self: center;
       .flickity-button {
-        background: var(--primary-color);
+        border:1px solid #1c618278;
       }
       .flickity-prev-next-button {
         width: 30px;
@@ -23,7 +24,11 @@
       }
       /* icon color */
       .flickity-button-icon {
-        fill: white;
+        fill: #1c618278;
+        left: 25%;
+        top: 30%;
+        width: 40%;
+        height: 40%;
       }
       /* position outside */
       .flickity-prev-next-button.previous {

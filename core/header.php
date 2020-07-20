@@ -11,7 +11,7 @@
      <link rel="preload" href="<?php echo get_theme_file_uri('assets\css\lib\fontawsome\webfonts\fa-regular-400.woff2') ?>" as="font" type="font/woff2" crossorigin>
      <link rel="preload" href="<?php echo get_theme_file_uri('assets\css\lib\fontawsome\webfonts\fa-solid-900.woff2') ?>" as="font" type="font/woff2" crossorigin>
      <link rel="stylesheet" href="<?php echo get_theme_file_uri('assets/css/globals.min.css') ?>">
-     <script type='text/javascript' src="<?php echo get_theme_file_uri('assets/js/main.min.js') ?>"></script>
+     <script defer type='text/javascript' src="<?php echo get_theme_file_uri('assets/js/main.min.js') ?>"></script>
      <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -46,8 +46,8 @@
           ?>
         </div>
         <div class="header__item search-content">
-          <button type="button" name="button" class="open-search"><i class="fas fa-search"></i></button>
-          <form role="search" method="get" class="search-form" action="<?php echo esc_url(site_url('/')); ?>">
+          <button type="button" name="button" class="open-search" onclick="notice()"><i class="fas fa-search"></i></button>
+          <form role="search" method="get" id="searchForm"class="search-form d--none" action="<?php echo esc_url(site_url('/')); ?>">
             <label>
               <!-- <span class="screen-reader-text">Search for:</span> -->
               <input type="text" class="search-field" placeholder="Tìm Kiếm" value="" name="s">

@@ -6,6 +6,7 @@ $type_display = get_sub_field('type_display','option');
 <div class="nw__label myt-50" style="border-bottom:2px solid <?php echo get_sub_field('background_color','option'); ?>">
   <h3 class="label-item roboto text--upcase" style="background-color:<?php echo get_sub_field('background_color','option');  ?>"><?php echo get_cat_name( $cat_id ); ?></h3>
   <div class="news__category-related">
+    <?php if(!wp_is_mobile()){ ?>
     <ul class="category-related__container">
       <?php
       foreach ($cate_child as $child) {
@@ -15,6 +16,27 @@ $type_display = get_sub_field('type_display','option');
         }
        ?>
     </ul>
+  <?php } ?>
+    <?php if(wp_is_mobile())
+    {
+      ?>
+      <div class="news__category-more">
+        <span>More</span>
+      </div>
+      <div class="news__sub-category-list">
+        <ul class="sub__cat-list">
+          <?php
+          foreach ($cate_child as $child) {
+              $child_Obj = get_category($child);
+              $category_link = get_category_link($child_Obj->cat_ID);
+              echo '<li class="sub__category"><a href="'.$category_link.'">'.$child_Obj->name.'</a></li>';
+            }
+           ?>
+        </ul>
+      </div>
+      <?php
+    }
+     ?>
   </div>
 </div>
 <?php
@@ -38,7 +60,7 @@ switch ($type_display) {
         if($i===0)
         {
           ?>
-          <div class="col-divide-6 nw__left-content td-1"><?php
+          <div class="col-divide-6 nw__left-content td-1 col-divide-md-12"><?php
           while($query_post_from_cat->have_posts()):$query_post_from_cat->the_post();
             if($j===0){
               ?>
@@ -66,7 +88,7 @@ switch ($type_display) {
         }
         else{
           ?>
-          <div class="col-divide-6 nw__right-content td-1"><?php
+          <div class="col-divide-6 nw__right-content td-1 col-divide-md-12"><?php
           while($query_post_from_cat->have_posts()):$query_post_from_cat->the_post();
             if($j>=1){
               ?>
@@ -218,7 +240,7 @@ switch ($type_display) {
   case 3:
   ?>
   <div class="nw__content td-3 my-20">
-    <div class="nw__content-post-slide" data-flickity='{ "wrapAround": true, "groupCells": true, "pageDots": false }'>
+    <div class="nw__content-post-slide" data-flickity='{ "autoPlay": false, "pauseAutoPlayOnHover": false, "pageDots": false,"draggable": true,"groupCells": 3 }'>
       <?php
       $args = array(
         'cat' => $cat_id,
@@ -232,6 +254,17 @@ switch ($type_display) {
         <div class="nw__post-slide--item">
           <div class="nw__image">
             <a href="<?php echo get_permalink(); ?>"><img src="<?php echo hk_get_thumb(get_the_id(),485,360) ?>" alt="Image"></a>
+            <div class="nw__category">
+              <?php
+              $categories=get_the_category(get_the_id());
+              $i=0;
+                foreach ($categories as $c) {
+                  $category_link = get_category_link($c->cat_ID);
+                  if($i===0){
+                    echo '<span class="category-title"><a href="'.$category_link.'">'.$c->cat_name.'</a></span>';}
+                    $i++;
+                } ?>
+            </div>
           </div>
           <div class="nw__post-title">
             <a href="<?php echo get_permalink(); ?>"><?php the_title();?></a>

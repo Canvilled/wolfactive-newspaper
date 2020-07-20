@@ -1,6 +1,6 @@
 <div class="nw">
   <div class="nw__container row-divide">
-    <div class="nw__background col-divide-8">
+    <div class="nw__background col-divide-8 col-divide-md-12">
       <?php
       if(have_rows('categories_and_post','option'))
       {
@@ -9,7 +9,7 @@
         endwhile;
       }?>
     </div>
-    <div class="nw__sidebar myt-50 col-divide-4">
+    <div class="nw__sidebar myt-50 col-divide-4 col-divide-md-12">
       <?php if (dynamic_sidebar('left-sidebar')) : get_sidebar( 'left-sidebar' ); ?><?php endif; ?>
     </div>
   </div>
