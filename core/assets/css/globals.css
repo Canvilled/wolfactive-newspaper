@@ -779,27 +779,52 @@ li {
 .main--background .menu__container .search__content .search__wrapper {
   position: absolute;
   right: 0;
+  display: none;
   width: 100%;
-  max-width: 80%;
+  background: #fff;
+  z-index: 2;
+  padding: 20px 30px;
+  box-shadow: 0px 4px 5px 1px #11111163;
 }
 
 .main--background .menu__container .search__content .search__wrapper .search-form {
-  border-bottom: 1px solid #111;
+  border-bottom: 1px solid #aaa;
 }
 
 .main--background .menu__container .search__content .search__wrapper .search-form input.search-field {
   width: 79%;
   border: none;
+  outline: none;
 }
 
-.main--background .menu__container .search__content .search__wrapper .search-form .button.search-submit {
+.main--background .menu__container .search__content .search__wrapper .search-form button.search-submit {
   border: none;
+  outline: none;
   background: transparent;
   cursor: pointer;
+  font-weight: 600;
+  text-transform: capitalize;
 }
 
 .main--background .menu__container .search__content .search__wrapper .search-form button.search-submit:hover {
   color: var(--primary-color);
+}
+
+.main--background .menu__container .search__content .search__wrapper .search-form .search__field-container {
+  justify-content: space-between;
+  display: flex;
+}
+
+.main--background .menu__container .search__content .search__wrapper .search-form .search__field-container label {
+  text-align: start;
+  width: 50%;
+}
+
+.main--background .menu__container .search__content .search__wrapper .search__result-overlay {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 230px));
+  justify-content: center;
+  grid-gap: 1em;
 }
 
 .main--background .menu__container .search__content .open-search {
@@ -807,6 +832,7 @@ li {
   border: none;
   background: #fff;
   cursor: pointer;
+  outline: none;
 }
 
 .main--background .menu__container::before {

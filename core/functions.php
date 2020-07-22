@@ -942,3 +942,37 @@ function the_breadcrumb() {
         elseif (is_search()) {echo"<li>Search Results"; echo'</li>';}
         echo '</ul>';
 }
+
+add_action('rest_api_init','postRegisterApiSearch');
+function postRegisterApiSearch(){
+  register_rest_route('post-api/v1','search',array(
+    'methods'   =>  WP_REST_SERVER::READABLE,
+    'callback'  =>  'postApiSearchResult'
+  ));
+}
+function postApiSearchResult($data){
+  $postList = new WP_Query(array(
+    'post_type'     => 'post',
+    'sentence'      =>   1,
+    's'             => sanitize_text_field($data['term']),
+  ));
+  $postResult = array();
+  while($postList->have_posts()):$postList->the_post();
+    // $termSize = get_the_terms(get_the_id(),'size');
+    // $sizes = array();
+    // foreach ($termSize as $term){
+    //   if($term->name !== "Tất cả"){
+    //     array_push($size,$term->name);
+    //   }
+    // };
+    array_push($postResult,
+      array(
+        'title'             => get_the_title(),
+        'thumbnail'          => get_the_post_thumbnail(),
+        'link' => get_the_permalink(),
+        'date' => get_the_date( 'F j, Y' ),
+        )
+      );
+   endwhile;
+return $postResult;
+}

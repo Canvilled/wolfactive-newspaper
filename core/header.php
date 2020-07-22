@@ -16,7 +16,8 @@
 </head>
 <body <?php body_class(); ?>>
 <section class="header">
-  <div class="main--background">
+  <?php if(!wp_is_mobile()){ ?>
+    <div class="main--background">
     <div class="header__contain">
       <div class="logo-and-banner row-divide container">
         <div class="header__item logo__container col-divide-4">
@@ -37,7 +38,7 @@
         </div>
       </div>
   	</div>
-    <div class="menu__container dp--none">
+    <div class="menu__container">
       <div class="menu__wrapper container row-divide">
         <div class="menu__background col-divide-6">
           <?php
@@ -46,19 +47,24 @@
           ?>
         </div>
         <div class="header__item search__content col-divide-6">
-          <button type="button" name="button" class="open-search" onclick="notice()"><i class="fas fa-search"></i></button>
-          <div class="search__wrapper d--none">
-            <form role="search" method="get" id="searchForm" class="search-form" action="<?php echo esc_url(site_url('/')); ?>">
-              <label>
-                <!-- <span class="screen-reader-text">Search for:</span> -->
-                <input type="text" class="search-field" placeholder="Tìm Kiếm" value="" name="s">
-                <input type="hidden" class="search-field" placeholder="Search …" value="1" name="sentence">
-                <input type="hidden" class="search-field" placeholder="Search …" value="post" name="post_type">
-              </label>
-              <button type="submit" class="search-submit" value="Search" aria-label="Button Submit Search">
-                SEARCH >
-              </button>
-            </form>
+          <button type="button" name="button" class="open-search" onclick="openSearch()"><i class="fas fa-search" aria-hidden="true"></i></button>
+          <div class="search__wrapper">
+
+              <form role="search" method="get" id="searchForm" class="search-form" action="<?php echo esc_url(site_url('/')); ?>">
+                <div class="search__field-container">
+                  <label>
+                    <!-- <span class="screen-reader-text">Search for:</span> -->
+                    <input type="text" class="search-field" placeholder="Tìm Kiếm" value="" name="s">
+                    <input type="hidden" class="search-field" placeholder="Search …" value="1" name="sentence">
+                    <input type="hidden" class="search-field" placeholder="Search …" value="post" name="post_type">
+                  </label>
+                  <button type="submit" class="search-submit" value="Search" aria-label="Button Submit Search">
+                    search >
+                  </button>
+                </div>
+              </form>
+
+            <div class="search__result-overlay my-20" id="searchResult"></div>
           </div>
         </div>
       </div>
@@ -69,13 +75,15 @@
         </button>
      </div>
   </div>
+  <?php }
+  else{ ?>
     <div class="main--background" id="headerNavBar">
-
-     <div class="container navbar__mb">
+    <div class="container navbar__mb">
        <?php
       //  wp_nav_menu(array(
       // 'theme_location' => 'headerMenuLocation' ));
       ?>
     </div>
   </div>
+  <?php } ?>
 </section>
