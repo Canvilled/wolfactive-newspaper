@@ -36,28 +36,33 @@ function renderPopularPost(){
   );
   $popular_post_query = new WP_Query($args);
   ob_start();
-  $i=0;
+  ?>
+  <div class="popular__post">
+    <div class="popular__post-container">
+  <?php
   while ($popular_post_query->have_posts()):$popular_post_query->the_post();
   $views = getPostViews(get_the_id());
-  if($i<=9 && $views >= 0){
     ?>
-    <div class="nw__post-item row-divide">
-      <div class="nw__image col-divide-4">
-        <a href="<?php echo get_permalink(); ?>"><img src="<?php echo hk_get_thumb(get_the_id(),485,360) ?>" alt="Image"></a>
-      </div>
-      <div class="nw__infomation col-divide-8">
-        <div class="nw__post-title nw__post-title--small">
-          <a href="<?php echo get_permalink(); ?>"><?php echo wp_trim_words( get_the_title(), 10, '...' );?></a>
+    <div class="popupar__post-item">
+      <div class="nw__post-item row-divide">
+        <div class="nw__image col-divide-4">
+          <a href="<?php echo get_permalink(); ?>"><img src="<?php echo hk_get_thumb(get_the_id(),485,360) ?>" alt="Image"></a>
         </div>
-        <div class="nw__editor-date open-sanrif">
-          <span class="date-time open-sanrif"><?php echo get_the_date( 'F j, Y' ) ?></span>
+        <div class="nw__infomation col-divide-8">
+          <div class="nw__post-title nw__post-title--small">
+            <a href="<?php echo get_permalink(); ?>"><?php echo wp_trim_words( get_the_title(), 10, '...' );?></a>
+          </div>
+          <div class="nw__editor-date open-sanrif">
+            <span class="date-time open-sanrif"><?php echo get_the_date( 'F j, Y' ) ?></span>
+          </div>
         </div>
       </div>
     </div>
     <?php
-    $i++;
-  }
   endwhile;
+  ?></div>
+  <button id="load-more-post">Load More</button>
+      </div><?php
   $output=ob_get_contents();
   ob_end_clean();
   return $output;
@@ -168,19 +173,3 @@ function renderNewMusic(){
   ob_end_clean();
   return $output;
 }
-
-function script_load_more($args = array()) {
-    //initial posts load
-    echo '<div id="ajax-primary" class="content-area">';
-        echo '<div id="ajax-content" class="content-area">';
-            ajax_script_load_more($args);
-        echo '</div>';
-        echo '<div class="btn__load-more-post">';
-        echo '<button id="loadMore"  data-page="1" data-url="'.admin_url("admin-ajax.php").'" >Xem thêm</button>';
-        echo '</div>';
-    echo '</div>';
-}
-/*
- * create short code.
- */
-add_shortcode('ajax_posts', 'script_load_more');

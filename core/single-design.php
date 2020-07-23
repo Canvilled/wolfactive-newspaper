@@ -3,7 +3,7 @@ get_header();
 setPostViews(get_the_id());
 $categories = get_the_category();
 foreach ($categories as $cat) {
-  if($cat->name === "Design"){
+  if($cat->name === "Design" || $cat->name === "Architecture"){
     $id=$cat->cat_ID;
     $cat_name=$cat->name;
     $category= get_category($id);
@@ -16,7 +16,9 @@ foreach ($categories as $cat) {
    <div class="single__design-post">
      <div class="sdp__banner-and-title">
        <div class="sdp__banner">
+         <?php if($image){ ?>
          <img src="<?php echo hk_get_image($image, 1920, 720); ?>" alt="Design banner">
+         <?php }  ?>
        </div>
        <div class="sdp__infomation text--center text--upcase">
          <div class="sdp__category open-sanrif">
