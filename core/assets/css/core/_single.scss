@@ -3,11 +3,14 @@ section#singlePost{
       .post__item-des{
         .post__category{
           justify-content: initial;
-          .category-item{
+          padding: 0;
+          .sub__category{
             margin-right: 10px;
-            background: #000;
             padding: 5px;
-            font-weight: 600;
+            a{
+              font-weight: 600;
+              color:#fff;
+            }
           }
         }
         .title--section{
@@ -16,6 +19,34 @@ section#singlePost{
       }
       .post__wrapper-container{
         .post__contain{
+          .social__share-post-1{
+            .social-share{
+              .share-buttons{
+                justify-content: center;
+                a{
+                  border-radius: 15px;
+                  padding:2px 3px;
+                }
+              }
+            }
+          }
+          .social__share-post-2{
+            .social-share{
+              padding: 10px 0;
+              margin: 20px 0;
+              border-top: 1px solid #aaaaaa52;
+              border-bottom: 1px solid #aaaaaa52;
+              .share-buttons{
+                a{
+                  border-radius: 15px;
+                  padding:2px 3px;
+                }
+              }
+            }
+          }
+          .post__item-content{
+            line-height: 1.6;
+          }
           .author-date{
             border-top: 1px solid #eee;
             border-bottom: 1px solid #eee;
@@ -80,6 +111,7 @@ section#singlePost{
           }
           .single-sidebar{
             overflow: hidden;
+            margin-bottom:10px;
             .textwidget{
               .nw__post-item{
                 margin: 10px 0;
@@ -122,10 +154,12 @@ section#singlePost{
       .previous__post{
         display: grid;
         color:#666;
+        font-size: 13px;
         a{
-          font-size:16px;
+          font-size:15px;
+          margin-top: 5px;
           color:#222;
-          font-weight: 700;
+          font-weight: 600;
           font-family: 'Open Sans',arial,sans-serif;
         }
       }
@@ -133,11 +167,16 @@ section#singlePost{
         display: grid;
         color:#666;
         text-align: end;
+        font-size: 13px;
         a{
-          font-size:16px;
+          font-size:15px;
+          margin-top: 5px;
           color:#222;
-          font-weight: 700;
+          font-weight: 600;
           font-family: 'Open Sans',arial,sans-serif;
+        }
+        a:hover{
+          color:var(--primary-color);
         }
       }
   }

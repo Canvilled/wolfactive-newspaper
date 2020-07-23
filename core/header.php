@@ -48,12 +48,10 @@
         </div>
         <div class="header__item search__content col-divide-6">
           <button type="button" name="button" class="open-search" onclick="openSearch()"><i class="fas fa-search" aria-hidden="true"></i></button>
-          <div class="search__wrapper">
-
+          <div class="search__wrapper" style="display:none;">
               <form role="search" method="get" id="searchForm" class="search-form" action="<?php echo esc_url(site_url('/')); ?>">
                 <div class="search__field-container">
                   <label>
-                    <!-- <span class="screen-reader-text">Search for:</span> -->
                     <input type="text" class="search-field" placeholder="Tìm Kiếm" value="" name="s">
                     <input type="hidden" class="search-field" placeholder="Search …" value="1" name="sentence">
                     <input type="hidden" class="search-field" placeholder="Search …" value="post" name="post_type">
@@ -63,7 +61,6 @@
                   </button>
                 </div>
               </form>
-
             <div class="search__result-overlay my-20" id="searchResult"></div>
           </div>
         </div>

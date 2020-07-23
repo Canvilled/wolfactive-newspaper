@@ -17,7 +17,7 @@ function ResultSearch(){
     }
     fetch(apiUrl)
     .then(result => {
-      console.log(result);
+      //console.log(result);
       return result.json();
     })
     .then(data => {
@@ -48,7 +48,7 @@ function ResultSearch(){
     })
     .catch(error => console.log(error));
 
-   }, 1000);
+  }, 2000);
 
 }
 

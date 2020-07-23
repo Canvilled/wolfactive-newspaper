@@ -27,6 +27,10 @@ function renderPopularPostShortcode (){
 }
 function renderPopularPost(){
   $args = array(
+    'posts_per_page' => 10,
+    'meta_key' => 'post_views_count',
+    'orderby' => 'meta_value_num',
+    'order' => 'DESC',
     'post_type' => 'post',
     'post_status' => 'publish',
   );
@@ -35,7 +39,7 @@ function renderPopularPost(){
   $i=0;
   while ($popular_post_query->have_posts()):$popular_post_query->the_post();
   $views = getPostViews(get_the_id());
-  if($i<=2 && $views >= 0){
+  if($i<=9 && $views >= 0){
     ?>
     <div class="nw__post-item row-divide">
       <div class="nw__image col-divide-4">
@@ -164,3 +168,19 @@ function renderNewMusic(){
   ob_end_clean();
   return $output;
 }
+
+function script_load_more($args = array()) {
+    //initial posts load
+    echo '<div id="ajax-primary" class="content-area">';
+        echo '<div id="ajax-content" class="content-area">';
+            ajax_script_load_more($args);
+        echo '</div>';
+        echo '<div class="btn__load-more-post">';
+        echo '<button id="loadMore"  data-page="1" data-url="'.admin_url("admin-ajax.php").'" >Xem thêm</button>';
+        echo '</div>';
+    echo '</div>';
+}
+/*
+ * create short code.
+ */
+add_shortcode('ajax_posts', 'script_load_more');

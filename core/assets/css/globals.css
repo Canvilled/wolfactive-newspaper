@@ -1667,17 +1667,46 @@ li {
 
 section#singlePost .single__wrapper .post__item-des .post__category {
   justify-content: initial;
+  padding: 0;
 }
 
-section#singlePost .single__wrapper .post__item-des .post__category .category-item {
+section#singlePost .single__wrapper .post__item-des .post__category .sub__category {
   margin-right: 10px;
-  background: #000;
   padding: 5px;
+}
+
+section#singlePost .single__wrapper .post__item-des .post__category .sub__category a {
   font-weight: 600;
+  color: #fff;
 }
 
 section#singlePost .single__wrapper .post__item-des .title--section {
   font-size: 42px;
+}
+
+section#singlePost .single__wrapper .post__wrapper-container .post__contain .social__share-post-1 .social-share .share-buttons {
+  justify-content: center;
+}
+
+section#singlePost .single__wrapper .post__wrapper-container .post__contain .social__share-post-1 .social-share .share-buttons a {
+  border-radius: 15px;
+  padding: 2px 3px;
+}
+
+section#singlePost .single__wrapper .post__wrapper-container .post__contain .social__share-post-2 .social-share {
+  padding: 10px 0;
+  margin: 20px 0;
+  border-top: 1px solid #aaaaaa52;
+  border-bottom: 1px solid #aaaaaa52;
+}
+
+section#singlePost .single__wrapper .post__wrapper-container .post__contain .social__share-post-2 .social-share .share-buttons a {
+  border-radius: 15px;
+  padding: 2px 3px;
+}
+
+section#singlePost .single__wrapper .post__wrapper-container .post__contain .post__item-content {
+  line-height: 1.6;
 }
 
 section#singlePost .single__wrapper .post__wrapper-container .post__contain .author-date {
@@ -1755,6 +1784,7 @@ section#singlePost .single__wrapper .post__wrapper-container .singlePost-sidebar
 
 section#singlePost .single__wrapper .post__wrapper-container .singlePost-sidebar .single-sidebar {
   overflow: hidden;
+  margin-bottom: 10px;
 }
 
 section#singlePost .single__wrapper .post__wrapper-container .singlePost-sidebar .single-sidebar .textwidget .nw__post-item {
@@ -1795,12 +1825,14 @@ section#singlePost .single__wrapper .post__wrapper-container .singlePost-sidebar
 section#singlePost .single__wrapper .previous__post {
   display: grid;
   color: #666;
+  font-size: 13px;
 }
 
 section#singlePost .single__wrapper .previous__post a {
-  font-size: 16px;
+  font-size: 15px;
+  margin-top: 5px;
   color: #222;
-  font-weight: 700;
+  font-weight: 600;
   font-family: 'Open Sans',arial,sans-serif;
 }
 
@@ -1808,13 +1840,19 @@ section#singlePost .single__wrapper .next__post {
   display: grid;
   color: #666;
   text-align: end;
+  font-size: 13px;
 }
 
 section#singlePost .single__wrapper .next__post a {
-  font-size: 16px;
+  font-size: 15px;
+  margin-top: 5px;
   color: #222;
-  font-weight: 700;
+  font-weight: 600;
   font-family: 'Open Sans',arial,sans-serif;
+}
+
+section#singlePost .single__wrapper .next__post a:hover {
+  color: var(--primary-color);
 }
 
 section#singlePost .single__music-post .banner-music {
@@ -2207,7 +2245,7 @@ section#singlePost .single__music-post .social-des-container .music-sidebar .sin
 .social-share .share-buttons a .social-text:before {
   content: '';
   position: absolute;
-  top: 5px;
+  top: 3px;
   left: 0;
   width: 1px;
   height: 16px;

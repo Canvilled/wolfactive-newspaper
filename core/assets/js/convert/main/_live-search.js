@@ -22,7 +22,7 @@ function ResultSearch() {
     }
 
     fetch(apiUrl).then(function (result) {
-      console.log(result);
+      //console.log(result);
       return result.json();
     }).then(function (data) {
       //console.log(data);
@@ -34,7 +34,7 @@ function ResultSearch() {
     }).catch(function (error) {
       return console.log(error);
     });
-  }, 1000);
+  }, 2000);
 }
 
 searchField.onkeydown = function () {
