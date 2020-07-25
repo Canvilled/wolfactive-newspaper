@@ -976,3 +976,60 @@ function postApiSearchResult($data){
    endwhile;
 return $postResult;
 }
+add_action('rest_api_init','apiCategory');
+function apiCategory(){
+  register_rest_route('category-api/v1','/cat-name',array(
+    'methods'   =>  "POST",
+    'callback'  =>  'renderCategoryAPI',
+  ));
+}
+function renderCategoryAPI( $request ) {
+    // Here we are accessing the path variable 'id' from the $request.
+    $submit = prefix_apiCategory();
+    return rest_ensure_response( $submit );
+}
+
+// A simple function that grabs a book title from our blogsby ID.
+function prefix_apiCategory() {
+    $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
+    if ($contentType === "application/json") {
+      //Receive the RAW post data.
+      $content = trim(file_get_contents("php://input"));
+      $decoded = json_decode($content, true);
+
+      // setup default result data
+      $result = array();
+      if(isset($decoded['category']) && $decoded['category']){
+        $args = array(
+          'post_type' => 'post',
+          'post_status' => 'publish',
+          'category_name'=> $decoded['category'],
+          'showposts'=> 8,
+        );
+        $category_post = new WP_Query($args);
+        if ($category_post->have_posts()) {
+          while($category_post->have_posts()):$category_post->the_post();
+            array_push($result,array(
+              'title' => get_the_title(),
+              'thumbnail' => hk_get_thumb(get_the_id(),240,170),
+              'date' => get_the_date(),
+              'link' => get_the_permalink(),
+            ));
+          endwhile;
+        }
+      }
+  }
+  // return result as json
+  wolfactive_return_json($result);
+}
+// Helper function to submit
+
+function wolfactive_return_json( $php_array ) {
+// encode result as json string
+$json_result = json_encode( $php_array );
+// return result
+die( $json_result );
+// stop all other processing
+exit;
+
+}

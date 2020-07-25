@@ -91,12 +91,12 @@ section#singlePost{
           }
         }
         .singlePost-sidebar{
-          padding:0 40px;
+          padding:0 20px;
           h2.title--section{
             display: inline-block;
             font-size: 14px;
             font-weight: 400;
-            background: #000;
+            background: #222;
             color: #fff;
             position: relative;
             padding: 2px 5px;
@@ -107,7 +107,7 @@ section#singlePost{
             bottom:0;
             width:150%;
             padding:1px;
-            background:#000;
+            background:#222;
           }
           .single-sidebar{
             overflow: hidden;
