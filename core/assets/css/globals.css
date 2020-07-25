@@ -772,26 +772,42 @@ li {
 }
 
 .main--background .menu__container .menu__wrapper .menu__background .menu-main-menu-container ul.menu li.menu-item .sub-menu {
-  display: none;
+  display: grid;
+  visibility: hidden;
+  position: absolute;
   background: #fff;
   box-shadow: 1px 3px 9px 0px #aaaaaa82;
   width: 100%;
-  height: 340px;
   z-index: 2;
-  padding: 25px;
+  top: 20px;
+  left: 0;
+  opacity: 0;
+  transition: all .5s linear;
   border-radius: 0px 0px 10px 10px;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  height: 340px;
+  padding: 25px;
 }
 
 .main--background .menu__container .menu__wrapper .menu__background .menu-main-menu-container ul.menu li.menu-item .sub-menu .menu-item {
   padding-left: 10px;
   margin: 10px 0;
-  width: 20%;
+}
+
+.main--background .menu__container .menu__wrapper .menu__background .menu-main-menu-container ul.menu li.menu-item:hover {
+  transition: all .5s linear;
 }
 
 .main--background .menu__container .menu__wrapper .menu__background .menu-main-menu-container ul.menu li.menu-item:hover .sub-menu {
-  position: absolute;
-  display: block;
-  left: 0;
+  visibility: visible;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+  transition-delay: 0s, 0s, 0.3s;
+  opacity: 1;
+}
+
+.main--background .menu__container .menu__wrapper .menu__background .menu-main-menu-container ul.menu li.menu-item:hover .sub-menu .menu-item-object-category {
+  grid-column: 1 / span 1;
 }
 
 .main--background .menu__container .menu__wrapper .search__content {
@@ -872,12 +888,19 @@ li {
 
 .display--post {
   position: absolute;
-  top: 10px;
-  height: 100%;
+  top: 0;
   right: 0px;
-  width: 75%;
+  height: 100%;
+  width: 100%;
+  grid-column: 2 / span 6;
+  padding: 30px;
+  border-left: 1px solid #aaaaaa50;
   /* icon color */
   /* position outside */
+}
+
+.display--post .flickity-viewport {
+  height: 100% !important;
 }
 
 .display--post .flickity-viewport .flickity-slider {
@@ -905,7 +928,7 @@ li {
 }
 
 .display--post .flickity-prev-next-button.previous {
-  left: 0px;
+  left: 20px;
   right: unset;
   top: unset;
   bottom: 5px;
@@ -915,7 +938,7 @@ li {
 
 .display--post .flickity-prev-next-button.next {
   right: unset;
-  left: 35px;
+  left: 65px;
   width: 25px;
   height: 25px;
   bottom: 5px;

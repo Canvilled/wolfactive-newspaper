@@ -967,7 +967,7 @@ function postApiSearchResult($data){
     // };
     array_push($postResult,
       array(
-        'title'             => get_the_title(),
+        'title'             => wp_trim_words( get_the_title(), 10, '...' ),
         'thumbnail'          => get_the_post_thumbnail(),
         'link' => get_the_permalink(),
         'date' => get_the_date( 'F j, Y' ),

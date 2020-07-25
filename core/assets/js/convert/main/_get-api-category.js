@@ -66,7 +66,9 @@ function getListPost(category, showPost) {
     return response.json();
   }).then(function (data) {
     showPost.innerHTML = "";
-    showPost.classList.remove("loading");
+    setTimeout(function () {
+      showPost.classList.remove("loading");
+    }, 3000);
     var slidePost = displayPost(data, showPost);
     createFlick();
     getListPostChild(slidePost);
