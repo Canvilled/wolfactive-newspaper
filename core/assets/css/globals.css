@@ -1912,7 +1912,7 @@ section#singlePost .single__wrapper .post__wrapper-container .singlePost-sidebar
   content: '';
   position: absolute;
   bottom: 0;
-  width: 150%;
+  width: 2000px;
   padding: 1px;
   background: #222;
 }
@@ -3109,6 +3109,7 @@ ul#crumbs li {
 
 .slidePost .slidePost__item {
   width: 100%;
+  padding: 0 5px;
 }
 
 .slidePost .slidePost__item .slidePost__item-title .title__block {
