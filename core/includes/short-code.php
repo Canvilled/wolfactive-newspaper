@@ -27,7 +27,7 @@ function renderPopularPostShortcode (){
 }
 function renderPopularPost(){
   $args = array(
-    'posts_per_page' => 10,
+    'posts_per_page' => 3,
     'meta_key' => 'post_views_count',
     'orderby' => 'meta_value_num',
     'order' => 'DESC',
@@ -61,13 +61,59 @@ function renderPopularPost(){
     <?php
   endwhile;
   ?></div>
-  <button id="load-more-post">Load More</button>
-      </div><?php
+  <?php
   $output=ob_get_contents();
   ob_end_clean();
   return $output;
 }
 
+add_action('init', 'renderSinglePopularPostShortCode');
+function renderSinglePopularPostShortCode(){
+  add_shortcode('single_popular_post','renderSinglePopularPost');
+}
+function renderSinglePopularPost(){
+  $args = array(
+    'posts_per_page' => 9,
+    'meta_key' => 'post_views_count',
+    'orderby' => 'meta_value_num',
+    'order' => 'DESC',
+    'post_type' => 'post',
+    'post_status' => 'publish',
+  );
+  $popular_post_query = new WP_Query($args);
+  ob_start();
+  ?>
+  <div class="popular__post-single">
+    <div class="popular__post-single-container">
+  <?php
+  while ($popular_post_query->have_posts()):$popular_post_query->the_post();
+  $views = getPostViews(get_the_id());
+    ?>
+    <div class="popupar__post-single-item">
+      <div class="nw__post-item row-divide">
+        <div class="nw__image col-divide-4">
+          <a href="<?php echo get_permalink(); ?>"><img src="<?php echo hk_get_thumb(get_the_id(),485,360) ?>" alt="Image"></a>
+        </div>
+        <div class="nw__infomation col-divide-8">
+          <div class="nw__post-title nw__post-title--small">
+            <a href="<?php echo get_permalink(); ?>"><?php echo wp_trim_words( get_the_title(), 10, '...' );?></a>
+          </div>
+          <div class="nw__editor-date open-sanrif">
+            <span class="date-time open-sanrif"><?php echo get_the_date( 'F j, Y' ) ?></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <?php
+  endwhile;
+  ?></div>
+  <button id="load-more-post">Load More</button>
+  <button id="close-post">Close</button>
+      </div><?php
+  $output=ob_get_contents();
+  ob_end_clean();
+  return $output;
+}
 //House Produce shortcode
 add_action('init', 'renderHousePostShortcode');
 function renderHousePostShortcode (){

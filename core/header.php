@@ -4,7 +4,7 @@
      <meta charset="<?php bloginfo('charset'); ?>" />
      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-     <meta name="author" content="Wolfactive - HuyNguyen - PhuongNam">
+     <meta name="author" content="Wolfactive - HuyNguyen - PhuongNam - TanDat">
   	 <link rel="profile" href="https://wolfactive.net/">
      <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
      <link rel="preload" href="<?php echo get_theme_file_uri('assets\css\lib\fontawsome\webfonts\fa-brands-400.woff2') ?>" as="font" type="font/woff2" crossorigin>

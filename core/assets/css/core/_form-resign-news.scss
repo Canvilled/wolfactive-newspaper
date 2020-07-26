@@ -1,0 +1,52 @@
+.form-resign-news{
+  .frn__container{
+    display: grid;
+    .frn__title{
+
+    }
+    .frn__field-content{
+
+    }
+    .frn__field-name{
+
+    }
+    .frn__field-email{
+
+    }
+    .input__field-item{
+      .submit__form{
+        background: #222;
+        color: #fff;
+        font-weight: 700;
+      }
+      .submit__form:hover{
+        background: var(--primary-color);
+      }
+      textarea#Noidung{
+        height:120px;
+      }
+      .frn__input-field{
+        border:1px solid #aaaaaa50;
+        outline: none;
+        width: 100%;
+        padding: 10px;
+        margin-top:10px;
+      }
+      label{
+        display: none;
+      }
+      .notice__result-value {
+        color: var(--tertiary-color);
+        font-weight: 700;
+        opacity:0;
+      }
+      .frn__input-field:placeholder{
+        color:#aaa;
+        font-family: open-sanrif;
+        font-size:15px;
+        text-transform: capitalize;
+      }
+    }
+
+  }
+}

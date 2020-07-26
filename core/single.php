@@ -49,6 +49,7 @@
             </div>
             <?php get_template_part( '/sections/author' ) ?>
             <?php get_template_part( '/sections/related-post' ) ?>
+            <?php get_template_part('/sections/form-resign-news') ?>
           </div>
           <div class="col-divide-4 singlePost-sidebar">
             <?php if (dynamic_sidebar('single-sidebar')) : get_sidebar( 'single-sidebar' ); ?><?php endif; ?>

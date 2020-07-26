@@ -5,10 +5,23 @@
   height: 1px; width: 1px;
   margin: -1px; padding: 0; border: 0;
 }
-.popular__post{
+.popular__post-single{
   text-align: center;
-  .popular__post-container{
+  .popular__post-single-container{
     text-align: initial;
+  }
+  #close-post{
+    padding: 10px;
+    background: transparent;
+    color: var(--tertiary-color);
+    border: 1px solid var(--tertiary-color);
+    margin-top: 10px;
+    outline: none;
+    cursor: pointer;
+  }
+  #close-post:hover{
+    background:var(--tertiary-color);
+    color:#fff;
   }
   #load-more-post{
     padding: 10px;
@@ -27,6 +40,7 @@
 .slidePost{
   .slidePost__item{
     width:100%;
+    padding: 0 5px;
     .slidePost__item-title{
       .title__block {
         margin-top:10px;

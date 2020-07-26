@@ -3064,15 +3064,15 @@ ul#crumbs li {
   border: 0;
 }
 
-.popular__post {
+.popular__post-single {
   text-align: center;
 }
 
-.popular__post .popular__post-container {
+.popular__post-single .popular__post-single-container {
   text-align: initial;
 }
 
-.popular__post #load-more-post {
+.popular__post-single #close-post {
   padding: 10px;
   background: transparent;
   color: var(--tertiary-color);
@@ -3082,7 +3082,22 @@ ul#crumbs li {
   cursor: pointer;
 }
 
-.popular__post #load-more-post:hover {
+.popular__post-single #close-post:hover {
+  background: var(--tertiary-color);
+  color: #fff;
+}
+
+.popular__post-single #load-more-post {
+  padding: 10px;
+  background: transparent;
+  color: var(--tertiary-color);
+  border: 1px solid var(--tertiary-color);
+  margin-top: 10px;
+  outline: none;
+  cursor: pointer;
+}
+
+.popular__post-single #load-more-post:hover {
   background: var(--tertiary-color);
   color: #fff;
 }
@@ -3204,6 +3219,49 @@ ul#crumbs li {
   height: 25px;
   bottom: -50px;
   top: unset;
+}
+
+.form-resign-news .frn__container {
+  display: grid;
+}
+
+.form-resign-news .frn__container .input__field-item .submit__form {
+  background: #222;
+  color: #fff;
+  font-weight: 700;
+}
+
+.form-resign-news .frn__container .input__field-item .submit__form:hover {
+  background: var(--primary-color);
+}
+
+.form-resign-news .frn__container .input__field-item textarea#Noidung {
+  height: 120px;
+}
+
+.form-resign-news .frn__container .input__field-item .frn__input-field {
+  border: 1px solid #aaaaaa50;
+  outline: none;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.form-resign-news .frn__container .input__field-item label {
+  display: none;
+}
+
+.form-resign-news .frn__container .input__field-item .notice__result-value {
+  color: var(--tertiary-color);
+  font-weight: 700;
+  opacity: 0;
+}
+
+.form-resign-news .frn__container .input__field-item .frn__input-field:placeholder {
+  color: #aaa;
+  font-family: open-sanrif;
+  font-size: 15px;
+  text-transform: capitalize;
 }
 
 /*# sourceMappingURL=globals.css.map */
