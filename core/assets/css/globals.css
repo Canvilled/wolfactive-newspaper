@@ -890,10 +890,11 @@ li {
 .display--post {
   position: absolute;
   top: 0;
+  display: flex;
   right: 0px;
   height: 100%;
   width: 100%;
-  grid-column: 2 / span 6;
+  grid-column: 2 / span 7;
   padding: 30px;
   border-left: 1px solid #aaaaaa50;
   /* icon color */
