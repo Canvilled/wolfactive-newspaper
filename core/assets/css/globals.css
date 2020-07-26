@@ -923,6 +923,7 @@ li {
 
 .display--post .display--post-item {
   width: 250px;
+  margin-right: 20px;
 }
 
 .display--post .display--post-item .post-item-title {
