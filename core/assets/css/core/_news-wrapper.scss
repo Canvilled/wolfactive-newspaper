@@ -5,11 +5,12 @@
         justify-content: space-between;
         display: flex;
         .label-item{
-          color:#fff;
-          padding: 2px 10px 0px 10px;
-          font-size:15px;
-          font-weight: 400;
+          color: #fff;
+          padding: 3px 15px 1px 15px;
+          font-size: 15px;
+          font-weight: 500;
           display: inline-block;
+          letter-spacing: 1.5px;
         }
         .news__category-related{
           align-self: center;
@@ -17,8 +18,9 @@
             display: flex;
             li.sub__category {
               margin-left: 30px;
+              letter-spacing: 1px;
               a{
-                color:#777;
+                color:#6b6a6a;
                 font-size:13px;
               }
             }
@@ -28,11 +30,11 @@
       .nw__content{
         .nw__left-content{
           .nw__image{}
-          .nw__post-title{font-size: 23px; font-weight: 500; line-height: 25px; margin: 10px 0;a{color: #111;}}
-          .nw__post-content{font-size:13px; color:#777; line-height: 21px;}
+          .nw__post-title{letter-spacing: 0.5px; font-size: 23px; font-weight: 500; line-height: 25px; margin: 10px 0;a{color: #111;}}
+          .nw__post-content{font-size:13px; color:#6b6a6a; line-height: 21px;}
           .nw__editor-date{
             .editor{font-size:11px; font-weight: 700; color:#000;}
-            .date-time{font-size:11px; color:#777}
+            .date-time{font-size:11px; color:#6b6a6a}
             .comment{
               float: right;
               margin-top: 5px;
@@ -50,6 +52,7 @@
               padding-left: 15px;
               .nw__post-title{
                 font-size: 14px;
+                letter-spacing: 0.5px;
                 line-height: 20px;
                 font-weight: 700;
                 a:hover{
@@ -58,12 +61,13 @@
               }
               .nw__editor-date{
                 margin-top: 5px;
-                .date-time{font-size:11px; color:#777}
+                .date-time{font-size:11px; color:#6b6a6a}
               }
             }
           }
         }
         .nw__left-content.td-2{
+          padding-right: 5px;
           .nw__post-item{
             .nw__post-title--small{
               margin:0;
@@ -78,9 +82,16 @@
           }
           .nw__post-item.row-divide{
             margin:10px 0;
+            .nw__infomation {
+              margin-bottom:10px;
+              .nw__post-title{
+                margin-top:0;
+              }
+            }
           }
         }
         .nw__right-content.td-2{
+          padding-left: 5px;
           .nw__post-item{
             .nw__post-title--small{
               margin:0 !important;
@@ -102,11 +113,11 @@
                 }
             }
             .nw__post-content{
-              font-size:13px; color:#777; line-height: 21px;
+              font-size:13px; color:#6b6a6a; line-height: 21px;
             }
             .nw__editor-date{
               .editor{font-size:11px; font-weight: 700; color:#000;}
-              .date-time{font-size:11px; color:#777}
+              .date-time{font-size:11px; color:#6b6a6a}
               .comment{
                 float: right;
                 margin-top: 5px;
@@ -196,7 +207,7 @@
             }
             .nw__editor-date{
               .date-time{
-                color:#777;
+                color:#6b6a6a;
                 font-weight: 400;
               }
               .comment{

@@ -67,7 +67,7 @@ switch ($type_display) {
               <div class="nw__image">
                 <a href="<?php echo get_permalink(); ?>"><img src="<?php echo hk_get_thumb(get_the_id(),485,360) ?>" alt="Image"></a>
               </div>
-              <div class="nw__post-title">
+              <div class="nw__post-title eclips">
                 <a href="<?php echo get_permalink(); ?>"><?php the_title();?></a>
               </div>
               <div class="nw__editor-date">
@@ -97,7 +97,7 @@ switch ($type_display) {
                   <a href="<?php echo get_permalink(); ?>"><img src="<?php echo hk_get_thumb(get_the_id(),485,360) ?>" alt="Image"></a>
                 </div>
                 <div class="nw__infomation col-divide-8">
-                  <div class="nw__post-title">
+                  <div class="nw__post-title eclips">
                     <a href="<?php echo get_permalink(); ?>"><?php echo wp_trim_words( get_the_title(), 10, '...' ); ?></a>
                   </div>
                   <div class="nw__editor-date">
@@ -134,7 +134,7 @@ switch ($type_display) {
       if($i===0)
       {
         ?>
-        <div class="col-divide-6 nw__left-content td-2"><?php
+        <div class="col-divide-6 nw__left-content td-2 col-divide-md-12"><?php
         while($query_post_from_cat->have_posts()):$query_post_from_cat->the_post();
           if($j<=2){
             if($j===0){
@@ -143,7 +143,7 @@ switch ($type_display) {
               <div class="nw__image">
                 <a href="<?php echo get_permalink(); ?>"><img src="<?php echo hk_get_thumb(get_the_id(),485,360) ?>" alt="Image"></a>
               </div>
-              <div class="nw__post-title">
+              <div class="nw__post-title eclips">
                 <a href="<?php echo get_permalink(); ?>"><?php echo wp_trim_words( get_the_title(), 10, '...' );?></a>
               </div>
               <div class="nw__editor-date">
@@ -164,7 +164,7 @@ switch ($type_display) {
                   <a href="<?php echo get_permalink(); ?>"><img src="<?php echo hk_get_thumb(get_the_id(),485,360) ?>" alt="Image"></a>
                 </div>
                 <div class="nw__infomation col-divide-8">
-                  <div class="nw__post-title nw__post-title--small">
+                  <div class="nw__post-title eclips">
                     <a href="<?php echo get_permalink(); ?>"><?php echo wp_trim_words( get_the_title(), 10, '...' );?></a>
                   </div>
                   <div class="nw__editor-date">
@@ -185,7 +185,7 @@ switch ($type_display) {
       }
       else{
         ?>
-        <div class="col-divide-6 nw__right-content td-2"><?php
+        <div class="col-divide-6 nw__right-content td-2 col-divide-md-12"><?php
         while($query_post_from_cat->have_posts()):$query_post_from_cat->the_post();
         if($j>2){
           if($j===3){
@@ -194,7 +194,7 @@ switch ($type_display) {
             <div class="nw__image">
               <a href="<?php echo get_permalink(); ?>"><img src="<?php echo hk_get_thumb(get_the_id(),485,360) ?>" alt="Image"></a>
             </div>
-            <div class="nw__post-title">
+            <div class="nw__post-title eclips">
               <a href="<?php echo get_permalink(); ?>"><?php echo wp_trim_words( get_the_title(), 10, '...' );?></a>
             </div>
             <div class="nw__editor-date">
@@ -215,7 +215,7 @@ switch ($type_display) {
                 <a href="<?php echo get_permalink(); ?>"><img src="<?php echo hk_get_thumb(get_the_id(),485,360) ?>" alt="Image"></a>
               </div>
               <div class="nw__infomation col-divide-8">
-                <div class="nw__post-title nw__post-title--small">
+                <div class="nw__post-title eclips">
                   <a href="<?php echo get_permalink(); ?>"><?php echo wp_trim_words( get_the_title(), 10, '...' );?></a>
                 </div>
                 <div class="nw__editor-date">
@@ -266,7 +266,7 @@ switch ($type_display) {
                 } ?>
             </div>
           </div>
-          <div class="nw__post-title">
+          <div class="nw__post-title eclips">
             <a href="<?php echo get_permalink(); ?>"><?php the_title();?></a>
           </div>
         </div>
@@ -293,7 +293,7 @@ switch ($type_display) {
         <a href="<?php echo get_permalink(); ?>"><img src="<?php echo hk_get_thumb(get_the_id(),485,360) ?>" alt="Image"></a>
       </div>
       <div class="nw__infomation col-divide-8">
-        <div class="nw__post-title">
+        <div class="nw__post-title eclips">
           <a href="<?php echo get_permalink(); ?>"><?php the_title();?></a>
         </div>
         <div class="nw__editor-date">

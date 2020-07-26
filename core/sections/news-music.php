@@ -12,9 +12,7 @@
       ?>
         <div class="mi-container col-divide-4 col-divide-md-12">
           <div class="mi__image">
-            <a href="<?php echo get_permalink(); ?>">
               <img class="img-music" src="<?php echo hk_get_thumb(get_the_id(),485,360) ?>" alt="Image">
-            </a>
             <div class="icon-music-play">
               <i class="fas fa-music"></i>
             </div>

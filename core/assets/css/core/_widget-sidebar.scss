@@ -19,28 +19,31 @@
   }
 }
 .nw__sidebar{
-  padding: 0 40px;
+  padding-left: 20px;
   .sidebar{
     margin-bottom: 20px;
+    overflow: hidden;
     h2.title--section{
       display: inline-block;
-      font-size: 14px;
-      font-weight: 400;
-      background: #000;
+      font-size: 15px;
+      font-family: open-sanrif;
+      font-weight: 600;
+      background: #222;
       color: #fff;
-      margin-top:10px;
+      margin:0;
       position: relative;
-      padding: 2px 5px;
+      padding: 5px 10px;
     }
     h2.title--section::after{
       content:'';
       position: absolute;
       bottom:0;
-      width:150%;
-      padding:1px;
-      background:#000;
+      width:200%;
+      height:2px;
+      background:#222;
     }
     .textwidget{
+      margin:10px;
       .sidebar__social-list{
         display: flex;
         justify-content: space-between;

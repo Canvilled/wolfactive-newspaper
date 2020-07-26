@@ -54,6 +54,7 @@ body{
 	font-weight:500;
 	line-height:1.5;
 	color:#333;
+  letter-spacing: 0.5px;
 	font-family: Roboto,sans-serif;
 }
 #main{
@@ -492,6 +493,9 @@ width: 80%;
   .my-6{
 	  margin:6px 0px;
   }
+  .my-10{
+    margin:10px 0;
+  }
 	.my-12{
 	  margin:12px 0px;
   }
@@ -663,4 +667,11 @@ li{
 }
 .open-sanrif{
 	font-family:open-sanrif;
+}
+.eclips{
+  text-overflow: ellipsis;
+  overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }

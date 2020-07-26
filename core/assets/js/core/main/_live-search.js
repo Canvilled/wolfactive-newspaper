@@ -13,7 +13,7 @@ function ResultSearch(){
   var apiUrl='';
   setTimeout(function(){
     if(searchField.value){
-      apiUrl =window.location.pathname+`wp-json/post-api/v1/search?term=`+searchField.value;
+      apiUrl =`${protocol}//${hostname}/wp-json/post-api/v1/search?term=`+searchField.value;
     }
     fetch(apiUrl)
     .then(result => {
@@ -25,17 +25,17 @@ function ResultSearch(){
       let content= ``;
       data.forEach((item,i)=>{
       content += `
-                <div class="Post__item">
-                  <div  class="Post__item-img">
+                <div class="post__item my-20">
+                  <div  class="post__item-img">
                     <a href="${item.link}">
                         ${item.thumbnail}
                     </a>
                   </div>
-                  <div class="Post__item-content">
+                  <div class="post__item-content">
                       <div class="date">
                         <i class="far fa-calendar-alt"></i> <span>${item.date}</span>
                       </div>
-                      <h4 class="Post__item-title title--item">
+                      <h4 class="post__item-title title--item">
                         <a href="${item.link}">
                           ${item.title}
                         </a>

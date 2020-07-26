@@ -763,7 +763,7 @@ function loops_get_post_center($get_cat_id){
     }
     else{
       ?>
-      <div class="nw__post-item row-divide">
+      <div class="nw__post-item row-divide my-10">
         <div class="nw__image col-divide-4">
           <a href="<?php echo get_permalink(); ?>"><img src="<?php echo hk_get_thumb(get_the_id(),485,360) ?>" alt="Image"></a>
         </div>

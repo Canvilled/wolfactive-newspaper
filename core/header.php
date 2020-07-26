@@ -61,7 +61,7 @@
                   </button>
                 </div>
               </form>
-            <div class="search__result-overlay my-20" id="searchResult"></div>
+            <div class="search__result-overlay" id="searchResult"></div>
           </div>
         </div>
       </div>
