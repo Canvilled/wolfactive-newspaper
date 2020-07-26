@@ -26,8 +26,8 @@ function createPostList(item) {
   var postDisplay = document.createElement("div");
   item.appendChild(postDisplay);
   postDisplay.classList.add('display--post');
-  postDisplay.classList.add('loading');
-  postDisplay.innerHTML = "<img style=\"width:64px; height:64px;\" src=\"".concat(urlImages, "Dual-Ring-1s-200px.gif\" alt=\"Loading Image\">");
+  postDisplay.classList.add('loading'); // postDisplay.innerHTML=``;
+
   return postDisplay;
 }
 
@@ -65,19 +65,19 @@ function getListPost(category, showPost) {
   }).then(function (response) {
     return response.json();
   }).then(function (data) {
-    showPost.innerHTML = "";
+    showPost.innerHTML = "<img style=\"width:64px; height:64px;\" src=\"".concat(urlImages, "Dual-Ring-1s-200px.gif\" alt=\"Loading Image\">");
     setTimeout(function () {
       showPost.classList.remove("loading");
+      var slidePost = displayPost(data, showPost);
+
+      if (Object.keys(data).length > 3) {
+        createFlick();
+      } else if (Object.keys(data).length === 0) {
+        showPost.innerHTML = "Kh\xF4ng C\xF3 B\xE0i Vi\u1EBFt";
+      }
+
+      getListPostChild(slidePost);
     }, 3000);
-    var slidePost = displayPost(data, showPost);
-
-    if (Object.keys(data).length > 3) {
-      createFlick();
-    } else if (Object.keys(data).length === 0) {
-      showPost.innerHTML = "Kh\xF4ng C\xF3 B\xE0i Vi\u1EBFt";
-    }
-
-    getListPostChild(slidePost);
   }).catch(function (err) {
     return console.log(err);
   });

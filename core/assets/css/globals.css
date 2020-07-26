@@ -887,6 +887,10 @@ li {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(187, 187, 187, 0.496236) 100%);
 }
 
+.display--post.flickity-enabled {
+  display: block;
+}
+
 .display--post {
   position: absolute;
   top: 0;

@@ -19,11 +19,10 @@ function convertTextToSlug (event){
 
 function createPostList(item){
     let postDisplay=document.createElement("div");
-
     item.appendChild(postDisplay);
     postDisplay.classList.add('display--post');
     postDisplay.classList.add('loading');
-    postDisplay.innerHTML=`<img style="width:64px; height:64px;" src="${urlImages}Dual-Ring-1s-200px.gif" alt="Loading Image">`;
+    // postDisplay.innerHTML=``;
     return postDisplay;
 }
 
@@ -57,18 +56,18 @@ function getListPost(category,showPost){
         })
         .then(response => response.json())
         .then(data => {
-          showPost.innerHTML=``;
+          showPost.innerHTML=`<img style="width:64px; height:64px;" src="${urlImages}Dual-Ring-1s-200px.gif" alt="Loading Image">`;
           setTimeout(function(){
             showPost.classList.remove("loading");
+            let slidePost = displayPost(data,showPost);
+            if(Object.keys(data).length > 3 )
+            {
+              createFlick();
+            } else if(Object.keys(data).length === 0) {
+              showPost.innerHTML=`Không Có Bài Viết`;
+            }
+            getListPostChild(slidePost);
           },3000);
-          let slidePost = displayPost(data,showPost);
-          if(Object.keys(data).length > 3 )
-          {
-            createFlick();
-          } else if(Object.keys(data).length === 0) {
-            showPost.innerHTML=`Không Có Bài Viết`;
-          }
-          getListPostChild(slidePost);
         })
         .catch(err => console.log(err));
 }
