@@ -61,6 +61,7 @@ function renderPopularPost(){
     <?php
   endwhile;
   ?></div>
+</div>
   <?php
   $output=ob_get_contents();
   ob_end_clean();

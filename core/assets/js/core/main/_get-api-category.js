@@ -67,7 +67,7 @@ function getListPost(category,showPost){
               showPost.innerHTML=`Không Có Bài Viết`;
             }
             getListPostChild(slidePost);
-          },3000);
+          },1000);
         })
         .catch(err => console.log(err));
 }

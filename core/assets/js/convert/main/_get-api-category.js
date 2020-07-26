@@ -77,7 +77,7 @@ function getListPost(category, showPost) {
       }
 
       getListPostChild(slidePost);
-    }, 3000);
+    }, 1000);
   }).catch(function (err) {
     return console.log(err);
   });
