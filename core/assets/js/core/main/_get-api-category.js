@@ -45,7 +45,7 @@ function createFlick(){
 
 function getListPost(category,showPost){
   let apiUrlMail =`${protocol}//${hostname}/wp-json/category-api/v1/cat-name`;
-  console.log(apiUrlMail);
+  //console.log(apiUrlMail);
         fetch(apiUrlMail,{
             method: 'POST',
             mode:    'cors',
@@ -60,9 +60,14 @@ function getListPost(category,showPost){
           showPost.innerHTML=``;
           setTimeout(function(){
             showPost.classList.remove("loading");
-          },3000)
+          },3000);
           let slidePost = displayPost(data,showPost);
-          createFlick();
+          if(Object.keys(data).length > 3 )
+          {
+            createFlick();
+          } else if(Object.keys(data).length === 0) {
+            showPost.innerHTML=`Không Có Bài Viết`;
+          }
           getListPostChild(slidePost);
         })
         .catch(err => console.log(err));
@@ -104,19 +109,13 @@ function getListPostChild(slidePost){
         getListPost(category,showPost);
     }
   });
-
 }
-// function sliderPostList(slidePost){
-//
-// }
-
 /*Helper*/
 
 /*action*/
 if(subMenuArray.length != 0 && menuArray.length != 0)
 menuArray.forEach((item,i)=>{
   item.onmouseenter = (event) => {
-    console.log(event);
     let postDisplay=document.querySelector('.display--post');
     if(postDisplay)
     {

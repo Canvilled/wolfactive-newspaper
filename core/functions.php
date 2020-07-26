@@ -1004,7 +1004,7 @@ function prefix_apiCategory() {
           'post_type' => 'post',
           'post_status' => 'publish',
           'category_name'=> $decoded['category'],
-          'showposts'=> 8,
+          'showposts'=> 6,
         );
         $category_post = new WP_Query($args);
         if ($category_post->have_posts()) {
