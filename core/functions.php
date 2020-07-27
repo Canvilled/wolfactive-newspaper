@@ -958,13 +958,6 @@ function postApiSearchResult($data){
   ));
   $postResult = array();
   while($postList->have_posts()):$postList->the_post();
-    // $termSize = get_the_terms(get_the_id(),'size');
-    // $sizes = array();
-    // foreach ($termSize as $term){
-    //   if($term->name !== "Tất cả"){
-    //     array_push($size,$term->name);
-    //   }
-    // };
     array_push($postResult,
       array(
         'title'             => wp_trim_words( get_the_title(), 10, '...' ),

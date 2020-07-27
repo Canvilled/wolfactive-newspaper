@@ -3,6 +3,13 @@
     .row-divide{
       .banner__container{
         align-self: center;
+        .header-banner{
+          a{
+            img{
+              max-height:150px;
+            }
+          }
+        }
       }
     }
   }
