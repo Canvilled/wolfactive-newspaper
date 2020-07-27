@@ -45,5 +45,5 @@
   <?php
   }
   // $post = $orig_post;
-  wp_reset_query();
+  // wp_reset_query();
   ?>
