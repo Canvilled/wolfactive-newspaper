@@ -18,7 +18,7 @@
                     }
                     .post__head-title {
                         position: absolute;
-                        bottom: 5px;
+                        bottom: 0;
                         padding: 0 15px 20px 17px;
                         background: linear-gradient(0deg, rgba(0, 0, 0, .5) 10%, rgba(255, 255, 255, 0) 100%);
                         .title__cat-news-top {
@@ -44,6 +44,7 @@
         }
         .right-top-news {
             .right__news-head {
+                margin-bottom: 5px;
                 .post__head-item {
                     position: relative;
                     .post__head-image {
@@ -59,7 +60,7 @@
                     }
                     .post__head-title {
                         position: absolute;
-                        bottom: 5px;
+                        bottom: 0;
                         padding: 0 15px 20px 17px;
                         background: linear-gradient(0deg, rgba(0, 0, 0, .5) 10%, rgba(255, 255, 255, 0) 100%);
                         .title__cat-news-top {
@@ -83,8 +84,17 @@
                 }
             }
             .right__news-tail {
+                .left__tail-post {
+                    padding-right: 2px;
+                }
+                .right__tail-post {
+                    padding-left: 2px;
+                }
                 .post__head-item {
                     position: relative;
+                    .post__head-image {
+                        overflow: hidden;
+                    }
                     .post__head-image:hover {
                         cursor: pointer;
                         img {
@@ -94,7 +104,7 @@
                     }
                     .post__head-title {
                         position: absolute;
-                        bottom: 5px;
+                        bottom: 0;
                         padding: 0 15px 20px 17px;
                         background: linear-gradient(0deg, rgba(0, 0, 0, .5) 10%, rgba(255, 255, 255, 0) 100%);
                         .title__cat-news-top {
