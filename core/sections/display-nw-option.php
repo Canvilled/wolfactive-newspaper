@@ -240,7 +240,7 @@ switch ($type_display) {
   case 3:
   ?>
   <div class="nw__content td-3 my-20">
-    <div class="nw__content-post-slide" data-flickity='{ "autoPlay": false, "pauseAutoPlayOnHover": false, "pageDots": false,"draggable": true,"groupCells": 3 }'>
+    <div class="nw__content-post-slide" data-flickity='{ "autoPlay": true, "pauseAutoPlayOnHover": false, "pageDots": false,"draggable": true,"groupCells": 3,"wrapAround": true }'>
       <?php
       $args = array(
         'cat' => $cat_id,

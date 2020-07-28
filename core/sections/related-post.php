@@ -38,12 +38,12 @@
             </div>
           </div>
         </div>
-        <? }
+      <?php }
         ?>
       </div>
     </div>
   <?php
   }
-  // $post = $orig_post;
-  // wp_reset_query();
+  $post = $orig_post;
+  wp_reset_query();
   ?>

@@ -33,7 +33,7 @@
             <?php
               $banner_image= get_field('banner','option');
              ?>
-             <img src="<?php echo $banner_image ?>" alt="banner-image-newspaper-wolfactive">
+             <img src="<?php echo hk_get_image($banner_image,700,150) ?>" alt="banner-image-newspaper-wolfactive">
           </a>
         </div>
       </div>
