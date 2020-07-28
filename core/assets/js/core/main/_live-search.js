@@ -1,30 +1,55 @@
 var searchResultDiv = document.querySelector("#searchResult");
 var searchField = document.querySelector(".search-field");
-function openSearch(){
-  var openSearchForm=document.querySelector('.open-search');
-  var searchForm = document.querySelector('.search__wrapper');
-  if(searchForm.style.display==='none'){
-      searchForm.style.display='block';
-  } else{
-    searchForm.style.display='none';
-  }
+var searchContainFocus = document.querySelector(".search-focus-click");
+var searchForm = document.querySelector('.search__wrapper');
+var openSearchFormBtn = document.querySelector('.open-search');
+
+// function openSearch() {
+//     if (searchForm.style.display === 'none') {
+//         searchForm.style.display = 'block';
+//         searchContainFocus.classList.remove('d--none');
+//     } else {
+//         searchForm.style.display = 'none';
+//         searchContainFocus.classList.add('d--none');
+//     }
+// }
+
+// function closeSearch() {
+
+// }
+
+searchField.onkeydown = () => {
+    ResultSearch();
 }
-function ResultSearch(){
-  var apiUrl='';
-  setTimeout(function(){
-    if(searchField.value){
-      apiUrl =`${protocol}//${hostname}/wp-json/post-api/v1/search?term=`+searchField.value;
-    }
-    fetch(apiUrl)
-    .then(result => {
-      //console.log(result);
-      return result.json();
-    })
-    .then(data => {
-      //console.log(data);
-      let content= ``;
-      data.forEach((item,i)=>{
-      content += `
+
+openSearchFormBtn.onclick = () => {
+    searchForm.classList.remove('d--none');
+    searchContainFocus.classList.remove('d--none');
+}
+
+searchContainFocus.onclick = () => {
+    // let searchFocus = document.querySelector(".search-focus-click");
+    // let closeSearchField = document.querySelector(".search-field");
+    searchForm.classList.add('d--none');
+    searchContainFocus.classList.add('d--none');
+}
+
+function ResultSearch() {
+    var apiUrl = '';
+    setTimeout(function() {
+        if (searchField.value) {
+            apiUrl = `${protocol}//${hostname}/wp-json/post-api/v1/search?term=` + searchField.value;
+        }
+        fetch(apiUrl)
+            .then(result => {
+                //console.log(result);
+                return result.json();
+            })
+            .then(data => {
+                //console.log(data);
+                let content = ``;
+                data.forEach((item, i) => {
+                    content += `
                 <div class="post__item my-20">
                   <div  class="post__item-img">
                     <a href="${item.link}">
@@ -43,15 +68,11 @@ function ResultSearch(){
                   </div>
                 </div>
             `;
-          })
-            searchResultDiv.innerHTML = content;
-    })
-    .catch(error => console.log(error));
+                })
+                searchResultDiv.innerHTML = content;
+            })
+            .catch(error => console.log(error));
 
-  }, 2000);
+    }, 1000);
 
-}
-
-searchField.onkeydown = () =>{
-  ResultSearch();
 }

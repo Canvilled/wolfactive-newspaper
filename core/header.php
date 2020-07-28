@@ -15,6 +15,8 @@
      <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<section class="home__wrapper">
+  <div class="search-focus-click d--none"></div>
 <section class="header">
   <?php if(!wp_is_mobile()){ ?>
     <div class="main--background">
@@ -47,8 +49,8 @@
           ?>
         </div>
         <div class="header__item search__content col-divide-6">
-          <button type="button" name="button" class="open-search" onclick="openSearch()"><i class="fas fa-search" aria-hidden="true"></i></button>
-          <div class="search__wrapper" style="display:none;">
+          <button type="button" name="button" class="open-search"><i class="fas fa-search" aria-hidden="true"></i></button>
+          <div class="search__wrapper d--none">
               <form role="search" method="get" id="searchForm" class="search-form" action="<?php echo esc_url(site_url('/')); ?>">
                 <div class="search__field-container">
                   <label>
@@ -56,8 +58,8 @@
                     <input type="hidden" class="search-field" placeholder="Search …" value="1" name="sentence">
                     <input type="hidden" class="search-field" placeholder="Search …" value="post" name="post_type">
                   </label>
-                  <button type="submit" class="search-submit" value="Search" aria-label="Button Submit Search">
-                    search >
+                  <button type="submit" class="btn search-submit" value="Search" aria-label="Button Submit Search">
+                    Tìm Kiếm
                   </button>
                 </div>
               </form>
@@ -84,3 +86,4 @@
   </div>
   <?php } ?>
 </section>
+

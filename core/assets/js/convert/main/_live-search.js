@@ -2,17 +2,35 @@
 
 var searchResultDiv = document.querySelector("#searchResult");
 var searchField = document.querySelector(".search-field");
+var searchContainFocus = document.querySelector(".search-focus-click");
+var searchForm = document.querySelector('.search__wrapper');
+var openSearchFormBtn = document.querySelector('.open-search'); // function openSearch() {
+//     if (searchForm.style.display === 'none') {
+//         searchForm.style.display = 'block';
+//         searchContainFocus.classList.remove('d--none');
+//     } else {
+//         searchForm.style.display = 'none';
+//         searchContainFocus.classList.add('d--none');
+//     }
+// }
+// function closeSearch() {
+// }
 
-function openSearch() {
-  var openSearchForm = document.querySelector('.open-search');
-  var searchForm = document.querySelector('.search__wrapper');
+searchField.onkeydown = function () {
+  ResultSearch();
+};
 
-  if (searchForm.style.display === 'none') {
-    searchForm.style.display = 'block';
-  } else {
-    searchForm.style.display = 'none';
-  }
-}
+openSearchFormBtn.onclick = function () {
+  searchForm.classList.remove('d--none');
+  searchContainFocus.classList.remove('d--none');
+};
+
+searchContainFocus.onclick = function () {
+  // let searchFocus = document.querySelector(".search-focus-click");
+  // let closeSearchField = document.querySelector(".search-field");
+  searchForm.classList.add('d--none');
+  searchContainFocus.classList.add('d--none');
+};
 
 function ResultSearch() {
   var apiUrl = '';
@@ -34,9 +52,5 @@ function ResultSearch() {
     }).catch(function (error) {
       return console.log(error);
     });
-  }, 2000);
+  }, 1000);
 }
-
-searchField.onkeydown = function () {
-  ResultSearch();
-};

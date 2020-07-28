@@ -764,7 +764,6 @@ li {
 }
 
 .main--background .menu__container {
-  padding: 20px 0;
   position: relative;
 }
 
@@ -778,6 +777,7 @@ li {
 }
 
 .main--background .menu__container .menu__wrapper .menu__background .menu-main-menu-container ul.menu li.menu-item {
+  padding: 20px 0;
   margin-right: 20px;
 }
 
@@ -789,17 +789,17 @@ li {
 }
 
 .main--background .menu__container .menu__wrapper .menu__background .menu-main-menu-container ul.menu li.menu-item .sub-menu {
-  display: grid;
-  visibility: hidden;
+  display: none;
   position: absolute;
   background: #fff;
   box-shadow: 1px 3px 9px 0px #aaaaaa82;
   width: 100%;
   z-index: 2;
-  top: 20px;
+  top: 55px;
   left: 0;
   opacity: 0;
-  transition: all .5s linear;
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   border-radius: 0px 0px 10px 10px;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(7, 1fr);
@@ -817,15 +817,25 @@ li {
   cursor: pointer;
 }
 
+.main--background .menu__container .menu__wrapper .menu__background .menu-main-menu-container ul.menu li.menu-item:hover a {
+  color: var(--primary-color);
+}
+
 .main--background .menu__container .menu__wrapper .menu__background .menu-main-menu-container ul.menu li.menu-item:hover .sub-menu {
-  visibility: visible;
-  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
-  transition-delay: 0s, 0s, 0.3s;
+  display: grid;
   opacity: 1;
 }
 
 .main--background .menu__container .menu__wrapper .menu__background .menu-main-menu-container ul.menu li.menu-item:hover .sub-menu .menu-item-object-category {
   grid-column: 1 / span 1;
+}
+
+.main--background .menu__container .menu__wrapper .menu__background .menu-main-menu-container ul.menu li.menu-item:hover .sub-menu .menu-item-object-category a {
+  color: #111;
+}
+
+.main--background .menu__container .menu__wrapper .menu__background .menu-main-menu-container ul.menu li.menu-item:hover .sub-menu .menu-item-object-category a:hover {
+  color: var(--primary-color);
 }
 
 .main--background .menu__container .menu__wrapper .search__content {
@@ -838,20 +848,16 @@ li {
 .main--background .menu__container .menu__wrapper .search__content .search__wrapper {
   position: absolute;
   right: 0;
-  display: none;
-  width: 100%;
+  width: 200%;
   background: #fff;
-  z-index: 2;
+  z-index: 3;
   padding: 20px 30px;
   box-shadow: 0px 4px 5px 1px #11111163;
 }
 
-.main--background .menu__container .menu__wrapper .search__content .search__wrapper .search-form {
-  border-bottom: 1px solid #aaa;
-}
-
 .main--background .menu__container .menu__wrapper .search__content .search__wrapper .search-form input.search-field {
   width: 100%;
+  background: #aaaaaa50;
   border: none;
   padding: 10px;
   outline: none;
@@ -861,19 +867,18 @@ li {
   border: none;
   outline: none;
   white-space: nowrap;
-  background: transparent;
+  background: var(--primary-bg-color);
+  color: #fff;
   cursor: pointer;
   font-weight: 600;
   text-transform: capitalize;
 }
 
-.main--background .menu__container .menu__wrapper .search__content .search__wrapper .search-form button.search-submit:hover {
-  color: var(--primary-color);
-}
-
 .main--background .menu__container .menu__wrapper .search__content .search__wrapper .search-form .search__field-container {
   justify-content: space-between;
   display: flex;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .main--background .menu__container .menu__wrapper .search__content .search__wrapper .search-form .search__field-container label {
@@ -1006,6 +1011,20 @@ li {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.home__wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.home__wrapper .search-focus-click {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background: #333;
+  z-index: 3;
 }
 
 .footer .main--background {
@@ -3435,6 +3454,28 @@ ul#crumbs li {
 .kenburns-bottom {
   -webkit-animation: kenburns-bottom 5s ease-out both;
   animation: kenburns-bottom 5s ease-out both;
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  10% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  10% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
 }
 
 /*# sourceMappingURL=globals.css.map */
