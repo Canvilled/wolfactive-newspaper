@@ -1200,9 +1200,6 @@ li {
 
 .top-news .top-news__container .left-top-news .top__news-post-head .post__head-item {
   position: relative;
-}
-
-.top-news .top-news__container .left-top-news .top__news-post-head .post__head-item .post__head-item {
   overflow: hidden;
 }
 
@@ -1243,9 +1240,6 @@ li {
 
 .top-news .top-news__container .right-top-news .right__news-head .post__head-item {
   position: relative;
-}
-
-.top-news .top-news__container .right-top-news .right__news-head .post__head-item .post__head-image {
   max-height: 254px;
   overflow: hidden;
 }
@@ -1291,9 +1285,6 @@ li {
 
 .top-news .top-news__container .right-top-news .right__news-tail .post__head-item {
   position: relative;
-}
-
-.top-news .top-news__container .right-top-news .right__news-tail .post__head-item .post__head-image {
   overflow: hidden;
 }
 

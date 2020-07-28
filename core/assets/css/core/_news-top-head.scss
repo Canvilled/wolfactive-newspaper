@@ -6,9 +6,7 @@
             .top__news-post-head {
                 .post__head-item {
                     position: relative;
-                    .post__head-item {
-                        overflow: hidden;
-                    }
+                    overflow: hidden;
                     .post__head-image:hover {
                         cursor: pointer;
                         img {
@@ -47,10 +45,8 @@
                 margin-bottom: 5px;
                 .post__head-item {
                     position: relative;
-                    .post__head-image {
-                        max-height: 254px;
-                        overflow: hidden;
-                    }
+                    max-height: 254px;
+                    overflow: hidden;
                     .post__head-image:hover {
                         cursor: pointer;
                         img {
@@ -92,9 +88,7 @@
                 }
                 .post__head-item {
                     position: relative;
-                    .post__head-image {
-                        overflow: hidden;
-                    }
+                    overflow: hidden;
                     .post__head-image:hover {
                         cursor: pointer;
                         img {
