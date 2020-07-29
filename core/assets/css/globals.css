@@ -1027,6 +1027,73 @@ li {
   z-index: 3;
 }
 
+.home__wrapper .navbar__mb {
+  position: fixed;
+  background: url("../images/navbar-image.png") no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+}
+
+.home__wrapper .navbar__mb .close__navbar {
+  position: absolute;
+  color: #fff;
+  padding: 0px 5px;
+  border: 2px solid #fff;
+  right: 20px;
+  top: 10px;
+  z-index: 5;
+}
+
+.home__wrapper .navbar__mb .navbar__mb-container {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding: 25px;
+}
+
+.home__wrapper .navbar__mb .navbar__mb-container .navbar__mb-logo {
+  width: 200px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.home__wrapper .navbar__mb .navbar__mb-container .menu-main-menu-container .menu .menu-item a {
+  color: #fff;
+  font-size: 21px;
+  font-weight: 700;
+  font-family: open-sanrif;
+}
+
+.home__wrapper .navbar__mb .navbar__mb-container .menu-main-menu-container .menu .menu-item .sub-menu {
+  padding-left: 20px;
+  -webkit-animation: slide-br 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-br 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.home__wrapper .navbar__mb .navbar__mb-container .menu-main-menu-container .menu .menu-item-has-children {
+  position: relative;
+}
+
+.home__wrapper .navbar__mb .navbar__mb-container .menu-main-menu-container .menu .menu-item-has-children i.fas.fa-sort-down {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #fff;
+  transition: all .5s linear;
+  transform: rotate(90deg);
+}
+
+.home__wrapper .navbar__mb .navbar__mb-container .menu-main-menu-container .menu .menu-item-has-children.active i.fas.fa-sort-down {
+  transform: rotate(0deg);
+}
+
 .footer .main--background {
   position: relative;
   background: url("../images/footer-background.jpg") no-repeat;
@@ -3475,6 +3542,28 @@ ul#crumbs li {
   10% {
     -webkit-transform: translateY(-10px);
     transform: translateY(-10px);
+  }
+}
+
+@-webkit-keyframes slide-br {
+  0% {
+    -webkit-transform: translateY(0) translateX(0);
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    -webkit-transform: translateY(5px) translateX(5px);
+    transform: translateY(5px) translateX(5px);
+  }
+}
+
+@keyframes slide-br {
+  0% {
+    -webkit-transform: translateY(0) translateX(0);
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    -webkit-transform: translateY(5px) translateX(5px);
+    transform: translateY(5px) translateX(5px);
   }
 }
 

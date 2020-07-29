@@ -68,3 +68,25 @@
         transform: translateY(-10px);
     }
 }
+
+@-webkit-keyframes slide-br {
+    0% {
+        -webkit-transform: translateY(0) translateX(0);
+        transform: translateY(0) translateX(0);
+    }
+    100% {
+        -webkit-transform: translateY(5px) translateX(5px);
+        transform: translateY(5px) translateX(5px);
+    }
+}
+
+@keyframes slide-br {
+    0% {
+        -webkit-transform: translateY(0) translateX(0);
+        transform: translateY(0) translateX(0);
+    }
+    100% {
+        -webkit-transform: translateY(5px) translateX(5px);
+        transform: translateY(5px) translateX(5px);
+    }
+}

@@ -16,16 +16,17 @@ var openSearchFormBtn = document.querySelector('.open-search'); // function open
 // function closeSearch() {
 // }
 
-searchField.onkeydown = function () {
-  ResultSearch();
-};
+if (searchField) {
+  searchField.onkeydown = function () {
+    ResultSearch();
+  };
+}
 
-openSearchFormBtn.onclick = function () {
+if (openSearchFormBtn) openSearchFormBtn.onclick = function () {
   searchForm.classList.remove('d--none');
   searchContainFocus.classList.remove('d--none');
 };
-
-searchContainFocus.onclick = function () {
+if (searchContainFocus) searchContainFocus.onclick = function () {
   // let searchFocus = document.querySelector(".search-focus-click");
   // let closeSearchField = document.querySelector(".search-field");
   searchForm.classList.add('d--none');

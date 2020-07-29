@@ -18,21 +18,24 @@ var openSearchFormBtn = document.querySelector('.open-search');
 
 // }
 
-searchField.onkeydown = () => {
-    ResultSearch();
+if (searchField) {
+    searchField.onkeydown = () => {
+        ResultSearch();
+    }
 }
 
-openSearchFormBtn.onclick = () => {
-    searchForm.classList.remove('d--none');
-    searchContainFocus.classList.remove('d--none');
-}
-
-searchContainFocus.onclick = () => {
-    // let searchFocus = document.querySelector(".search-focus-click");
-    // let closeSearchField = document.querySelector(".search-field");
-    searchForm.classList.add('d--none');
-    searchContainFocus.classList.add('d--none');
-}
+if (openSearchFormBtn)
+    openSearchFormBtn.onclick = () => {
+        searchForm.classList.remove('d--none');
+        searchContainFocus.classList.remove('d--none');
+    }
+if (searchContainFocus)
+    searchContainFocus.onclick = () => {
+        // let searchFocus = document.querySelector(".search-focus-click");
+        // let closeSearchField = document.querySelector(".search-field");
+        searchForm.classList.add('d--none');
+        searchContainFocus.classList.add('d--none');
+    }
 
 function ResultSearch() {
     var apiUrl = '';
