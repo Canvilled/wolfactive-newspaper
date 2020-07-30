@@ -245,6 +245,49 @@
 .home__wrapper {
     position: relative;
     width: 100%;
+    .search__wrapper-mobile {
+        position: fixed;
+        background: #fff;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 4;
+        .search__wrapper-mobile--close {
+            text-align: end;
+            margin: 10px 10px 0 0;
+        }
+        .navbar__mb-logo-search {
+            width: 200px;
+            margin: 0 auto;
+        }
+        .search-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .search__field-container {
+                width: 70%;
+                label {
+                    .search-field {
+                        width: 100%;
+                        padding: 12px 5px 11px 10px;
+                        border-radius: 5px 0 0 5px;
+                        border: none;
+                        outline: 0;
+                        background: #aaaaaa50;
+                    }
+                }
+            }
+            .btn-search-nav {
+                width: 10%;
+                background: var(--primary-bg-color);
+                border-radius: 0 5px 5px 0;
+                .btn {
+                    color: #fff;
+                }
+            }
+        }
+    }
     .search-focus-click {
         position: absolute;
         width: 100%;
@@ -319,4 +362,41 @@
             }
         }
     }
+}
+
+.nav__header {
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    top: 0;
+    padding: 5px;
+    .btn__open-menu {
+        align-self: center;
+        .btn-nav {
+            color: #fff;
+        }
+    }
+    .nav__header-logo {
+        width: 100px;
+    }
+    .search-nav {
+        align-self: center;
+        padding: 5px;
+        .open-search {
+            border: none;
+            outline: none;
+            background: none;
+            color: #fff;
+            font-size: 18px;
+            padding: 5px;
+        }
+    }
+}
+
+.scroll-bar-block {
+    overflow: hidden;
 }

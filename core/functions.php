@@ -706,8 +706,7 @@ function get_news_top_post($num,$width,$height){
   <div class="top__news-post-head">
     <div class="post__head-item">
       <div class="post__head-image">
-        <a href="<?php echo get_permalink(); ?>"><img src="<?php echo hk_get_thumb(get_the_id(),$width,$height) ?>" alt="Image"></a>
-        <div class="bg-cover-image"></div>
+        <img class="d--block" src="<?php echo hk_get_thumb(get_the_id(),$width,$height) ?>" alt="Image">
       </div>
       <div class="post__head-title">
         <div class="title__cat-news-top">

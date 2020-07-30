@@ -1,10 +1,12 @@
 var btnNav = document.querySelector('#navBtn');
+var body = document.querySelector('body');
 var closeNav = document.querySelector('.close__navbar');
 var navContain = document.querySelector('.navbar__mb');
 var subMenuNav = document.querySelectorAll('.navbar__mb .navbar__mb-container .menu-main-menu-container .menu>.menu-item>.sub-menu');
 var menuNavArray = document.querySelectorAll('.navbar__mb .navbar__mb-container .menu-main-menu-container .menu>.menu-item');
 var menuItemHasChild = document.querySelectorAll('.navbar__mb .navbar__mb-container .menu-main-menu-container .menu>.menu-item-has-children');
-
+var openSearchNav = document.querySelector('.open-search-nav');
+var closeSearchNav = document.querySelector('#closeSearchNav');
 
 
 /* helper */
@@ -98,12 +100,27 @@ if (menuNavArray.length !== 0 && subMenuNav.length !== 0) {
 if (btnNav) {
     btnNav.onclick = () => {
         navContain.classList.remove('d--none');
+        body.classList.add('scroll-bar-block');
     }
 }
 if (closeNav) {
     closeNav.onclick = () => {
         navContain.classList.add('d--none');
+        body.classList.remove('scroll-bar-block');
     }
 }
-
+if (openSearchNav) {
+    openSearchNav.onclick = () => {
+        body.classList.add('scroll-bar-block');
+    }
+}
+if (closeSearchNav) {
+    closeSearchNav.onclick = () => {
+        let searchNavFocus = document.querySelector(".search-focus-click");
+        let searchLayoutNav = document.querySelector('.search__wrapper');
+        body.classList.remove('scroll-bar-block');
+        searchNavFocus.classList.add('d--none');
+        searchLayoutNav.classList.add('d--none');
+    }
+}
 /*Action*/

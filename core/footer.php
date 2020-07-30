@@ -36,7 +36,7 @@
             <?php if (dynamic_sidebar('footer-sub-right-sidebar')) : get_sidebar( 'footer-sub-right-sidebar' ); ?><?php endif; ?>
           </div>
         </div>
-  	    <div class="container"><p class="text--center">All Right Reserved.</p></div>
+  	    <div class="container footer__sub-alright"><p class="text--center text-alright">All Right By WolfActive Reserved.</p></div>
   	  </div>
   	    <!----------=========Sub==========-------->
 	  </div>

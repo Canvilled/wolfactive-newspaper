@@ -23,10 +23,38 @@
 
 <body <?php body_class(); ?>>
     <section class="home__wrapper">
+        <?php if(wp_is_mobile()){ ?>
+        <div class="search__wrapper search__wrapper-mobile d--none">
+            <div class="search__wrapper-mobile--close">
+            <button class="btn close__navbar-search" id="closeSearchNav" ><i class="fas fa-times"></i></button>
+            </div>
+            
+            <div class="navbar__mb-logo-search search__wrapper-mobile--logo">
+                <?php
+               $image = get_field('logo','option');
+                  ?>
+                <img src="<?php echo $image; ?>" alt="logo-newspaper-wolfactive">
+            </div>
+            <form role="search" method="get" id="searchForm" class="search-form"
+                action="<?php echo esc_url(site_url('/')); ?>">
+                <div class="search__field-container">
+                    <label>
+                        <input type="text" class="search-field" placeholder="Tìm Kiếm" value="" name="s">
+                        <input type="hidden" class="search-field" placeholder="Search …" value="1" name="sentence">
+                        <input type="hidden" class="search-field" placeholder="Search …" value="post" name="post_type">
+                    </label>
+                </div>
+                <div class="btn-search-nav">
+                    <button type="submit" class="btn search-submit" value="Search" aria-label="Button Submit Search">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </form>
+            <div class="search__result-overlay" id="searchResult"></div>
+        </div>
         <div class="navbar__mb d--none">
             <button class="btn close__navbar"><i class="fas fa-times"></i></button>
             <div class="bg-cover-image"></div>
-
             <div class="navbar__mb-container">
                 <div class="navbar__mb-logo">
                     <?php
@@ -40,6 +68,7 @@
       ?>
             </div>
         </div>
+        <?php } ?>
         <div class="search-focus-click d--none"></div>
         <section class="header">
             <?php if(!wp_is_mobile()){ ?>
@@ -103,18 +132,25 @@
             <?php }
   else{ ?>
             <div class="main--background" id="headerNavBar">
-                <div class="header__item btn__open-menu nav__header">
-                  <div class="btn-open-nav">
-                  <button class="btn text--light btn-nav" id="navBtn" aria-label="btn-navbar">
-                        <i class="fas fa-bars icon--text"></i>
-                    </button>
-                  </div>
-                  <div class="nav__header-logo">
+                <div class="nav__header">
+                    <div class="btn__open-menu">
+                        <button class="btn text--light btn-nav" id="navBtn" aria-label="btn-navbar">
+                            <i class="fas fa-bars icon--text"></i>
+                        </button>
+                    </div>
+                    <div class="nav__header-logo">
+                        <a href="<?php echo site_url(); ?>" class="d--block header-logo mr-auto">
+                            <?php
+              $image = get_field('logo_footer','option');
+                 ?>
+                            <img src="<?php echo $image; ?>" alt="logo-newspaper-wolfactive">
+                        </a>
+                    </div>
+                    <div class="search-nav">
+                        <button type="button" name="button" class="open-search open-search-nav"><i class="fas fa-search"
+                                aria-hidden="true"></i></button>
 
-                  </div>
-                  <div class="btn-open-search-nav">
-                    
-                  </div>
+                    </div>
                 </div>
             </div>
             <?php } ?>

@@ -66,7 +66,7 @@ class Most_Popular_Post_Widget extends WP_Widget{
         if(isset($instance['title']))
         {
             $title=apply_filters('widget_title',$instance['title']);
-            echo $args['before-title'].esc_html($title).$args['after-title'];
+            echo $args['before_title'].esc_html($title).$args['after_title'];
         }
         $most_popular = array(
             'showposts' => $instance['post_count'],

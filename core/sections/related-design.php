@@ -6,7 +6,7 @@
     ?>
     <div class="sdp__related container">
       <h4 class="title__block"> <span>RELATED ARTICLES</span> </h4>
-      <div class="sdp__related-contain myt-20" data-flickity='{ "autoPlay": false, "pauseAutoPlayOnHover": false, "pageDots": false,"draggable": true,"groupCells": 2 }'>
+      <div class="sdp__related-contain myt-20" data-flickity='{ "autoPlay": true, "pauseAutoPlayOnHover": false, "pageDots": false,"draggable": true,"groupCells": 2 }'>
     <?php
   $tag_ids = array();
   foreach($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id;
