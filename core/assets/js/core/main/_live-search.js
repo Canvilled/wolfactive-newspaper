@@ -60,14 +60,15 @@ function ResultSearch() {
                     </a>
                   </div>
                   <div class="post__item-content">
-                      <div class="date">
-                        <i class="far fa-calendar-alt"></i> <span>${item.date}</span>
-                      </div>
                       <h4 class="post__item-title title--item">
                         <a href="${item.link}">
                           ${item.title}
                         </a>
                       </h4>
+                      <div class="date">
+                        <i class="far fa-calendar-alt"></i> <span>${item.date}</span>
+                      </div>
+                      </p><a href="${item.link}">Đọc tiếp</a></p>
                   </div>
                 </div>
             `;

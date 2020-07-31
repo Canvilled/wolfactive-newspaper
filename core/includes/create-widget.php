@@ -83,7 +83,7 @@ class Most_Popular_Post_Widget extends WP_Widget{
   while ($popular_post_query->have_posts()):$popular_post_query->the_post();
   $views = getPostViews(get_the_id());
     ?>
-    <div class="popupar__post-item">
+    <div class="popupar__post-item my-10">
       <div class="nw__post-item row-divide">
         <div class="nw__image col-divide-4">
           <a href="<?php echo get_permalink(); ?>"><img src="<?php echo hk_get_thumb(get_the_id(),485,360) ?>" alt="Image"></a>

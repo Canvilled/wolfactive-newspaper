@@ -79,14 +79,23 @@
             }
             .search__content {
                 position: relative;
+                .search__wrapper::-webkit-scrollbar {
+                    width: 5px;
+                }
+                .search__wrapper::-webkit-scrollbar-thumb {
+                    background: #c1c1c1;
+                }
                 .search__wrapper {
                     position: absolute;
+                    top: 40px;
                     right: 0;
-                    width: 200%;
+                    width: 150%;
                     background: #fff;
                     z-index: 3;
                     padding: 20px 30px;
                     box-shadow: 0px 4px 5px 1px #11111163;
+                    max-height: 510px;
+                    overflow-y: scroll;
                     .search-form {
                         input.search-field {
                             width: 100%;
@@ -117,12 +126,10 @@
                         }
                     }
                     .search__result-overlay {
-                        display: grid;
-                        grid-template-columns: repeat(auto-fill, minmax(160px, 230px));
-                        justify-content: center;
-                        grid-gap: 1em;
                         .post__item {
+                            display: flex;
                             .post__item-img {
+                                width: 20%;
                                 a {
                                     img {
                                         width: 100%;
@@ -131,6 +138,7 @@
                                 }
                             }
                             .post__item-content {
+                                margin-left: 20px;
                                 text-align: start;
                             }
                         }
