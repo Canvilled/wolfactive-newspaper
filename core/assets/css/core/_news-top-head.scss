@@ -8,6 +8,8 @@
                         left: 0 !important;
                         width: 49.75%;
                         visibility: hidden;
+                        opacity: 0;
+                        transition: all .5s cubic-bezier(0, 0.14, 0.9, 1.08);
                         z-index: 1;
                         .tn__post-item-content {
                             .tn__post-thumb {
@@ -69,8 +71,8 @@
                     }
                     .tn__post-item-#{1}.is-selected {
                         visibility: visible;
-                        animation: tracking-in-contract-bck-top 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
                         z-index: 2;
+                        opacity: 1;
                         cursor: pointer;
                         .tn__post-item-content {
                             .tn__post-info {
@@ -129,6 +131,8 @@
                         width: 49.75%;
                         height: 50%;
                         overflow: hidden;
+                        opacity: 0;
+                        transition: all .5s cubic-bezier(0, 0.14, 0.9, 1.08);
                         visibility: hidden;
                         z-index: 1;
                         .tn__post-item-content {
@@ -180,7 +184,7 @@
                     .tn__post-item-#{2}.is-selected {
                         visibility: visible;
                         z-index: 2;
-                        animation: tracking-in-contract-bck-top 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+                        opacity: 1;
                         cursor: pointer;
                         .tn__post-item-content {
                             .tn__post-info {
@@ -198,6 +202,8 @@
                         left: unset !important;
                         bottom: -2px;
                         width: 24.5%;
+                        opacity: 0;
+                        transition: all .5s cubic-bezier(0, 0.14, 0.9, 1.08);
                         visibility: hidden;
                         z-index: 1;
                         .tn__post-item-content {
@@ -247,8 +253,8 @@
                     }
                     .tn__post-item-#{3}.is-selected {
                         visibility: visible;
-                        animation: tracking-in-contract-bck-top 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
                         z-index: 2;
+                        opacity: 1;
                         cursor: pointer;
                         .tn__post-item-content {
                             .tn__post-info {
@@ -266,6 +272,8 @@
                         left: unset !important;
                         bottom: -2px;
                         visibility: hidden;
+                        opacity: 0;
+                        transition: all .5s cubic-bezier(0, 0.14, 0.9, 1.08);
                         z-index: 1;
                         width: 24.5%;
                         .tn__post-item-content {
@@ -315,8 +323,8 @@
                     }
                     .tn__post-item-#{4}.is-selected {
                         visibility: visible;
-                        animation: tracking-in-contract-bck-top 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
                         z-index: 2;
+                        opacity: 1;
                         cursor: pointer;
                         .tn__post-item-content {
                             .tn__post-info {

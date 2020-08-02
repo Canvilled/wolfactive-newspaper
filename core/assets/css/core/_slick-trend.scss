@@ -1,50 +1,64 @@
-.marquee-slick{
-  .trending__post{
-    margin:25px 0;
-    padding:0 10px;
-    justify-content: normal;
-    .trend__title {
-      display: inline-block;
-      padding: 5px;
-      background: var(--primary-color);
-      font-size: 14px;
-      color: #fff;
-      text-align: center;
-    }
-    .trend__post-list{
-      margin-left:10px;
-      align-self: center;
-      .flickity-button {
-        border:1px solid #1c618278;
-      }
-      .flickity-prev-next-button {
-        width: 30px;
-        height: 30px;
-        border-radius: 0px;
-      }
-      /* icon color */
-      .flickity-button-icon {
-        fill: #1c618278;
-        left: 25%;
-        top: 30%;
-        width: 40%;
-        height: 40%;
-      }
-      /* position outside */
-      .flickity-prev-next-button.previous {
-        left: unset;
-        right: 0px;
-      }
-      .flickity-prev-next-button.next {
-        right: -40px;
-      }
-      .flickity-viewport{
-        .flickity-slider{
-          .title__post{
-            width:100%;
-          }
+.marquee-slick {
+    .trending__post {
+        margin: 25px 0;
+        padding: 0 10px;
+        justify-content: normal;
+        @media screen and (max-width: 480px) {
+            margin-top: 50px;
         }
-      }
+        .trend__title {
+            display: inline-block;
+            padding: 5px;
+            background: var(--primary-color);
+            font-size: 14px;
+            color: #fff;
+            text-align: center;
+        }
+        .trend__post-list {
+            margin-left: 10px;
+            align-self: center;
+            .flickity-button {
+                border: 1px solid #1c618278;
+                @media screen and (max-width: 480px) {
+                    display: none;
+                }
+            }
+            .flickity-prev-next-button {
+                width: 30px;
+                height: 30px;
+                border-radius: 0px;
+            }
+            /* icon color */
+            .flickity-button-icon {
+                fill: #1c618278;
+                left: 25%;
+                top: 30%;
+                width: 40%;
+                height: 40%;
+            }
+            /* position outside */
+            .flickity-prev-next-button.previous {
+                left: unset;
+                right: 0px;
+            }
+            .flickity-prev-next-button.next {
+                right: -40px;
+            }
+            .flickity-viewport {
+                .flickity-slider {
+                    .title__post {
+                        width: 100%;
+                        @media screen and (max-width: 480px) {
+                            text-align: center;
+                        }
+                        a {
+                            @media screen and (max-width: 480px) {
+                                font-size: 11px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
-  }
 }

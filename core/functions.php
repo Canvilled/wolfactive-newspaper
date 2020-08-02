@@ -14,7 +14,9 @@ define('THEME_URL', get_stylesheet_directory_uri());
      'includes/acf-options.php',  // ACF Option page
      'includes/resize.php',
      'includes/short-code.php',
-     'includes/create-widget.php',
+     'includes/popular_post_widget.php',
+     'includes/category_popular_widget.php',
+     'includes/load_more_post.php',
  ];
 
  foreach ($file_includes as $file) {
@@ -861,52 +863,6 @@ function check_for_category_single_template( $t )
   }
   return $t;
 }
-function the_breadcrumb() {
-                echo '<ul id="crumbs">';
-        if (!is_home()) {
-                echo '<li><a href="';
-                echo get_option('home');
-                echo '">';
-                echo 'Trang chủ';
-                echo "</a></li>";
-                 if (is_category() || is_single()) {
-                        if(is_category())
-                        {
-                          $this_category = get_category(get_query_var( 'cat' ));
-                          $categories = get_the_category();
-                          if ($this_category->category_parent == 0) {
-                            single_cat_title();
-                          }
-                          else if($this_category->category_parent != 0) {
-                            foreach ($categories as $cat) {
-                              ?>
-                              <div class="category-item">
-                                <?php echo esc_html( $cat->name ); ?>
-                              </div>
-                              <?php
-                            }
-                          }
-                        }
-                        if (is_single()) {
-                                echo "</li><span>›</span><li>";
-                                the_title();
-                                echo '</li>';
-                        }
-                } elseif (is_page()) {
-                        echo '<span>›</span><li>';
-                        echo the_title();
-                        echo '</li>';
-                }
-        }
-        elseif (is_tag()) {single_tag_title();}
-        elseif (is_day()) {echo"<li>Archive for "; the_time('F jS, Y'); echo'</li>';}
-        elseif (is_month()) {echo"<li>Archive for "; the_time('F, Y'); echo'</li>';}
-        elseif (is_year()) {echo"<li>Archive for "; the_time('Y'); echo'</li>';}
-        elseif (is_author()) {echo"<li>Author Archive"; echo'</li>';}
-        elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {echo "<li>Blog Archives"; echo'</li>';}
-        elseif (is_search()) {echo"<li>Search Results"; echo'</li>';}
-        echo '</ul>';
-}
 
 add_action('rest_api_init','postRegisterApiSearch');
 function postRegisterApiSearch(){
@@ -925,8 +881,8 @@ function postApiSearchResult($data){
   while($postList->have_posts()):$postList->the_post();
     array_push($postResult,
       array(
-        'title'             => wp_trim_words( get_the_title(), 10, '...' ),
-        'thumbnail'          => get_the_post_thumbnail(),
+        'title'             => wp_trim_words( get_the_title(), 20, '...' ),
+        'thumbnail'          => hk_get_thumb(get_the_id(),75,75),
         'link' => get_the_permalink(),
         'date' => get_the_date( 'F j, Y' ),
         )
@@ -990,4 +946,35 @@ die( $json_result );
 // stop all other processing
 exit;
 
+}
+//API Post
+add_action('rest_api_init','apiPost');
+function apiPost(){
+  register_rest_route('post-api/v1','post',array(
+    'methods'   =>  WP_REST_SERVER::READABLE,
+    'callback'  =>  'postApiResult'
+  ));
+}
+function postApiResult($data){
+  $postList = new WP_Query(array(
+    'post_type'     => 'post',
+    'post_status' => 'publish',
+    'meta_key' => 'post_views_count',
+    'orderby' => 'meta_value_num',
+    'order' => 'date',
+    'offset' => 3,
+    'showposts' => 9,
+  ));
+  $postResult = array();
+  while($postList->have_posts()):$postList->the_post();
+    array_push($postResult,
+      array(
+        'title'             => wp_trim_words( get_the_title(), 20, '...' ),
+        'thumbnail'          => hk_get_thumb(get_the_id(),75,75),
+        'link' => get_the_permalink(),
+        'date' => get_the_date( 'F j, Y' ),
+        )
+      );
+   endwhile;
+return $postResult;
 }

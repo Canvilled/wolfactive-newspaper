@@ -79,6 +79,7 @@ subMenuNav.forEach(function (item, i) {
 if (menuNavArray.length !== 0 && subMenuNav.length !== 0) {
   menuNavArray.forEach(function (item, i) {
     item.onclick = function (event) {
+      console.log(event);
       var checkLengthMenu = event.srcElement.children;
 
       if (item.classList.contains('active')) {

@@ -79,12 +79,6 @@
             }
             .search__content {
                 position: relative;
-                .search__wrapper::-webkit-scrollbar {
-                    width: 5px;
-                }
-                .search__wrapper::-webkit-scrollbar-thumb {
-                    background: #c1c1c1;
-                }
                 .search__wrapper {
                     position: absolute;
                     top: 40px;
@@ -94,8 +88,6 @@
                     z-index: 3;
                     padding: 20px 30px;
                     box-shadow: 0px 4px 5px 1px #11111163;
-                    max-height: 510px;
-                    overflow-y: scroll;
                     .search-form {
                         input.search-field {
                             width: 100%;
@@ -125,21 +117,30 @@
                             }
                         }
                     }
+                    .search__result-overlay::-webkit-scrollbar {
+                        width: 5px;
+                    }
+                    .search__result-overlay::-webkit-scrollbar-thumb {
+                        background: #c1c1c1;
+                    }
                     .search__result-overlay {
+                        height: 400px;
+                        overflow-y: scroll;
+                        display: flex;
+                        flex-wrap: wrap;
                         .post__item {
                             display: flex;
-                            .post__item-img {
-                                width: 20%;
-                                a {
-                                    img {
-                                        width: 100%;
-                                        height: 120px;
-                                    }
-                                }
-                            }
                             .post__item-content {
-                                margin-left: 20px;
                                 text-align: start;
+                                .post__item-title {
+                                    font-size: 16px;
+                                }
+                                .date-post {
+                                    font-size: 13px;
+                                }
+                                .readmore {
+                                    font-size: 13px;
+                                }
                             }
                         }
                     }
@@ -254,13 +255,7 @@
     position: relative;
     width: 100%;
     .search__wrapper-mobile {
-        position: fixed;
         background: #fff;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        z-index: 4;
         .search__wrapper-mobile--close {
             text-align: end;
             margin: 10px 10px 0 0;
@@ -295,6 +290,22 @@
                 }
             }
         }
+        .search__result-overlay {
+            .post__item {
+                .post__item-content {
+                    .post__item-title {
+                        font-size: 15px;
+                        text-align: start;
+                    }
+                    .date {
+                        font-size: 11px;
+                    }
+                    .readmore {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
     }
     .search-focus-click {
         position: absolute;
@@ -306,19 +317,17 @@
     }
     .navbar__mb {
         position: fixed;
-        background: url('../images/navbar-image.png') no-repeat;
-        background-size: cover;
+        background: #fff;
         width: 100%;
         height: 100%;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        z-index: 4;
+        z-index: 3;
         .close__navbar {
             position: absolute;
-            color: #fff;
+            color: #222;
             padding: 0px 5px;
-            border: 2px solid #fff;
             right: 20px;
             top: 10px;
             z-index: 5;
@@ -339,7 +348,7 @@
                 .menu {
                     .menu-item {
                         a {
-                            color: #fff;
+                            color: #222;
                             font-size: 21px;
                             font-weight: 700;
                             font-family: open-sanrif;
@@ -356,7 +365,7 @@
                             position: absolute;
                             right: 0;
                             top: 0;
-                            color: #fff;
+                            color: #222;
                             transition: all .5s linear;
                             transform: rotate(90deg);
                         }

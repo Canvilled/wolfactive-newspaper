@@ -24,44 +24,37 @@
 <body <?php body_class(); ?>>
     <section class="home__wrapper">
         <?php if(wp_is_mobile()){ ?>
-        <div class="search__wrapper search__wrapper-mobile d--none">
-            <div class="search__wrapper-mobile--close">
-            <button class="btn close__navbar-search" id="closeSearchNav" ><i class="fas fa-times"></i></button>
-            </div>
-            
-            <div class="navbar__mb-logo-search search__wrapper-mobile--logo">
-                <?php
-               $image = get_field('logo','option');
-                  ?>
-                <img src="<?php echo $image; ?>" alt="logo-newspaper-wolfactive">
-            </div>
-            <form role="search" method="get" id="searchForm" class="search-form"
-                action="<?php echo esc_url(site_url('/')); ?>">
-                <div class="search__field-container">
-                    <label>
-                        <input type="text" class="search-field" placeholder="Tìm Kiếm" value="" name="s">
-                        <input type="hidden" class="search-field" placeholder="Search …" value="1" name="sentence">
-                        <input type="hidden" class="search-field" placeholder="Search …" value="post" name="post_type">
-                    </label>
-                </div>
-                <div class="btn-search-nav">
-                    <button type="submit" class="btn search-submit" value="Search" aria-label="Button Submit Search">
-                        <i class="fas fa-search" aria-hidden="true"></i>
-                    </button>
-                </div>
-            </form>
-            <div class="search__result-overlay" id="searchResult"></div>
-        </div>
         <div class="navbar__mb d--none">
             <button class="btn close__navbar"><i class="fas fa-times"></i></button>
-            <div class="bg-cover-image"></div>
             <div class="navbar__mb-container">
-                <div class="navbar__mb-logo">
-                    <?php
-               $image = get_field('logo_footer','option');
+                <div class="search__wrapper search__wrapper-mobile">
+                    <div class="navbar__mb-logo-search search__wrapper-mobile--logo">
+                        <?php
+               $image = get_field('logo','option');
                   ?>
-                    <img src="<?php echo $image; ?>" alt="logo-newspaper-wolfactive">
+                        <img src="<?php echo $image; ?>" alt="logo-newspaper-wolfactive">
+                    </div>
+                    <form role="search" method="get" id="searchForm" class="search-form"
+                        action="<?php echo esc_url(site_url('/')); ?>">
+                        <div class="search__field-container">
+                            <label>
+                                <input type="text" class="search-field" placeholder="Tìm Kiếm" value="" name="s">
+                                <input type="hidden" class="search-field" placeholder="Search …" value="1"
+                                    name="sentence">
+                                <input type="hidden" class="search-field" placeholder="Search …" value="post"
+                                    name="post_type">
+                            </label>
+                        </div>
+                        <div class="btn-search-nav">
+                            <button type="submit" class="btn search-submit" value="Search"
+                                aria-label="Button Submit Search">
+                                <i class="fas fa-search" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="search__result-overlay my-10" id="searchResult"></div>
                 </div>
+
                 <?php
        wp_nav_menu(array(
       'theme_location' => 'headerMenuLocation' ));
@@ -123,7 +116,7 @@
                                         </button>
                                     </div>
                                 </form>
-                                <div class="search__result-overlay" id="searchResult"></div>
+                                <div class="search__result-overlay my-10 d--none" id="searchResult"></div>
                             </div>
                         </div>
                     </div>

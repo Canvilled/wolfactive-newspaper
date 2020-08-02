@@ -1,7 +1,7 @@
 <div class="topnews">
     <div class="tn__container">
         <div class="tn__post-container"
-            data-flickity='{ "autoPlay": true, "pauseAutoPlayOnHover": false, "pageDots": false,"draggable": true,"groupCells": 4,"wrapAround": true,"prevNextButtons": false }'>
+            data-flickity='{ "autoPlay": false,"fade": true, "pauseAutoPlayOnHover": false, "pageDots": false,"draggable": true,"groupCells": 4,"wrapAround": true,"prevNextButtons": false }'>
             <?php 
     $args=array(
       'post_type' => 'post',
