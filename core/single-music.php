@@ -15,7 +15,7 @@ setPostViews(get_the_id());
         $category_link = get_category_link($id);
         $image = get_field('banner_category',$category);
         $color = get_field('color_category',$category);
-        ?>
+    ?>
         <div class="banner-music position--relative">
           <img src="<?php echo $image ?>" alt="banner__image">
           <div class="cat-tit-music">
@@ -37,7 +37,10 @@ setPostViews(get_the_id());
             </div>
           </div>
         </div>
+        <?php  }
+    } ?>
         <div class="single__music-wrapper">
+        <?php while (have_posts()):the_post(); ?>
           <div class="music__wrapper">
             <div class="music py-40">
               <div class="music-content container">
@@ -45,6 +48,7 @@ setPostViews(get_the_id());
               </div>
             </div>
           </div>
+  <?php endwhile; ?>
           <?php get_template_part( 'sections/related-music' );?>
           <div class="social-des-container container row-divide">
             <div class="ad-social col-divide-8">
@@ -79,10 +83,6 @@ setPostViews(get_the_id());
             </div>
           </div>
         </div>
-        <?php
-      }
-    }
-     ?>
   </div>
 </section>
 <?php

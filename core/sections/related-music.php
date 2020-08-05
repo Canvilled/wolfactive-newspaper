@@ -20,8 +20,7 @@
 
   $my_query = new wp_query( $args );
 
-  while( $my_query->have_posts() ) {
-  $my_query->the_post();
+  while( $my_query->have_posts() ): $my_query->the_post();
   ?>
   <div class="music__related-item">
     <div class="music__related-thumb">
@@ -42,10 +41,10 @@
       <a rel="nofollow" target="_blank" href="<? the_permalink()?>"><?php the_title(); ?></a>
     </div>
   </div>
-  <? }
-  }
+  <?php endwhile;
   $post = $orig_post;
   wp_reset_query();
   ?>
   </div>
 </div>
+<?php }?>
