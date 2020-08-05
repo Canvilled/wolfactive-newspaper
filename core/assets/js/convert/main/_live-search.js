@@ -52,5 +52,5 @@ function ResultSearch() {
     }).catch(function (error) {
       return console.log(error);
     });
-  }, 1000);
+  }, 500);
 }

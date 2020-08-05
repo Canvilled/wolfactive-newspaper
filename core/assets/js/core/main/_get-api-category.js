@@ -1,6 +1,7 @@
 /*VARIABLES*/
 var subMenuArray = document.querySelectorAll('.header .menu>.menu-item>.sub-menu');
 var menuArray = document.querySelectorAll('.header .menu>.menu-item');
+var subCategoryPost = document.querySelectorAll('.news__category-related .category-related__container .sub__category ');
 var urlImages = `${protocol}//${hostname}/wp-content/themes/wolfactive-newspaper/core/assets/images/`;
 /*end variable*/
 
@@ -37,10 +38,6 @@ function createFlick() {
         groupCells: 3,
     });
 }
-// function removePostList(){
-//   let postDisplay=document.querySelector('.display--post');
-//   postDisplay.remove();
-// }
 
 function getListPost(category, showPost) {
     let apiUrlMail = `${protocol}//${hostname}/wp-json/category-api/v1/cat-name`;

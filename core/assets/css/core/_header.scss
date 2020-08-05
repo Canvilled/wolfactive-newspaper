@@ -323,7 +323,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        z-index: 3;
+        z-index: 4;
         .close__navbar {
             position: absolute;
             color: #222;
@@ -345,6 +345,7 @@
                 margin-bottom: 50px;
             }
             .menu-main-menu-container {
+                margin: 10px 0;
                 .menu {
                     .menu-item {
                         a {
@@ -361,18 +362,23 @@
                     }
                     .menu-item-has-children {
                         position: relative;
-                        i.fas.fa-sort-down {
-                            position: absolute;
-                            right: 0;
-                            top: 0;
-                            color: #222;
-                            transition: all .5s linear;
-                            transform: rotate(90deg);
-                        }
+                        overflow: hidden;
+                    }
+                    .menu-item-has-children:after {
+                        content: '';
+                        position: absolute;
+                        right: 3px;
+                        top: 10px;
+                        border: solid black;
+                        border-width: 0 3px 3px 0;
+                        padding: 3px;
+                        transition: all .25s linear;
+                        transform: rotate(45deg);
+                        -webkit-transform: rotate(45deg);
                     }
                     .menu-item-has-children.active {
                         i.fas.fa-sort-down {
-                            transform: rotate(0deg);
+                            transform: rotate(135deg);
                         }
                     }
                 }

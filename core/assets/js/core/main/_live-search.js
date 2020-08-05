@@ -67,6 +67,6 @@ function ResultSearch() {
             })
             .catch(error => console.log(error));
 
-    }, 1000);
+    }, 500);
 
 }

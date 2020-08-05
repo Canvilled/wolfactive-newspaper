@@ -1121,7 +1121,7 @@ li {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 3;
+  z-index: 4;
 }
 
 .home__wrapper .navbar__mb .close__navbar {
@@ -1148,6 +1148,10 @@ li {
   margin-bottom: 50px;
 }
 
+.home__wrapper .navbar__mb .navbar__mb-container .menu-main-menu-container {
+  margin: 10px 0;
+}
+
 .home__wrapper .navbar__mb .navbar__mb-container .menu-main-menu-container .menu .menu-item a {
   color: #222;
   font-size: 21px;
@@ -1163,19 +1167,24 @@ li {
 
 .home__wrapper .navbar__mb .navbar__mb-container .menu-main-menu-container .menu .menu-item-has-children {
   position: relative;
+  overflow: hidden;
 }
 
-.home__wrapper .navbar__mb .navbar__mb-container .menu-main-menu-container .menu .menu-item-has-children i.fas.fa-sort-down {
+.home__wrapper .navbar__mb .navbar__mb-container .menu-main-menu-container .menu .menu-item-has-children:after {
+  content: '';
   position: absolute;
-  right: 0;
-  top: 0;
-  color: #222;
-  transition: all .5s linear;
-  transform: rotate(90deg);
+  right: 3px;
+  top: 10px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  padding: 3px;
+  transition: all .25s linear;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
 
 .home__wrapper .navbar__mb .navbar__mb-container .menu-main-menu-container .menu .menu-item-has-children.active i.fas.fa-sort-down {
-  transform: rotate(0deg);
+  transform: rotate(135deg);
 }
 
 .nav__header {
@@ -4799,6 +4808,29 @@ ul#crumbs li {
   height: 25px;
   bottom: -50px;
   top: unset;
+}
+
+.post__item-load-more-item {
+  display: none;
+}
+
+.post__item-load-more-item.loading {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  opacity: 0.5;
+  transform: translate(-50%, -50%);
+}
+
+.post__item-load-more-item.loading img {
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
 }
 
 .form-resign-news .frn__container {

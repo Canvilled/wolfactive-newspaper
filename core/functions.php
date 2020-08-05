@@ -962,8 +962,7 @@ function postApiResult($data){
     'meta_key' => 'post_views_count',
     'orderby' => 'meta_value_num',
     'order' => 'date',
-    'offset' => 3,
-    'showposts' => 9,
+    'showposts' => intval($data['showposts'])
   ));
   $postResult = array();
   while($postList->have_posts()):$postList->the_post();

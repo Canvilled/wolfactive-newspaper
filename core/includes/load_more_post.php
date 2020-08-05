@@ -18,7 +18,7 @@ class Most_Popular_Post__Load_More_Widget extends WP_Widget{
         if(isset($instance['post_count'])){
             $postCount = $instance['post_count'];
         } else {
-            $postCount = 1;
+            $postCount = 3;
         }
         if(isset($instance['include_date'])){
             $showDate = $instance['include_date'];
@@ -34,12 +34,28 @@ class Most_Popular_Post__Load_More_Widget extends WP_Widget{
 
 <div>
     <p><label for="<?php echo $this->get_field_id('title');?>"> <?php esc_html_e('Title:','base-theme')?></label></p>
-    <input type="text" class="widefat" id="<?php echo $this->get_field_id('title')?>"
-        name="<?php echo $this->get_field_name('title') ?>" value="<?php echo esc_attr($title); ?>" />
+    <input type="text" class="widefat" id="<?php echo $this->get_field_id('title')?>" name="<?php echo $this->get_field_name('title') ?>" value="<?php echo esc_attr($title); ?>" />
 </div>
+<p>
+    <label for="<?php echo $this->get_field_id('post_count') ?>"><?php esc_html_e('Post Count') ?></label>
+    <input type="number" class="tiny-text" id="<?php echo $this->get_field_id('post_count')?>" min="3" max="5" value="<?php echo intval($postCount); ?>" name="<?php echo $this->get_field_name('post_count') ?>"/>
+</p>
+<p>
+    <label for="<?php echo $this->get_field_id('include_date')?>"><?php esc_html_e('Show Date','base-theme')?></label>
+    <input name="<?php echo $this->get_field_name('include_date') ?>" <?php checked($showDate)?> type="checkbox" class="wolfactive__widget-input" id="<?php echo $this->get_field_id('include_date')?>" />
+</p>
+<p>
+    <label for="<?php echo $this->get_field_id('sort_by')?>"><?php esc_html_e('Sort By:','base-theme')?></label>
+    <select id="<?php echo $this->get_field_id('sort_by')?>" name="<?php echo $this->get_field_name('sort_by')?>">
+        <option <?php selected($sort_by,'date');?> value="date"><?php esc_html_e('Most Recent'); ?></option>
+        <option <?php selected($sort_by,'rand');?> value="rand"><?php esc_html_e('Random'); ?></option>
+    </select>
+</p>
 <?php
     }
     public function widget($args,$instance){
+        $postCount = $instance['post_count'];
+        $showDate = $instance['include_date'];
         echo $args['before_widget'];
         if(isset($instance['title']))
         {
@@ -47,17 +63,18 @@ class Most_Popular_Post__Load_More_Widget extends WP_Widget{
             echo $args['before_title'].esc_html($title).$args['after_title'];
         }
         $most_popular = array(
-            'posts_per_page' => 3,
+            'showposts' => $postCount,
             'meta_key' => 'post_views_count',
             'orderby' => 'meta_value_num',
             'order' => 'DESC',
             'post_type' => 'post',
             'post_status' => 'publish',
+            
         );
         $popular_post_query = new WP_Query($most_popular);
         ?>
- <div class="popular__post-single">
-    <div class="popular__post-single-container">
+ <div class="popular__post-single position--relative">
+    <div class="popular__post-single-container popular__post-load-more my-10" data-number-post="<?php echo $postCount; ?>" show-date="<?php echo $showDate; ?>">
   <?php
   while ($popular_post_query->have_posts()):$popular_post_query->the_post();
   $views = getPostViews(get_the_id());
@@ -71,15 +88,18 @@ class Most_Popular_Post__Load_More_Widget extends WP_Widget{
           <div class="nw__post-title nw__post-title--small">
             <a href="<?php echo get_permalink(); ?>"><?php echo wp_trim_words( get_the_title(), 10, '...' );?></a>
           </div>
+          <?php if($instance['include_date']){ ?>
           <div class="nw__editor-date open-sanrif">
             <span class="date-time open-sanrif"><?php echo get_the_date( 'F j, Y' ) ?></span>
           </div>
+          <?php } ?>
         </div>
       </div>
     </div>
     <?php
   endwhile;
   ?></div>
+  <div class="post__item-load-more-item"></div>
   <button id="load-more-post">Load More</button>
   <button id="close-post">Close</button>
 <?php
