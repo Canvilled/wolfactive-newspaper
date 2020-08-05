@@ -45,7 +45,7 @@ if (document.querySelector('.popular__post-load-more')) {
         offset = parseInt(postCountShow);
     closePostBtn.classList.add('d--none');
     if (postDateShow !== 1) {
-        let postItemDateLoad = document.querySelectorAll('.popular__post-load-more .popupar__post-single-item>.nw__editor-date');
+        let postItemDateLoad = document.querySelectorAll('.popular__post-load-more .popupar__post-item .nw__post-item .nw__infomation >.nw__editor-date');
         postItemDateLoad.forEach((item, i) => {
             item.classList.add('d--none');
         })
