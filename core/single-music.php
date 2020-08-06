@@ -8,7 +8,7 @@ setPostViews(get_the_id());
     <?php
     $categories = get_the_category();
     foreach ($categories as $cat) {
-      if($cat->name === "Music"){
+      if($cat->name === "Music"||$cat->slug === "music"){
         $id=$cat->cat_ID;
         $cat_name=$cat->name;
         $category= get_category($id);
@@ -75,7 +75,9 @@ setPostViews(get_the_id());
                       </ul>
                     </div>
                   </div>
+                  
                 </div>
+                <?php get_template_part('/sections/form-resign-news') ?>
               </div>
             </div>
             <div class="music-sidebar col-divide-4">

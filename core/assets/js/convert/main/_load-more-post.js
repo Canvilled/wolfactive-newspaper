@@ -30,7 +30,7 @@ if (document.querySelector('.popular__post-load-more')) {
   closePostBtn.classList.add('d--none');
 
   if (postDateShow !== 1) {
-    var postItemDateLoad = document.querySelectorAll('.popular__post-load-more .popupar__post-single-item>.nw__editor-date');
+    var postItemDateLoad = document.querySelectorAll('.popular__post-load-more .popupar__post-item .nw__post-item .nw__infomation >.nw__editor-date');
     postItemDateLoad.forEach(function (item, i) {
       item.classList.add('d--none');
     });

@@ -32,16 +32,16 @@ class Category_Popular_Widget extends WP_Widget{
             $title=apply_filters('widget_title',$instance['title']);
             echo $args['before_title'].esc_html($title).$args['after_title'];
         }
-        $cats = get_terms('category');
-        $i=0;
-        foreach($cats as $cat){
+        $categories = get_categories( array(
+            'orderby' => 'count',
+            'order'   => 'DESC',
+        ) );
+        foreach($categories as $cat){
             $category_link = get_term_link( $cat );
             if($cat->name !== 'Uncategorized'){
-                if($cat->count >= 10 && $i<9)
-              echo '<li class="category-item"><span><a class="roboto category-name" href="'.$category_link.'">'.$cat->name.'</a></span> <span clas="cat-counts-post">'.$cat->count.'<span> </li>';
+              echo '<li class="category-item my-10"><span><a class="roboto category-name" href="'.$category_link.'">'.$cat->name.'</a></span> <span class="cat-counts-post">'.$cat->count.'<span> </li>';
             }
           }
-          $i++;
         echo $args['after_widget'];
     }
     public function update($new_instance, $old_instance){

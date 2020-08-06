@@ -17,6 +17,7 @@ define('THEME_URL', get_stylesheet_directory_uri());
      'includes/popular_post_widget.php',
      'includes/category_popular_widget.php',
      'includes/load_more_post.php',
+     'includes/slide_post_widget.php',
  ];
 
  foreach ($file_includes as $file) {

@@ -172,3 +172,12 @@
         position: absolute;
     }
 }
+
+.sidebar {
+    .category-item {
+        font-weight: 600;
+        .cat-counts-post {
+            float: right;
+        }
+    }
+}
