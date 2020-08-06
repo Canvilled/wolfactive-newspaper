@@ -321,9 +321,12 @@ switch ($type_display) {
       'showposts' => '10',
     );
     $query_post_from_cat = new WP_Query($args);
+    ?>
+      <div class="nw__content-type-display-5 row-divide">
+    <?php
     while($query_post_from_cat->have_posts()):$query_post_from_cat->the_post();
     ?>
-      <div class="nw__post-slide--item">
+      <div class="nw__post-slide--item col-divide-6">
           <div class="nw__image">
             <a href="<?php echo get_permalink(); ?>"><img src="<?php echo hk_get_thumb(get_the_id(),485,360) ?>" alt="Image"></a>
             <div class="nw__category">
@@ -342,6 +345,7 @@ switch ($type_display) {
     <?php
   endwhile;
     ?>
+    </div>
   </div>
   <?php
     break;

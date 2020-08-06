@@ -24,7 +24,7 @@
   ?>
   <div class="music__related-item">
     <div class="music__related-thumb">
-      <a rel="nofollow" target="_blank" href="<? the_permalink()?>">
+      <a rel="nofollow" target="_blank" href="<?php the_permalink()?>">
         <img src="<?php echo hk_get_thumb(get_the_id(),150,150) ?>" alt="Image">
       </a>
       <div class="music-category open-sanrif">

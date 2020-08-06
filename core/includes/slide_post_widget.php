@@ -20,8 +20,8 @@ class WolfActive_Slide_Post_Widget extends WP_Widget{
         } else {
             $postCount = 4;
         }
-        if(isset($instance['category'])){
-            $cat_display = $instance['category'];
+        if(isset($instance['cat_display'])){
+            $cat_display = $instance['cat_display'];
         } else {
             $cat_display = '';
         }
@@ -33,11 +33,11 @@ class WolfActive_Slide_Post_Widget extends WP_Widget{
 </div>
 <p>
     <label for="<?php echo $this->get_field_id('post_count') ?>"><?php esc_html_e('Post Count') ?></label>
-    <input type="number" class="tiny-text" id="<?php echo $this->get_field_id('post_count')?>" min="1" max="5" value="<?php echo intval($postCount); ?>" name="<?php echo $this->get_field_name('post_count') ?>"/>
+    <input type="number" class="tiny-text" id="<?php echo $this->get_field_id('post_count')?>" min="4" max="10" value="<?php echo intval($postCount); ?>" name="<?php echo $this->get_field_name('post_count') ?>"/>
 </p>
 <p>
-    <label for="<?php echo $this->get_field_id('category')?>"><?php esc_html_e('Category:','base-theme')?></label>
-    <select id="<?php echo $this->get_field_id('category')?>" name="<?php echo $this->get_field_name('category')?>">
+    <label for="<?php echo $this->get_field_id('cat_display')?>"><?php esc_html_e('Category:','base-theme')?></label>
+    <select id="<?php echo $this->get_field_id('cat_display')?>" name="<?php echo $this->get_field_name('cat_display')?>">
         <?php 
             $cats = get_terms('category');
             foreach($cats as $cat){
@@ -62,7 +62,7 @@ class WolfActive_Slide_Post_Widget extends WP_Widget{
             echo $args['before_title'].esc_html($title).$args['after_title'];
         }
         $args = array(
-            'category_name' => $instance['category'],
+            'category_name' => $instance['cat_display'],
             'order' => 'DESC',
             'showposts' => $instance['post_count'],
             'post_type' => 'post',
@@ -118,7 +118,7 @@ class WolfActive_Slide_Post_Widget extends WP_Widget{
         $instance = array();
         $instance['title'] = sanitize_text_field($new_instance['title']);
         $instance['post_count'] = intval($new_instance['post_count']);
-        $instance['sort_by'] = WolfactiveOrderSort($new_instance['sort_by']);
+        $instance['cat_display'] = $new_instance['cat_display'];
         return $instance;
     }
 }
