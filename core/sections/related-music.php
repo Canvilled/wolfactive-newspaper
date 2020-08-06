@@ -38,7 +38,7 @@
       </div>
     </div>
     <div class="music__related-title">
-      <a rel="nofollow" target="_blank" href="<? the_permalink()?>"><?php the_title(); ?></a>
+      <a rel="nofollow" target="_blank" href="<?php the_permalink()?>"><?php the_title(); ?></a>
     </div>
   </div>
   <?php endwhile;

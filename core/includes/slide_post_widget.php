@@ -2,7 +2,7 @@
 class WolfActive_Slide_Post_Widget extends WP_Widget{
     public function __construct(){
         parent::__construct(
-            'most_popular_widget',
+            'WolfActive_Slide_Post_Widget',
             esc_html__('Wolfactive Slide Post','base-theme'),
             array(
                 'description' => esc_html__( 'Display Wolfactive Slide Post','base-theme')
@@ -10,6 +10,7 @@ class WolfActive_Slide_Post_Widget extends WP_Widget{
         );
     }
     public function form($instance){
+        var_dump($instance);
         if(isset($instance['title'])){
             $title = $instance['title'];
         } else {
@@ -56,6 +57,8 @@ class WolfActive_Slide_Post_Widget extends WP_Widget{
     }
     public function widget($args,$instance){
         echo $args['before_widget'];
+        
+        var_dump($instance['cat_display']);
         if(isset($instance['title']))
         {
             $title=apply_filters('widget_title',$instance['title']);
