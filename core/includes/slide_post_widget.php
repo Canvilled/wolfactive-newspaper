@@ -10,7 +10,6 @@ class WolfActive_Slide_Post_Widget extends WP_Widget{
         );
     }
     public function form($instance){
-        var_dump($instance);
         if(isset($instance['title'])){
             $title = $instance['title'];
         } else {
@@ -57,8 +56,6 @@ class WolfActive_Slide_Post_Widget extends WP_Widget{
     }
     public function widget($args,$instance){
         echo $args['before_widget'];
-        
-        var_dump($instance['cat_display']);
         if(isset($instance['title']))
         {
             $title=apply_filters('widget_title',$instance['title']);
@@ -83,26 +80,26 @@ class WolfActive_Slide_Post_Widget extends WP_Widget{
             </div>
             <div class="slidePost__item-author slidePost__item-date slidePost__item-views">
                 <div class="author date">
-                <span class="author-name"><?php the_author_link(); ?></span>
-                -
-                <span class="date-time"><?php echo get_the_date( 'F j, Y' ); ?></span>
-                <span class="views-count"><?php echo getPostViews(get_the_id()); ?></span>
+                    <span class="author-name"><?php the_author_link(); ?></span>
+                    -
+                    <span class="date-time"><?php echo get_the_date( 'F j, Y' ); ?></span>
+                    <span class="views-count"><?php echo getPostViews(get_the_id()); ?></span>
                 </div>
             </div>
             <div class="slidePost__item-thumbnail">
                 <div class="thumbnail-image">
-                <a href="<?php the_permalink() ?>"> <img src="<?php echo hk_get_thumb(get_the_id(),324,162) ?>" alt="image"> </a>
-                <div class="category-post">
-                    <?php
-                    $categories=get_the_category(get_the_id());
-                    $i=0;
-                    foreach ($categories as $c) {
-                        $category_link = get_category_link($c->cat_ID);
-                        if($i===0){
-                        echo '<span class="category-title"><a href="'.$category_link.'">'.$c->cat_name.'</a></span>';}
-                        $i++;
-                    } ?>
-                </div>
+                    <a href="<?php the_permalink() ?>"> <img src="<?php echo hk_get_thumb(get_the_id(),324,162) ?>" alt="image"> </a>
+                    <div class="category-post">
+                        <?php
+                        $categories=get_the_category(get_the_id());
+                        $i=0;
+                        foreach ($categories as $c) {
+                            $category_link = get_category_link($c->cat_ID);
+                            if($i===0){
+                            echo '<span class="category-title"><a href="'.$category_link.'">'.$c->cat_name.'</a></span>';}
+                            $i++;
+                        } ?>
+                    </div>
                 </div>
             </div>
             <div class="slidePost__item-excerpt open-sanrif">
@@ -113,7 +110,6 @@ class WolfActive_Slide_Post_Widget extends WP_Widget{
         endwhile;
         ?>
         </div>
-    </div>
 <?php
         echo $args['after_widget'];
     }
