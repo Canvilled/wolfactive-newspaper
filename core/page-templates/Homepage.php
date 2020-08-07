@@ -16,6 +16,7 @@
       </div>
       <?php get_template_part('/sections/news-music') ?>
       <?php get_template_part('/sections/news-image-banner') ?>
+      <?php get_template_part('/sections/news-last-home') ?>
     </div>
   </div>
 </div>

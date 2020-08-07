@@ -752,13 +752,21 @@ function loops_get_post_center($get_cat_id){
 function arphabet_widgets_init(){
         // Sidebar
         register_sidebar(array(
-            'name'          => 'Left Sidebar',
+            'name'          => 'Left Home Sidebar',
             'id'            => 'left-sidebar',
             'before_widget' => '<div class="sidebar my-10">',
             'after_widget'  => '</div>',
             'before_title'  => '<h2 class="title--section text--upcase">',
             'after_title'   => '</h2>',
         ));
+        register_sidebar(array(
+          'name'          => 'Left Home Sidebar 2',
+          'id'            => 'left-sidebar-2',
+          'before_widget' => '<div class="sidebar my-10">',
+          'after_widget'  => '</div>',
+          'before_title'  => '<h2 class="title--section text--upcase">',
+          'after_title'   => '</h2>',
+      ));
         register_sidebar(array(
             'name'          => 'Footer Left Sidebar',
             'id'            => 'footer-left-sidebar',

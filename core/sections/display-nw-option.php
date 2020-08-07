@@ -73,7 +73,7 @@ switch ($type_display) {
               <div class="nw__editor-date">
                 <span class="editor"><?php the_author_link(); ?></span> -
                 <span class="date-time"><?php echo get_the_date( 'F j, Y' ) ?></span>
-                <span class="comment"> <a href="#"><?php echo get_comments_number(get_the_id()) ?></a> </span>
+                <span class="comment"><?php echo get_comments_number(get_the_id()) ?></span>
               </div>
               <div class="nw__post-content open-sanrif">
                 <?php echo wp_trim_words( get_the_content(), 15, '...' ); ?>
@@ -149,7 +149,7 @@ switch ($type_display) {
               <div class="nw__editor-date">
                 <span class="editor"><?php the_author_link(); ?></span> -
                 <span class="date-time"><?php echo get_the_date( 'F j, Y' ); ?></span>
-                <span class="comment"> <a href="#"><?php echo get_comments_number(get_the_id()) ?></a> </span>
+                <span class="comment"><?php echo get_comments_number(get_the_id()) ?></span>
               </div>
               <div class="nw__post-content open-sanrif">
                 <?php echo wp_trim_words( get_the_content(), 15, '...' ); ?>
@@ -200,7 +200,7 @@ switch ($type_display) {
             <div class="nw__editor-date">
               <span class="editor"><?php the_author_link(); ?></span> -
               <span class="date-time"><?php echo get_the_date( 'F j, Y' ); ?></span>
-              <span class="comment"> <a href="#"><?php echo get_comments_number(get_the_id()) ?></a> </span>
+              <span class="comment"><?php echo get_comments_number(get_the_id()) ?></span>
             </div>
             <div class="nw__post-content open-sanrif">
               <?php echo wp_trim_words( get_the_content(), 15, '...' ); ?>
@@ -299,7 +299,7 @@ switch ($type_display) {
         <div class="nw__editor-date">
           <span class="editor"><?php the_author_link(); ?></span> -
           <span class="date-time"><?php echo get_the_date( 'F j, Y' ) ?></span>
-          <span class="comment"> <a href="#"><?php echo get_comments_number(get_the_id()) ?></a> </span>
+          <span class="comment"><?php echo get_comments_number(get_the_id()) ?></span>
         </div>
         <div class="nw__post-content open-sanrif">
           <?php echo wp_trim_words( get_the_content(), 20, '...' ); ?>
