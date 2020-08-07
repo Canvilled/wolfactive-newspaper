@@ -71,47 +71,47 @@ class WolfActive_Slide_Post_Widget extends WP_Widget{
           $category_post = new WP_Query($args);
         ?>
         <div class="slidePost" data-flickity='{ "autoPlay": true, "pauseAutoPlayOnHover": false, "pageDots": false,"draggable": true}'>
-        <?php
-        while($category_post->have_posts()):$category_post->the_post();
-        ?>
-        <div class="slidePost__item">
-            <div class="slidePost__item-title">
-                <h2 class="title__block"> <a href="<?php the_permalink() ?>"><?php echo wp_trim_words(get_the_title(),15,'...'); ?></a> </h2>
-            </div>
-            <div class="slidePost__item-author slidePost__item-date slidePost__item-views">
-                <div class="author date">
-                    <span class="author-name"><?php the_author_link(); ?></span>
-                    -
-                    <span class="date-time"><?php echo get_the_date( 'F j, Y' ); ?></span>
-                    <span class="views-count"><?php echo getPostViews(get_the_id()); ?></span>
+            <?php
+            while($category_post->have_posts()):$category_post->the_post();
+            ?>
+            <div class="slidePost__item">
+                <div class="slidePost__item-title eclips">
+                    <h2 class="title__block"> <a href="<?php the_permalink() ?>"><?php echo wp_trim_words(get_the_title(),15,'...'); ?></a> </h2>
                 </div>
-            </div>
-            <div class="slidePost__item-thumbnail">
-                <div class="thumbnail-image">
-                    <a href="<?php the_permalink() ?>"> <img src="<?php echo hk_get_thumb(get_the_id(),324,162) ?>" alt="image"> </a>
-                    <div class="category-post">
-                        <?php
-                        $categories=get_the_category(get_the_id());
-                        $i=0;
-                        foreach ($categories as $c) {
-                            $category_link = get_category_link($c->cat_ID);
-                            if($i===0){
-                            echo '<span class="category-title"><a href="'.$category_link.'">'.$c->cat_name.'</a></span>';}
-                            $i++;
-                        } ?>
+                <div class="slidePost__item-author slidePost__item-date slidePost__item-views">
+                    <div class="author date">
+                        <span class="author-name"><?php the_author_link(); ?></span>
+                        -
+                        <span class="date-time"><?php echo get_the_date( 'F j, Y' ); ?></span>
+                        <span class="views-count"><?php echo getPostViews(get_the_id()); ?></span>
                     </div>
                 </div>
+                <div class="slidePost__item-thumbnail">
+                    <div class="thumbnail-image">
+                        <a href="<?php the_permalink() ?>"> <img src="<?php echo hk_get_thumb(get_the_id(),324,162) ?>" alt="image"> </a>
+                        <div class="category-post">
+                            <?php
+                            $categories=get_the_category(get_the_id());
+                            $i=0;
+                            foreach ($categories as $c) {
+                                $category_link = get_category_link($c->cat_ID);
+                                if($i===0){
+                                echo '<span class="category-title"><a href="'.$category_link.'">'.$c->cat_name.'</a></span>';}
+                                $i++;
+                            } ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="slidePost__item-excerpt open-sanrif">
+                    <?php echo wp_trim_words( get_the_content(), 20, '...' ); ?>
+                </div>
             </div>
-            <div class="slidePost__item-excerpt open-sanrif">
-                <?php echo wp_trim_words( get_the_content(), 20, '...' ); ?>
-            </div>
-        </div>
-        <?php
-        endwhile;
-        ?>
+            <?php
+            endwhile;
+            ?>
         </div>
 <?php
-        echo $args['after_widget'];
+        // echo $args['after_widget'];
     }
     public function update($new_instance, $old_instance){
         $instance = array();

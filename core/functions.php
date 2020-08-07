@@ -754,7 +754,7 @@ function arphabet_widgets_init(){
         register_sidebar(array(
             'name'          => 'Left Sidebar',
             'id'            => 'left-sidebar',
-            'before_widget' => '<div class="sidebar">',
+            'before_widget' => '<div class="sidebar my-10">',
             'after_widget'  => '</div>',
             'before_title'  => '<h2 class="title--section text--upcase">',
             'after_title'   => '</h2>',

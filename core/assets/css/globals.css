@@ -1229,6 +1229,14 @@ li {
   overflow: hidden;
 }
 
+.footer a {
+  color: #fff;
+}
+
+.footer a:hover {
+  color: var(--tertiary-color);
+}
+
 .footer .main--background {
   position: relative;
   background: url("../images/footer-background.jpg") no-repeat;

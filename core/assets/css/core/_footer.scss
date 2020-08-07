@@ -1,4 +1,10 @@
 .footer {
+    a {
+        color: #fff;
+    }
+    a:hover {
+        color: var(--tertiary-color);
+    }
     .main--background {
         position: relative;
         background: url('../images/footer-background.jpg') no-repeat;
