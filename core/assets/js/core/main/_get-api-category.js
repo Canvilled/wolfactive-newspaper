@@ -40,9 +40,9 @@ function createFlick() {
 }
 
 function getListPost(category, showPost) {
-    let apiUrlMail = `${protocol}//${hostname}/wp-json/category-api/v1/cat-name`;
+    let apiUrlCat = `${protocol}//${hostname}/wp-json/category-api/v1/cat-name`;
     //console.log(apiUrlMail);
-    fetch(apiUrlMail, {
+    fetch(apiUrlCat, {
             method: 'POST',
             mode: 'cors',
             headers: {

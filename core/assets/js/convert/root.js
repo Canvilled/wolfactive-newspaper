@@ -6,3 +6,4 @@ import 'assets/js/convert/main/live-search';
 import 'assets/js/convert/main/get-api-category';
 import 'assets/js/convert/main/validate';
 import 'assets/js/convert/main/_load-more-post';
+import 'assets/js/convert/main/_responisve';
